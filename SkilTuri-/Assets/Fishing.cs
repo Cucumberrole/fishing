@@ -12,6 +12,8 @@ public class Fishing : MonoBehaviour
     public float reelSpeed = 5f; // 巻き取りの速度
     private bool isReeling = false; // 巻き取り中かどうかを示すフラグ
 
+
+
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
