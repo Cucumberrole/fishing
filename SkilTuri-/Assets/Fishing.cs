@@ -12,7 +12,8 @@ public class Fishing : MonoBehaviour
     public float reelSpeed = 5f; // 巻き取りの速度
     private bool isReeling = false; // 巻き取り中かどうかを示すフラグ
 
-
+    public int segmentCount = 20;
+    public float curveHeight = 2f;
 
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,7 +26,7 @@ public class Fishing : MonoBehaviour
         }
         if (line != null)
         {
-            line.positionCount = 2; // LineRendererの頂点数を設定(竿先とルアー)
+            line.positionCount = segmentCount; // LineRendererの頂点数を設定(竿先とルアー)
         }
 
     }
@@ -73,8 +74,24 @@ public class Fishing : MonoBehaviour
                 LureRigidbody.simulated = false; // ルアーの物理挙動をOFFにする
             }
         }
-        line.SetPosition(0, Rodtip.position);//竿先の位置をLineRendererの始点に設定
-        line.SetPosition(1, Lure.transform.position);//ルアーの位置をLineRendererの終点に設定
+        //line.SetPosition(0, Rodtip.position);//竿先の位置をLineRendererの始点に設定
+        //line.SetPosition(1, Lure.transform.position);//ルアーの位置をLineRendererの終点に設定
+        Vector3 start = Rodtip.position;
+        Vector3 end = Lure.transform.position;
+
+        for (int i = 0; i < segmentCount; i++)
+        {
+            float t = i / (float)(segmentCount - 1);
+
+            // 直線補間
+            Vector3 point = Vector3.Lerp(start, end, t);
+
+            // 放物線ぽく下げる
+            float curve = Mathf.Sin(t * Mathf.PI) * curveHeight;
+
+            point.y -= curve;
+            line.SetPosition(i, point);
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
