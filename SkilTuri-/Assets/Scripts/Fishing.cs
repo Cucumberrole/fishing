@@ -16,6 +16,8 @@ public class Fishing : MonoBehaviour
     public float curveHeight = 2f;
 
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
+
+    private Fish caughtFish;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,8 +55,8 @@ public class Fishing : MonoBehaviour
             isReeling = true; // 巻き取り開始
             LureRigidbody.simulated = false;// 巻き取り中は物理挙動をOFFにする
         }
-        if (isReeling) 
-        { 
+        if (isReeling)
+        {
             Lure.transform.position = Vector2.MoveTowards(Lure.transform.position, Rodtip.position, reelSpeed * Time.deltaTime);
             //Vector2.MoveTowards(今の位置, 目標位置, 移動距離)らしい
             // ルアーを竿先に向かって一定速度で移動
@@ -66,6 +68,10 @@ public class Fishing : MonoBehaviour
             //{
             //      Lure.transform.position = Rodtip.position; // ルアーが竿先に近づいたら位置を完全に合わせる
             //}
+            if (caughtFish != null)
+            {
+                caughtFish.transform.position = Lure.transform.position;
+            }
 
             if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
             {
@@ -97,10 +103,19 @@ public class Fishing : MonoBehaviour
     {
         if (other.CompareTag("Sea"))
         {
-            LureRigidbody.linearDamping = 5f; // 海に入ったらルアーの動きを減速させる
-            LureRigidbody.angularDamping = 5f; // 海に入ったらルアーの回転も減速させる
+            LureRigidbody.linearDamping = 5f;
+            LureRigidbody.angularDamping = 5f;
+        }
+
+        Fish fish = other.GetComponent<Fish>();
+
+        if (fish != null)
+        {
+            caughtFish = fish;
+            fish.isCaught = true;
         }
     }
+
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Sea"))
@@ -110,3 +125,4 @@ public class Fishing : MonoBehaviour
         }
     }
 }
+

@@ -1,4 +1,3 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Fish : MonoBehaviour
@@ -9,6 +8,8 @@ public class Fish : MonoBehaviour
     private Vector3 startPos;
     private bool movingRight = true;
 
+    public bool isCaught = false;
+
     void Start()
     {
         startPos = transform.position;
@@ -16,6 +17,8 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
+        if (isCaught) return;
+
         if (movingRight)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -29,6 +32,7 @@ public class Fish : MonoBehaviour
         else
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
+
             if (transform.position.x < startPos.x - moveDistance)
             {
                 movingRight = true;
