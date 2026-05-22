@@ -5,13 +5,16 @@ using UnityEngine.UI;
 //　スキルのタイプ
 public enum SkillType
 {
-    Attack1,
-    Attack2,
-    Defense1,
-    Defense2,
-    Speed1,
-    Speed2,
-    Combo,
+    Hook1,
+    Hook2,
+    Rod1,
+    Rod2,
+    Bait1,
+    Bait2,
+    Pier1,
+    Pier2,
+    Shop1,
+    Shop2,
     Master
 };
 
@@ -63,30 +66,34 @@ public class SkillSystem : MonoBehaviour
         {
             return false;
         }
-        //　攻撃UP2は攻撃UP1を覚えていなければダメ
-        if (type == SkillType.Attack2)
+        //　釣り針2は釣り針1を覚えていなければダメ
+        if (type == SkillType.Hook2)
         {
-            return skills[(int)SkillType.Attack1];
+            return skills[(int)SkillType.Hook1];
             //　防御UP2は防御UP1を覚えていなければダメ
         }
-        else if (type == SkillType.Defense2)
+        else if(type == SkillType.Rod2)
         {
-            return skills[(int)SkillType.Defense1];
+            return skills[(int)SkillType.Rod1];
+        }
+        else if (type == SkillType.Pier2)
+        {
+            return skills[(int)SkillType.Pier1];
             //　速さUP2は速さUP1を覚えていなければダメ
         }
-        else if (type == SkillType.Speed2)
+        else if (type == SkillType.Bait2)
         {
-            return skills[(int)SkillType.Speed1];
+            return skills[(int)SkillType.Bait1];
+        }
+        else if (type == SkillType.Shop2)
+        {
+            return skills[(int)SkillType.Shop1];
             //　コンボは攻撃UP2と防御２を覚えていなければダメ
         }
-        else if (type == SkillType.Combo)
-        {
-            return skills[(int)SkillType.Attack2] && skills[(int)SkillType.Defense2];
-            //　マスタースキルは全てのスキルを覚えていなければダメ
-        }
+
         else if (type == SkillType.Master)
         {
-            return skills[(int)SkillType.Attack2] && skills[(int)SkillType.Defense2] && skills[(int)SkillType.Speed2] && skills[(int)SkillType.Combo];
+            return skills[(int)SkillType.Hook2] && skills[(int)SkillType.Rod2] && skills[(int)SkillType.Pier2] && skills[(int)SkillType.Bait2];
         }
         return true;
     }
