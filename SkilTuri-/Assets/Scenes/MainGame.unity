@@ -441,9 +441,9 @@ GameObject:
   - component: {fileID: 656287735}
   - component: {fileID: 656287734}
   - component: {fileID: 656287737}
+  - component: {fileID: 656287738}
   - component: {fileID: 656287736}
   - component: {fileID: 656287733}
-  - component: {fileID: 656287738}
   m_Layer: 0
   m_Name: Lure
   m_TagString: Untagged
