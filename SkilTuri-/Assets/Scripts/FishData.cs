@@ -7,7 +7,9 @@ public class FishData : ScriptableObject //ScriptableObject§ìI
 
     public Sprite fishSprite;
 
-    public int Money;
+    public int money;
+
+    public int rarity;
 
     public float speed;
 

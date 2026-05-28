@@ -98,6 +98,27 @@ public class Fishing : MonoBehaviour
             point.y -= curve;
             line.SetPosition(i, point);
         }
+
+        Fish[] fishes = FindObjectsOfType<Fish>();
+
+        foreach (Fish fish in fishes)
+        {
+            if (fish.isCaught) continue;
+
+            float distance = Vector2.Distance(
+                Lure.transform.position,
+                fish.transform.position
+            );
+
+            if (distance < 1.0f)
+            {
+                caughtFish = fish;
+
+                fish.isCaught = true;
+
+                break;
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -107,12 +128,21 @@ public class Fishing : MonoBehaviour
             LureRigidbody.angularDamping = 5f;
         }
 
-        Fish fish = other.GetComponent<Fish>();
+        //Fish fish = other.GetComponent<Fish>();
 
-        if (fish != null)
+        //if (fish != null)
+        //{
+        //    caughtFish = fish;
+        //    fish.isCaught = true;
+        //}
+
+        void OnTriggerEnter2D(Collider2D other)
         {
-            caughtFish = fish;
-            fish.isCaught = true;
+            if (other.CompareTag("Sea"))
+            {
+                LureRigidbody.linearDamping = 5f;
+                LureRigidbody.angularDamping = 5f;
+            }
         }
     }
 
@@ -125,4 +155,3 @@ public class Fishing : MonoBehaviour
         }
     }
 }
-
