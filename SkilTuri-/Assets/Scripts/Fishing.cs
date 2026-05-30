@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 public class Fishing : MonoBehaviour
 {
@@ -79,6 +81,15 @@ public class Fishing : MonoBehaviour
                 Lure.transform.position = Rodtip.position; // ルアーが竿先に近づいたら位置を完全に合わせる
                 isReeling = false; // 巻き取り終了
                 LureRigidbody.simulated = false; // ルアーの物理挙動をOFFにする
+
+                if (caughtFish != null)
+                {
+                    FishData result = GetRandomFish(caughtFish.size);
+                    if (result != null)
+                    {
+                        Debug.Log("釣れた魚：" + result.fishName);
+                    }
+                }
             }
         }
         //line.SetPosition(0, Rodtip.position);//竿先の位置をLineRendererの始点に設定
@@ -147,5 +158,27 @@ public class Fishing : MonoBehaviour
             LureRigidbody.linearDamping = 0f; // 海から出たらルアーの動きを元に戻す
             LureRigidbody.angularDamping = 0f; // 海から出たらルアーの回転も元に戻す
         }
+    }
+
+    FishData GetRandomFish(FishSize size)
+    {
+        List<FishData> candidates = new List<FishData>();
+
+        foreach (FishData fish in fishList)
+        {
+            if (fish.size == size)
+            {
+                candidates.Add(fish);
+            }
+        }
+
+        if (candidates.Count == 0)
+        {
+            return null;
+        }
+
+        int randomIndex = Random.Range(0, candidates.Count);
+
+        return candidates[randomIndex];
     }
 }

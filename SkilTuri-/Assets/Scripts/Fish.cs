@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
+    public FishSize size;
+
     public float speed = 2f;
 
     public float catchRange = 2.5f;
