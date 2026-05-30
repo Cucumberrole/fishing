@@ -166,6 +166,12 @@ public class Fishing : MonoBehaviour
 
         foreach (FishData fish in fishList)
         {
+            if (fish==null)
+            {
+                Debug.Log("フィッシュデータが空です！！");
+                continue;
+            }
+
             if (fish.size == size)
             {
                 candidates.Add(fish);
