@@ -15,6 +15,5 @@ MonoBehaviour:
   fishName: 
   fishSprite: {fileID: 6018910308036209004, guid: 21fe11ca00b411946b16e94111ba3ceb, type: 3}
   money: 5000
-  rarity: 1
-  speed: 0
+  size: 0
   isRate: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
   m_Name: Pufferfish_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  fishName: 
+  fishName: Puffer
   fishSprite: {fileID: -371740909335319690, guid: dda8fd7ce35724a4c8d73dcb5469f82f, type: 3}
   money: 1000
   size: 0
