@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Sardine_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  fishSprite: {fileID: -8062708480011262309, guid: 95ffe884163c1ee45b632f3f60f06ada, type: 3}
+  fishSprite: {fileID: -8062708480011262309, guid: 04e86e9123883a54a8118e3179ba79c8, type: 3}
   money: 1000
-  rarity: 0
-  speed: 0
+  size: 0
   isRate: 0

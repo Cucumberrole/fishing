@@ -18,6 +18,7 @@ public class Fishing : MonoBehaviour
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
 
     private Fish caughtFish;
+    public FishData[] fishList;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -110,7 +111,7 @@ public class Fishing : MonoBehaviour
                 fish.transform.position
             );
 
-            if (distance < 1.0f)
+            if (distance < fish.catchRange)
             {
                 caughtFish = fish;
 
@@ -119,6 +120,8 @@ public class Fishing : MonoBehaviour
                 break;
             }
         }
+
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -135,15 +138,6 @@ public class Fishing : MonoBehaviour
         //    caughtFish = fish;
         //    fish.isCaught = true;
         //}
-
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Sea"))
-            {
-                LureRigidbody.linearDamping = 5f;
-                LureRigidbody.angularDamping = 5f;
-            }
-        }
     }
 
     void OnTriggerExit2D(Collider2D other)

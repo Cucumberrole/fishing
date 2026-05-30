@@ -9,9 +9,14 @@ public class FishData : ScriptableObject //ScriptableObject§ìI
 
     public int money;
 
-    public int rarity;
+    public FishSize size;
 
-    public float speed;
+    public bool isRate;
+}
 
-    public float isRate;
+public enum FishSize
+{
+    Small,
+    Medium,
+    Large
 }
