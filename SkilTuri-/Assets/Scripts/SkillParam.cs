@@ -14,6 +14,8 @@ public class SkillParam : MonoBehaviour
     //　このスキルを覚える為に必要なスキルポイント
     [SerializeField]
     private int spendPoint;
+    [SerializeField]
+    private int spendCount;
     //　スキルのタイトル
     [SerializeField]
     private string skillTitle;
@@ -40,10 +42,10 @@ public class SkillParam : MonoBehaviour
             return;
         }
         //　スキルを覚えられるかどうかチェック
-        if (skillSystem.CanLearnSkill(type, spendPoint))
+        if (skillSystem.CanLearnSkill(type, spendPoint,spendCount))
         {
             //　スキルを覚えさせる
-            skillSystem.LearnSkill(type, spendPoint);
+            skillSystem.LearnSkill(type, spendPoint,spendCount);
 
             ChangeButtonColor(new Color(0f, 0f, 1f, 1f));
 

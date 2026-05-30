@@ -655,10 +655,10 @@ MonoBehaviour:
   segmentCount: 20
   curveHeight: 2
   fishList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: fa2f6c2e9453b3e49bdb37fd1bef6abe, type: 2}
+  - {fileID: 11400000, guid: 03436dd30fd413c44ae0dfa88b263bc0, type: 2}
+  - {fileID: 11400000, guid: 168e2615e9e3b7b49b21dcc5a4047fd9, type: 2}
+  - {fileID: 11400000, guid: 2e165723700f99c4daeaa1d4356b4c2e, type: 2}
 --- !u!212 &656287734
 SpriteRenderer:
   serializedVersion: 2
