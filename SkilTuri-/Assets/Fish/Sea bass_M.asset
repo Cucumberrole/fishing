@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
   m_Name: Sea bass_M
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  fishName: 
+  fishName: "\u30B9\u30BA\u30AD"
   fishSprite: {fileID: -6657443298520322924, guid: 335467fee1cbea7498cb70bc5e24e4b0, type: 3}
   money: 5000
-  rarity: 1
-  speed: 0
+  size: 1
   isRate: 0

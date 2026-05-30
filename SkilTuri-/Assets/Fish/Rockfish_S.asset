@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
   m_Name: Rockfish_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  fishName: Rock
+  fishName: "\u30AB\u30B5\u30B4"
   fishSprite: {fileID: 8645993535499493640, guid: 31a189fd0bd3e4c41b79a96b10b49a35, type: 3}
   money: 1000
   size: 0

@@ -14,6 +14,8 @@ public class SkillParam : MonoBehaviour
     //　このスキルを覚える為に必要なスキルポイント
     [SerializeField]
     private int spendPoint;
+    [SerializeField]
+    private int spendCount;
     //　スキルのタイトル
     [SerializeField]
     private string skillTitle;
@@ -23,6 +25,8 @@ public class SkillParam : MonoBehaviour
     //　スキル情報を載せるテキストUI
     [SerializeField]
     private Text text;
+    [SerializeField]
+    private Button button; 
 
     // Use this for initialization
     void Start()
@@ -40,18 +44,20 @@ public class SkillParam : MonoBehaviour
             return;
         }
         //　スキルを覚えられるかどうかチェック
-        if (skillSystem.CanLearnSkill(type, spendPoint))
+        if (skillSystem.CanLearnSkill(type, spendPoint,spendCount))
         {
             //　スキルを覚えさせる
-            skillSystem.LearnSkill(type, spendPoint);
-
-            ChangeButtonColor(new Color(0f, 0f, 1f, 1f));
+            skillSystem.LearnSkill(type, spendPoint,spendCount);
+            
+            ChangeButtonColor(new Color(1f, 1f, 1f, 1f));
 
             text.text = skillTitle + "を覚えた";
+           
         }
         else
         {
             text.text = "スキルを覚えられません。";
+            
         }
     }
 
@@ -66,7 +72,7 @@ public class SkillParam : MonoBehaviour
         }
         else if (!skillSystem.IsSkill(type))
         {
-            ChangeButtonColor(new Color(1f, 1f, 1f, 1f));
+            ChangeButtonColor(new Color(0.5f, 0.5f, 0.5f, 1f));
         }
     }
     //　スキル情報を表示

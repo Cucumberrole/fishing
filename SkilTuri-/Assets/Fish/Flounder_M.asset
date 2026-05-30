@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
   m_Name: Flounder_M
   m_EditorClassIdentifier: Assembly-CSharp::FishData
-  fishName: 
+  fishName: "\u30D2\u30E9\u30E1"
   fishSprite: {fileID: 1422176302660019449, guid: e70eb18ab3374684b855106e5a67fc5b, type: 3}
   money: 5000
-  rarity: 1
-  speed: 0
+  size: 1
   isRate: 0
