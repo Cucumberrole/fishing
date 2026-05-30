@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Rockfish_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  fishSprite: {fileID: 8645993535499493640, guid: 564cdaf9ef4c21c469063b89b598382b, type: 3}
+  fishSprite: {fileID: 8645993535499493640, guid: 31a189fd0bd3e4c41b79a96b10b49a35, type: 3}
   money: 1000
-  rarity: 0
-  speed: 0
+  size: 0
   isRate: 0

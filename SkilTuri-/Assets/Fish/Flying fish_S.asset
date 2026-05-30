@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Flying fish_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  fishSprite: {fileID: 1295662721307831680, guid: b8120bf2bfda46a4d92d96db7d173271, type: 3}
+  fishSprite: {fileID: 1295662721307831680, guid: 939f3eaad7cbf1e46855a2015cecccf8, type: 3}
   money: 1000
-  rarity: 0
-  speed: 0
+  size: 0
   isRate: 0

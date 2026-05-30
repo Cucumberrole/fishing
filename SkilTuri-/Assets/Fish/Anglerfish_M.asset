@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Anglerfish_M
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  fishSprite: {fileID: 1249149584347041918, guid: 20bd749aef5ac424b8cf16df57ccba24, type: 3}
+  fishSprite: {fileID: 1249149584347041918, guid: 90eb289a162e2d3449896c11ccc3da02, type: 3}
   money: 5000
-  rarity: 1
-  speed: 0
+  size: 0
   isRate: 0

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
-    public FishData data;
+    public float speed = 2f;
 
-    private SpriteRenderer spriteRenderer;
+    public float catchRange = 2.5f;
 
     private Vector3 startPos;
 
@@ -14,22 +14,18 @@ public class Fish : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        spriteRenderer.sprite = data.fishSprite;
-
         startPos = transform.position;
     }
 
     void Update()
     {
+        if (isCaught) return;
+
         Swim();
     }
 
     void Swim()
     {
-        float speed = data.speed;
-
         if (movingRight)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -37,7 +33,6 @@ public class Fish : MonoBehaviour
             if (transform.position.x > startPos.x + 3f)
             {
                 movingRight = false;
-
                 Flip();
             }
         }
@@ -48,7 +43,6 @@ public class Fish : MonoBehaviour
             if (transform.position.x < startPos.x - 3f)
             {
                 movingRight = true;
-
                 Flip();
             }
         }
@@ -57,9 +51,13 @@ public class Fish : MonoBehaviour
     void Flip()
     {
         Vector3 scale = transform.localScale;
-
         scale.x *= -1;
-
         transform.localScale = scale;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, catchRange);
     }
 }

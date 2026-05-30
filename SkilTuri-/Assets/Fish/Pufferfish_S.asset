@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Pufferfish_S
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: 
-  fishSprite: {fileID: -371740909335319690, guid: c808f52ce91fb054cae2a938cf1764d3, type: 3}
+  fishSprite: {fileID: -371740909335319690, guid: dda8fd7ce35724a4c8d73dcb5469f82f, type: 3}
   money: 1000
-  rarity: 0
-  speed: 0
+  size: 0
   isRate: 0
