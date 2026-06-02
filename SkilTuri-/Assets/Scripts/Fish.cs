@@ -14,6 +14,10 @@ public class Fish : MonoBehaviour
 
     public bool isCaught = false;
 
+    public bool isLaunching = false;
+
+    public float detectRange = 3f;
+
     void Start()
     {
         startPos = transform.position;
@@ -21,7 +25,35 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
+        GameObject lure = GameObject.FindWithTag("Lure");
+
+        if (isLaunching)
+        {
+            transform.position += Vector3.up * 10f * Time.deltaTime;
+
+            Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+            if (viewPos.y > 1.1f)
+            {
+                Destroy(gameObject);
+            }
+
+            return;
+        }
+
         if (isCaught) return;
+
+        if (lure != null)
+        {
+            float distance = Vector2.Distance(transform.position, lure.transform.position);
+
+            if (distance < detectRange)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
+
+                return;
+            }
+        }
 
         Swim();
     }

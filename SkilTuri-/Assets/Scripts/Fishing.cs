@@ -21,6 +21,8 @@ public class Fishing : MonoBehaviour
 
     private Fish caughtFish;
     public FishData[] fishList;
+
+    private Fish launchedFish;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +59,14 @@ public class Fishing : MonoBehaviour
         {
             isReeling = true; // 巻き取り開始
             LureRigidbody.simulated = false;// 巻き取り中は物理挙動をOFFにする
+            if (caughtFish != null)
+            {
+                launchedFish = caughtFish;
+
+                caughtFish.isLaunching = true;
+
+                caughtFish = null;
+            }
         }
         if (isReeling)
         {
@@ -73,23 +83,14 @@ public class Fishing : MonoBehaviour
             //}
             if (caughtFish != null)
             {
-                caughtFish.transform.position = Lure.transform.position;
+                caughtFish.transform.position = Lure.transform.position + Vector3.down * 0.7f;
             }
 
             if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
             {
-                Lure.transform.position = Rodtip.position; // ルアーが竿先に近づいたら位置を完全に合わせる
-                isReeling = false; // 巻き取り終了
-                LureRigidbody.simulated = false; // ルアーの物理挙動をOFFにする
+                Lure.transform.position = Rodtip.position;
 
-                if (caughtFish != null)
-                {
-                    FishData result = GetRandomFish(caughtFish.size);
-                    if (result != null)
-                    {
-                        Debug.Log("釣れた魚：" + result.fishName);
-                    }
-                }
+                isReeling = false;
             }
         }
         //line.SetPosition(0, Rodtip.position);//竿先の位置をLineRendererの始点に設定
@@ -132,7 +133,25 @@ public class Fishing : MonoBehaviour
             }
         }
 
+        if (launchedFish != null)
+        {
+            Vector3 viewPos =
+                Camera.main.WorldToViewportPoint(launchedFish.transform.position);
 
+            if (viewPos.y > 1.1f)
+            {
+                FishData result = GetRandomFish(launchedFish.size);
+
+                if (result != null)
+                {
+                    Debug.Log("獲得：" + result.fishName);
+                }
+
+                Destroy(launchedFish.gameObject);
+
+                launchedFish = null;
+            }
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -166,7 +185,7 @@ public class Fishing : MonoBehaviour
 
         foreach (FishData fish in fishList)
         {
-            if (fish==null)
+            if (fish == null)
             {
                 Debug.Log("フィッシュデータが空です！！");
                 continue;
