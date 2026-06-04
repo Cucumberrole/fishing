@@ -11,7 +11,7 @@ public class FishData : ScriptableObject //ScriptableObject§ìI
 
     public FishSize size;
 
-    public bool isRate;
+    public bool isRare;
 }
 
 public enum FishSize
