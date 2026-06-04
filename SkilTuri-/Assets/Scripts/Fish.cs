@@ -6,7 +6,6 @@ public class Fish : MonoBehaviour
     public FishSize size;
 
     public float speed = 2f;
-
     public float catchRange = 2.5f;
 
     private Vector3 startPos;
@@ -15,7 +14,6 @@ public class Fish : MonoBehaviour
     private bool movingRight = true;
 
     public bool isCaught = false;
-
     public bool isLaunching = false;
 
     public float detectRange = 3f;
@@ -128,5 +126,10 @@ public class Fish : MonoBehaviour
 
         float margin = 1f;
 
+        float x = Random.Range(bounds.min.x + margin, bounds.max.x - margin);
+
+        float y = Random.Range(bounds.min.y + margin, bounds.max.y - margin);
+
+        targetPos = new Vector2(x, y);
     }
 }
