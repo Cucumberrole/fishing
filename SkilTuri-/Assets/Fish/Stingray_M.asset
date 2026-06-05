@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stingray_M
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: "\u30A8\u30A4"
-  fishSprite: {fileID: 6018910308036209004, guid: 21fe11ca00b411946b16e94111ba3ceb, type: 3}
+  fishSprite: {fileID: 6018910308036209004, guid: 5ba02194d5ca5aa4bae178eb833f8bff, type: 3}
   money: 5000
   size: 1
-  isRate: 0
+  isRare: 0

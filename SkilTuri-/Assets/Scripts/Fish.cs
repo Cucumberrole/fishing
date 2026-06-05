@@ -22,19 +22,25 @@ public class Fish : MonoBehaviour
     public float swimRangeY = 3f;
 
     private BoxCollider2D seaCollider;
+    private GameObject lure;
+
+    public bool isInterested = false;
 
     void Start()
     {
         GameObject sea = GameObject.FindWithTag("Sea");
+
+        lure = GameObject.FindWithTag("Lure");
 
         if (sea != null)
         {
             seaCollider = sea.GetComponent<BoxCollider2D>();
         }
 
+        startPos = transform.position;
+
         ChooseNewTarget();
 
-        startPos = transform.position;
 
         // ‚»‚ê‚¼‚ê‚Ì‹›‚Ì‘å‚«‚³
         if (size == FishSize.Small)
@@ -53,7 +59,6 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        GameObject lure = GameObject.FindWithTag("Lure");
 
         if (isLaunching)
         {
@@ -77,9 +82,15 @@ public class Fish : MonoBehaviour
 
             if (distance < detectRange)
             {
+                isInterested = true;
+
                 transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
 
                 return;
+            }
+            else
+            {
+                isInterested = false;
             }
         }
 
