@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sea bream_M
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: "\u30BF\u30A4"
-  fishSprite: {fileID: -6624250133288859541, guid: dac1b0aa8a5549443a733edc18c201d5, type: 3}
+  fishSprite: {fileID: -6624250133288859541, guid: 12ac8b08cbfcce04286e357c1f6473ea, type: 3}
   money: 5000
   size: 1
-  isRate: 0
+  isRare: 0

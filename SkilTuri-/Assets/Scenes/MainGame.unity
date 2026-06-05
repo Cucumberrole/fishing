@@ -795,8 +795,8 @@ Transform:
   m_GameObject: {fileID: 884337051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22, y: -8, z: -1}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalPosition: {x: -16, y: -6.5, z: -1}
+  m_LocalScale: {x: 8, y: 17, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   fishPrefab: {fileID: 319958820}
-  spawnCount: 20
+  spawnCount: 4
   spawnMin: {x: -8, y: -8}
   spawnMax: {x: 8, y: -6}
 --- !u!4 &2127256764

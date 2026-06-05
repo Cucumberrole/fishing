@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hammerhead shark_L
   m_EditorClassIdentifier: Assembly-CSharp::FishData
   fishName: "\u30B7\u30E5\u30E2\u30AF\u30B6\u30E1"
-  fishSprite: {fileID: 4803213028844382984, guid: 93acead9cbbb6604ebd5c2d6727583bb, type: 3}
+  fishSprite: {fileID: 4803213028844382984, guid: bec04cb04b789264b90d2875ee46e8cb, type: 3}
   money: 10000
   size: 2
-  isRate: 0
+  isRare: 0

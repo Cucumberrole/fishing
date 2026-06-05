@@ -57,10 +57,14 @@ public class Fishing : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            isReeling = true; // Šª‚«æ‚èŠJn
-            LureRigidbody.simulated = false;// Šª‚«æ‚è’†‚Í•¨—‹““®‚ğOFF‚É‚·‚é
+            Lure.transform.position = Rodtip.position;
+
+            LureRigidbody.simulated = false;
+
             if (caughtFish != null)
             {
+                Debug.Log("‹›‚ğ”ò‚Î‚µ‚Ü‚·I");
+
                 launchedFish = caughtFish;
 
                 caughtFish.isLaunching = true;
@@ -123,12 +127,10 @@ public class Fishing : MonoBehaviour
                 fish.transform.position
             );
 
-            if (distance < fish.catchRange)
+            if (fish.isInterested && distance < fish.catchRange)
             {
                 caughtFish = fish;
-
                 fish.isCaught = true;
-
                 break;
             }
         }
