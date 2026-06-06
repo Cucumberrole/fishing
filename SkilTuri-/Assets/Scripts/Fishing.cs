@@ -19,10 +19,13 @@ public class Fishing : MonoBehaviour
 
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
 
-    private Fish caughtFish;
+    private List<Fish> caughtFishes = new List<Fish>();
     public FishData[] fishList;
+    public FishGetUI fishGetUIPrefab;
 
-    private Fish launchedFish;
+    private List<Fish> launchedFishes = new List<Fish>();
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +40,9 @@ public class Fishing : MonoBehaviour
         }
 
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -55,23 +61,27 @@ public class Fishing : MonoBehaviour
             //巻き取りはaddforceじゃできない
 
         }
+
         if (Input.GetMouseButtonDown(1))
         {
             Lure.transform.position = Rodtip.position;
 
             LureRigidbody.simulated = false;
 
-            if (caughtFish != null)
+            if (caughtFishes.Count > 0)
             {
                 Debug.Log("魚を飛ばします！");
 
-                launchedFish = caughtFish;
+                foreach (Fish fish in caughtFishes)
+                {
+                    fish.isLaunching = true;
+                    launchedFishes.Add(fish);
+                }
 
-                caughtFish.isLaunching = true;
-
-                caughtFish = null;
+                caughtFishes.Clear();
             }
         }
+
         if (isReeling)
         {
             Lure.transform.position = Vector2.MoveTowards(Lure.transform.position, Rodtip.position, reelSpeed * Time.deltaTime);
@@ -85,9 +95,9 @@ public class Fishing : MonoBehaviour
             //{
             //      Lure.transform.position = Rodtip.position; // ルアーが竿先に近づいたら位置を完全に合わせる
             //}
-            if (caughtFish != null)
+            for (int i = 0; i < caughtFishes.Count; i++)
             {
-                caughtFish.transform.position = Lure.transform.position + Vector3.down * 0.7f;
+                caughtFishes[i].transform.position = Lure.transform.position + Vector3.down * (0.7f * (i + 1));
             }
 
             if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
@@ -116,45 +126,59 @@ public class Fishing : MonoBehaviour
             line.SetPosition(i, point);
         }
 
-        Fish[] fishes = FindObjectsOfType<Fish>();
+        Fish[] fishes = FindObjectsByType<Fish>(FindObjectsSortMode.None);
 
         foreach (Fish fish in fishes)
         {
-            if (fish.isCaught) continue;
-
-            float distance = Vector2.Distance(
-                Lure.transform.position,
-                fish.transform.position
-            );
-
-            if (fish.isInterested && distance < fish.catchRange)
+            if (fish.isCaught)
             {
-                caughtFish = fish;
-                fish.isCaught = true;
-                break;
+                if (!caughtFishes.Contains(fish))
+                {
+                    fish.isCaught = true;
+
+                    caughtFishes.Add(fish);
+
+                    Debug.Log("魚が食いついた！");
+                }
             }
         }
 
-        if (launchedFish != null)
+        for (int i = launchedFishes.Count - 1; i >= 0; i--)
         {
-            Vector3 viewPos =
-                Camera.main.WorldToViewportPoint(launchedFish.transform.position);
+            Fish fish = launchedFishes[i];
 
-            if (viewPos.y > 1.1f)
+            if (fish == null)
             {
-                FishData result = GetRandomFish(launchedFish.size);
+                launchedFishes.RemoveAt(i);
+                continue;
+            }
+
+            Vector3 viewPos = Camera.main.WorldToViewportPoint(fish.transform.position);
+
+            if (viewPos.y > 1.0f)
+            {
+                Debug.Log("画面外です");
+
+                FishData result = GetRandomFish(fish.size);
 
                 if (result != null)
                 {
                     Debug.Log("獲得：" + result.fishName);
+                    GameManager.Instance.AddMoney(result.money);
+
+                    FishGetUI ui = Instantiate(fishGetUIPrefab);
+                    ui.Setup(result);
                 }
 
-                Destroy(launchedFish.gameObject);
+                Destroy(fish.gameObject);
 
-                launchedFish = null;
+                launchedFishes.RemoveAt(i);
             }
         }
     }
+
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Sea"))
@@ -172,6 +196,9 @@ public class Fishing : MonoBehaviour
         //}
     }
 
+
+
+
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Sea"))
@@ -180,6 +207,9 @@ public class Fishing : MonoBehaviour
             LureRigidbody.angularDamping = 0f; // 海から出たらルアーの回転も元に戻す
         }
     }
+
+
+
 
     FishData GetRandomFish(FishSize size)
     {

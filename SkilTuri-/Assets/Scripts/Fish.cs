@@ -11,7 +11,7 @@ public class Fish : MonoBehaviour
     private Vector3 startPos;
     private Vector2 targetPos;
 
-    private bool movingRight = true;
+    // private bool movingRight = true;
 
     public bool isCaught = false;
     public bool isLaunching = false;
@@ -26,11 +26,26 @@ public class Fish : MonoBehaviour
 
     public bool isInterested = false;
 
+    private SpriteRenderer sr; // デバッグ用
+
+
+
+
     void Start()
     {
         GameObject sea = GameObject.FindWithTag("Sea");
 
         lure = GameObject.FindWithTag("Lure");
+        if (lure == null)
+        {
+            Debug.Log("ルアーが見つかりません！");
+        }
+        else
+        {
+            Debug.Log("ルアー発見！");
+        }
+
+        sr = GetComponent<SpriteRenderer>(); // デバッグ用
 
         if (sea != null)
         {
@@ -57,11 +72,19 @@ public class Fish : MonoBehaviour
         }
     }
 
+
+
+
     void Update()
     {
 
         if (isLaunching)
         {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            transform.localScale = scale;
+            transform.rotation = Quaternion.Euler(0, 0, 90);
+
             transform.position += Vector3.up * 10f * Time.deltaTime;
 
             Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
@@ -74,28 +97,59 @@ public class Fish : MonoBehaviour
             return;
         }
 
-        if (isCaught) return;
+        if (isCaught)
+        {
+            if (lure != null)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * 2f * Time.deltaTime);
+            }
+            return;
+        }
 
         if (lure != null)
         {
             float distance = Vector2.Distance(transform.position, lure.transform.position);
 
+            // Debug.Log(distance);
+
             if (distance < detectRange)
             {
+                Debug.Log(gameObject.name + " がルアーを発見");
+                sr.color = Color.red;
+
                 isInterested = true;
 
                 transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
+
+                if (lure.transform.position.x > transform.position.x)
+                {
+                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+                else
+                {
+                    transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+
+                if (distance < 0.3f)
+                {
+                    isCaught = true;
+                    Debug.Log("食いついた！");
+                }
 
                 return;
             }
             else
             {
+                sr.color = Color.white;
                 isInterested = false;
             }
         }
 
         Swim();
     }
+
+
+
 
     void Swim()
     {
@@ -116,6 +170,9 @@ public class Fish : MonoBehaviour
         }
     }
 
+
+
+
     void Flip()
     {
         Vector3 scale = transform.localScale;
@@ -123,11 +180,17 @@ public class Fish : MonoBehaviour
         transform.localScale = scale;
     }
 
+
+
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, catchRange);
     }
+
+
+
 
     void ChooseNewTarget()
     {
