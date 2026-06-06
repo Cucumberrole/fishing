@@ -109,3 +109,6 @@ SkilTuri-/Temp/
 SkilTuri-/UserSettings/
 SkilTuri-/UserSettings/Layouts/default-6000.dwlt
 SkilTuri-/UserSettings/EditorUserSettings.asset
+SkilTuri-/[Oo]bj/
+SkilTuri-/[Bb]in/
+SkilTuri-/**/*.cache
