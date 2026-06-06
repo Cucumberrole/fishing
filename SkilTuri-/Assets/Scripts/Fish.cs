@@ -60,15 +60,15 @@ public class Fish : MonoBehaviour
         // ‚»‚ê‚¼‚ê‚Ì‹›‚Ì‘å‚«‚³
         if (size == FishSize.Small)
         {
-            transform.localScale = Vector3.one * 0.2f;
+            transform.localScale = Vector3.one * 0.3f;
         }
         else if (size == FishSize.Medium)
         {
-            transform.localScale = Vector3.one * 0.4f;
+            transform.localScale = Vector3.one * 0.5f;
         }
         else if (size == FishSize.Large)
         {
-            transform.localScale = Vector3.one * 0.8f;
+            transform.localScale = Vector3.one * 0.7f;
         }
     }
 

@@ -715,9 +715,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bb937b4a2a30445ba148d485197d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameTime: 150
+  gameTime: 10
   timeText: {fileID: 1731444661}
   money: 0
+  totalmoney: 0
   moneyText: {fileID: 901466938}
 --- !u!1 &884337051
 GameObject:
@@ -1754,7 +1755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   fishPrefab: {fileID: 319958820}
-  spawnCount: 2
+  spawnCount: 0
   spawnMin: {x: -8, y: -8}
   spawnMax: {x: 8, y: -6}
 --- !u!4 &2127256764
@@ -1826,7 +1827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3477984047611363749, guid: 09fc8b5cd0d83a9409eb3b12b07d78a5, type: 3}
       propertyPath: detectRange
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7992098944799977593, guid: 09fc8b5cd0d83a9409eb3b12b07d78a5, type: 3}
       propertyPath: m_Name

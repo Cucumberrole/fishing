@@ -165,8 +165,9 @@ public class Fishing : MonoBehaviour
                 {
                     Debug.Log("älìæÅF" + result.fishName);
                     GameManager.Instance.AddMoney(result.money);
+                    GameManager.Instance.caughtFishList.Add(result);
 
-                    FishGetUI ui = Instantiate(fishGetUIPrefab);
+                    FishGetUI ui = Instantiate(fishGetUIPrefab, GameObject.Find("Canvas").transform);
                     ui.Setup(result);
                 }
 
