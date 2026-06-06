@@ -6,7 +6,7 @@ using UnityEngine;
 public class GManager : MonoBehaviour
 {
     public static GManager instance = null;
-    public int money;
+    public int money = 100;
 
 
     private void Awake()
