@@ -9,6 +9,12 @@ public class GManager : MonoBehaviour
     public int totalmoney; // お金の合計
     public int storeMoney; // 総額の金額
 
+    public int spawnCount = 20;     // 魚のスポーン数
+    public float gameTime = 10f;    // 制限時間
+    public float detectRange = 3f;  // 魚がかかる範囲(ルアーの検知範囲)
+
+
+
 
     private void Awake()
     {
@@ -21,16 +27,5 @@ public class GManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
