@@ -10,21 +10,20 @@ public class GameManager : MonoBehaviour
     public float gameTime = 10f;
     public TextMeshProUGUI timeText;
 
-    public int money = 0; // 今回のラウンドのお金
-    public int totalmoney = 0; // お金の合計
+    public int money = 0;
+    // public int totalmoney = 0;
+
     public List<FishData> caughtFishList = new();
 
     public TextMeshProUGUI moneyText;
 
-
-
+    private bool isRoundRunning = true;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,47 +31,65 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
-
     void Update()
     {
+        if (!isRoundRunning)
+        {
+            return;
+        }
+
         gameTime -= Time.deltaTime;
 
-        timeText.text = Mathf.Ceil(gameTime).ToString();
-
-        if (gameTime <= 0)
+        if (timeText != null)
         {
+            timeText.text = Mathf.Ceil(gameTime).ToString();
+        }
+
+        if (gameTime <= 0f)
+        {
+            gameTime = 0f;
+            isRoundRunning = false;
+
+            if (GManager.instance != null)
+            {
+                GManager.instance.totalmoney = money;
+            }
+            else
+            {
+                Debug.LogError("GManagerが見つかりません！");
+            }
+
             SceneManager.LoadScene("Result");
         }
     }
 
-
-
-
     public void AddMoney(int amount)
     {
         money += amount;
-        totalmoney += amount;
 
-        moneyText.text = "MONEY × " + money;
+        if (moneyText != null)
+        {
+            moneyText.text = "MONEY × " + money;
+        }
     }
-
-
-
 
     public void AddFish(FishData fish)
     {
+        if (fish == null)
+        {
+            return;
+        }
+
         caughtFishList.Add(fish);
     }
-
-
-
 
     public void StartRound()
     {
         money = 0;
+        gameTime = 10f;
         caughtFishList.Clear();
+
+        isRoundRunning = true;
 
         if (moneyText != null)
         {

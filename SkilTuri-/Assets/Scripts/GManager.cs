@@ -6,7 +6,8 @@ using UnityEngine;
 public class GManager : MonoBehaviour
 {
     public static GManager instance = null;
-    public int money = 100;
+    public int totalmoney; // Ç®ã‡ÇÃçáåv
+    public int storeMoney; // ëçäzÇÃã‡äz
 
 
     private void Awake()
@@ -24,12 +25,12 @@ public class GManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

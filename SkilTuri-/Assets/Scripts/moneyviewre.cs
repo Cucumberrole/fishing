@@ -8,8 +8,14 @@ public class moneyviewer : MonoBehaviour
 
     void Start()
     {
-        // GameManagerからスコアを取得してテキストに反映
-        int money = GManager.instance.money;
-       moneyText.text = "MONEY: " + money.ToString();
+        if (GManager.instance == null)
+        {
+            Debug.LogError("GManagerが見つかりません！");
+            moneyText.text = "MONEY: 0";
+            return;
+        }
+
+        int money = GManager.instance.totalmoney;
+        moneyText.text = "MONEY: " + money;
     }
 }
