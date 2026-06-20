@@ -16,6 +16,15 @@ public class Fish : MonoBehaviour
     public bool isCaught = false;
     public bool isLaunching = false;
 
+    public bool isReturning = false;
+    public bool reachedPlayer = false;
+
+    public float returnSpeed = 8f;
+
+    public FishData caughtData;
+
+    private Transform returnTarget;
+
     public float detectRange = 3f;
 
     public float swimRangeX = 3f;
@@ -77,22 +86,50 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
+        if (isReturning)
+        {
+            if (returnTarget == null)
+            {
+                return;
+            }
+
+            transform.position = Vector2.MoveTowards(transform.position, returnTarget.position, returnSpeed * Time.deltaTime);
+
+            // プレイヤーの方向を向かせる
+            Vector3 scale = transform.localScale;
+
+            if (returnTarget.position.x > transform.position.x)
+            {
+                scale.x = Mathf.Abs(scale.x);
+            }
+            else
+            {
+                scale.x = -Mathf.Abs(scale.x);
+            }
+
+            transform.localScale = scale;
+
+            // プレイヤーへ到着したか
+            if (Vector2.Distance(
+                transform.position,
+                returnTarget.position
+            ) < 0.3f)
+            {
+                reachedPlayer = true;
+            }
+
+            return;
+        }
 
         if (isLaunching)
         {
             Vector3 scale = transform.localScale;
             scale.x = Mathf.Abs(scale.x);
             transform.localScale = scale;
+
             transform.rotation = Quaternion.Euler(0, 0, 90);
 
             transform.position += Vector3.up * 10f * Time.deltaTime;
-
-            Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
-
-            if (viewPos.y > 1.1f)
-            {
-                Destroy(gameObject);
-            }
 
             return;
         }
@@ -205,5 +242,32 @@ public class Fish : MonoBehaviour
         float y = Random.Range(bounds.min.y + margin, bounds.max.y - margin);
 
         targetPos = new Vector2(x, y);
+    }
+
+
+
+    public void BeginReturn(Transform target, FishData data)
+    {
+        if (target == null || data == null)
+        {
+            return;
+        }
+
+        isLaunching = false;
+        isReturning = true;
+        reachedPlayer = false;
+
+        returnTarget = target;
+        caughtData = data;
+
+        // 飛び上がるときの回転を元に戻す
+        transform.rotation = Quaternion.identity;
+
+        // 魚影から、実際に獲得した魚の画像へ変更
+        if (sr != null && data.fishSprite != null)
+        {
+            sr.sprite = data.fishSprite;
+            sr.color = Color.white;
+        }
     }
 }

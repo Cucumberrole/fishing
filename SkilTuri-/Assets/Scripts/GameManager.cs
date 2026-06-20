@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 
             if (GManager.instance != null)
             {
-                GManager.instance.totalmoney = money;
+                GManager.instance.totalMoney = money;
             }
             else
             {
