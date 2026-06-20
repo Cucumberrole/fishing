@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Hammer head shark_N
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30CF\u30F3\u30DE\u30FC\u30D8\u30C3\u30C9\u30B7\u30E3\u30FC\u30AF"
+  fishSprite: {fileID: 1879907193999703877, guid: dbe477ec643588642948d29310561c93, type: 3}
+  money: 100
+  size: 2
