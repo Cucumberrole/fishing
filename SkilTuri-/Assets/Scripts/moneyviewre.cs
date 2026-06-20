@@ -15,7 +15,7 @@ public class moneyviewer : MonoBehaviour
             return;
         }
 
-        int money = GManager.instance.totalmoney;
+        int money = GManager.instance.totalMoney;
         moneyText.text = "MONEY: " + money;
     }
 }

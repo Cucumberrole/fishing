@@ -472,7 +472,9 @@ MonoBehaviour:
   Rodtip: {fileID: 569007269}
   line: {fileID: 226710570}
   throwDirection: {x: 1, y: 1}
-  power: 10
+  minPower: 5
+  maxPower: 20
+  maxChargeTime: 2
   reelSpeed: 5
   segmentCount: 20
   curveHeight: 2
@@ -488,6 +490,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b3d33399212a5143a710142def11ae3, type: 2}
   - {fileID: 11400000, guid: 32431a8698722ad488c0647c62344584, type: 2}
   fishGetUIPrefab: {fileID: 5158924256382526496, guid: e9c6550e53f6f6f4785da5a34c9d0c37, type: 3}
+  playerTarget: {fileID: 1748367896}
 --- !u!212 &656287734
 SpriteRenderer:
   serializedVersion: 2
@@ -715,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bb937b4a2a30445ba148d485197d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameTime: 10
+  gameTime: 120
   timeText: {fileID: 1731444661}
   money: 0
   caughtFishList: []
@@ -895,8 +898,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1218,7 +1221,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc87e69f0ad4b945be63700edcd5e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GManager
-  totalmoney: 0
+  roundMoney: 0
+  totalMoney: 0
+  gameTimeLimit: 10
+  spawnCount: 20
+  detectRange: 3
+  minThrowPower: 5
+  maxThrowPower: 20
+  maxChargeTime: 2
+  reelSpeed: 5
+  caughtFishList: []
+  gameTimeLevel: 0
+  spawnCountLevel: 0
+  detectRangeLevel: 0
+  throwPowerLevel: 0
+  reelSpeedLevel: 0
 --- !u!4 &1678948804
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,15 +1472,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 44.75
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
