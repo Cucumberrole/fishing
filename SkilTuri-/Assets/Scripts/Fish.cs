@@ -1,4 +1,3 @@
-using System.Transactions;
 using UnityEngine;
 
 public class Fish : MonoBehaviour
@@ -19,11 +18,18 @@ public class Fish : MonoBehaviour
     public bool isReturning = false;
     public bool reachedPlayer = false;
 
-    public float returnSpeed = 8f;
-
     public FishData caughtData;
 
     private Transform returnTarget;
+
+    // 戻る演出
+    public float returnDuration = 1.2f;
+    public float returnCurveHeight = 3f;
+    public float returnSideOffset = 2f;
+
+    private Vector3 returnStartPosition;
+    private Vector3 returnControlPosition;
+    private float returnElapsedTime;
 
     public float detectRange = 3f;
 
@@ -86,35 +92,72 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
+        // プレイヤーへ到着した魚は動かさない
+        if (reachedPlayer)
+        {
+            return;
+        }
+
         if (isReturning)
         {
+
+
+
             if (returnTarget == null)
             {
                 return;
             }
 
-            transform.position = Vector2.MoveTowards(transform.position, returnTarget.position, returnSpeed * Time.deltaTime);
+            returnElapsedTime += Time.deltaTime;
 
-            // プレイヤーの方向を向かせる
-            Vector3 scale = transform.localScale;
+            float duration = Mathf.Max(returnDuration, 0.01f);
 
-            if (returnTarget.position.x > transform.position.x)
+            // 0～1の進行度
+            float t = Mathf.Clamp01(returnElapsedTime / duration);
+
+            // 最初は速く、到着前にゆっくりになる
+            float easedT = 1f - Mathf.Pow(1f - t, 3f);
+
+            Vector3 endPosition = returnTarget.position;
+
+            // 二次ベジェ曲線
+            Vector3 pointA = Vector3.Lerp(returnStartPosition, returnControlPosition, easedT);
+
+            Vector3 pointB = Vector3.Lerp(returnControlPosition, endPosition, easedT);
+
+            Vector3 nextPosition = Vector3.Lerp(pointA, pointB, easedT);
+
+            // 移動方向を取得
+            Vector3 moveDirection = nextPosition - transform.position;
+
+            transform.position = nextPosition;
+
+            // 移動方向に応じて左右反転
+            if (moveDirection.x > 0.01f)
             {
+                Vector3 scale = transform.localScale;
                 scale.x = Mathf.Abs(scale.x);
+                transform.localScale = scale;
             }
-            else
+            else if (moveDirection.x < -0.01f)
             {
+                Vector3 scale = transform.localScale;
                 scale.x = -Mathf.Abs(scale.x);
+                transform.localScale = scale;
             }
 
-            transform.localScale = scale;
+            // 少し揺らす
+            float shakeAngle = Mathf.Sin(t * Mathf.PI * 4f) * 12f * (1f - t);
 
-            // プレイヤーへ到着したか
-            if (Vector2.Distance(
-                transform.position,
-                returnTarget.position
-            ) < 0.3f)
+            transform.rotation = Quaternion.Euler(0f, 0f, shakeAngle);
+
+            // プレイヤーへ到着
+            if (t >= 1f)
             {
+                transform.position = endPosition;
+                transform.rotation = Quaternion.identity;
+
+                isReturning = false;
                 reachedPlayer = true;
             }
 
@@ -255,15 +298,28 @@ public class Fish : MonoBehaviour
 
         isLaunching = false;
         isReturning = true;
+        isCaught = false;
         reachedPlayer = false;
 
         returnTarget = target;
         caughtData = data;
 
-        // 飛び上がるときの回転を元に戻す
+        returnElapsedTime = 0f;
+        returnStartPosition = transform.position;
+
+        // 開始地点とプレイヤーの中間地点
+        Vector3 middlePosition = (returnStartPosition + returnTarget.position) / 2f;
+
+        // 横方向へランダムに膨らませる
+        float randomSide = Random.Range(-returnSideOffset, returnSideOffset);
+
+        // 曲線の曲がり方を決める地点
+        returnControlPosition = middlePosition + Vector3.up * returnCurveHeight + Vector3.right * randomSide;
+
+        // 飛び上がったときの回転を戻す
         transform.rotation = Quaternion.identity;
 
-        // 魚影から、実際に獲得した魚の画像へ変更
+        // 魚影から実際の魚の画像へ変更
         if (sr != null && data.fishSprite != null)
         {
             sr.sprite = data.fishSprite;
