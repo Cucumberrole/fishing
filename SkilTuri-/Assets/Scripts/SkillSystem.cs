@@ -21,7 +21,24 @@ public enum SkillType
     Repop2,
     Repop3,
     Pier1,
-    Pier2
+    Pier2,
+    Hook4,
+    Hook5,
+    Hook6,
+    GrowFish4,
+    GrowFish5,
+    GrowFish6,
+    Money4,
+    Money5,
+    Money6,
+    Time4,
+    Time5,
+    Time6,
+    Repop4,
+    Repop5,
+    Repop6,
+    Pier3,
+    Pier4
 };
 
 public class SkillSystem : MonoBehaviour
@@ -94,23 +111,58 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.Hook2];
         }
+        else if (type == SkillType.Hook4)
+        {
+            return skills[(int)SkillType.Pier2] && skills[(int)SkillType.Hook3];
+        }
+        else if (type == SkillType.Hook5)
+        {
+            return skills[(int)SkillType.Hook4];
+        }
+        else if (type == SkillType.Hook6)
+        {
+            return skills[(int)SkillType.Hook5];
+        }
         else if (type == SkillType.GrowFish2)
         {
             return skills[(int)SkillType.GrowFish1];
             //　速さUP2は速さUP1を覚えていなければダメ
         }
-        else if(type == SkillType.GrowFish3)
+        else if (type == SkillType.GrowFish3)
         {
             return skills[(int)SkillType.GrowFish2];
+        }
+        else if (type == SkillType.GrowFish4)
+        {
+            return skills[(int)SkillType.Pier2] && skills[(int)SkillType.GrowFish3];
+        }
+        else if (type == SkillType.GrowFish5)
+        {
+            return skills[(int)SkillType.GrowFish4];
+        }
+        else if (type ==SkillType.GrowFish6)
+        {
+            return skills[(int)SkillType.GrowFish5];
         }
         else if (type == SkillType.Money2)
         {
             return skills[(int)SkillType.Money1];
             //　コンボは攻撃UP2と防御２を覚えていなければダメ
         }
-        else if(type == SkillType.Money3)
+        else if (type == SkillType.Money3)
         {
             return skills[(int)SkillType.Money2];
+        }else if (type == SkillType.Money4)
+        {
+            return skills[(int)SkillType.Pier2] && skills[(int)SkillType.Money3];
+        }
+        else if (type == SkillType.Money5)
+        {
+            return skills[(int)SkillType.Money4];
+        }
+        else if (type == SkillType.Money6)
+        {
+            return skills[(int)SkillType.Money5];
         }
         else if (type == SkillType.Time1)
         {
@@ -124,6 +176,18 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.Time2];
         }
+        else if (type == SkillType.Time4)
+        {
+            return skills[(int)SkillType.Pier3] && skills[(int)SkillType.Time3];
+        }
+        else if (type == SkillType.Time5)
+        {
+            return skills[(int)SkillType.Time4];
+        }
+        else if (type == SkillType.Time6)
+        {
+            return skills[(int)SkillType.Time5];
+        }
         else if (type == SkillType.Repop1)
         {
             return skills[(int)SkillType.Pier1];
@@ -136,6 +200,18 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.Repop2];
         }
+        else if (type == SkillType.Repop4)
+        {
+            return skills[(int)SkillType.Pier3]&&skills[(int)SkillType.Repop3];
+        }
+        else if (type ==SkillType.Repop5)
+        {
+            return skills[(int)SkillType.Repop4];
+        }
+        else if (type == SkillType.Repop6)
+        {
+            return skills[(int)SkillType.Repop5];
+        }
         else if (type == SkillType.Pier1)
         {
             return skills[(int)SkillType.Hook3] || skills[(int)SkillType.GrowFish3] || skills[(int)SkillType.Money3];
@@ -145,8 +221,16 @@ public class SkillSystem : MonoBehaviour
             return skills[(int)SkillType.Time3] || skills[(int)SkillType.Repop3];
             //　マスタースキルは全てのスキルを覚えていなければダメ
         }
-  
-        return true;
+        else if (type == SkillType.Pier3)
+        {
+            return skills[(int)SkillType.Hook6] || skills[(int)SkillType.GrowFish6] || skills[(int)SkillType.Money6];
+        }
+        else if(type == SkillType.Pier4)
+        {
+            return skills[(int)SkillType.Time6] || skills[(int)SkillType.Repop6];
+        }
+
+            return true;
     }
     //　スキル毎にボタンのオン・オフをする処理を実行させる
     void CheckOnOff()
