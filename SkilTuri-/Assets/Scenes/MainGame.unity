@@ -478,17 +478,6 @@ MonoBehaviour:
   reelSpeed: 5
   segmentCount: 20
   curveHeight: 2
-  fishList:
-  - {fileID: 11400000, guid: fa2f6c2e9453b3e49bdb37fd1bef6abe, type: 2}
-  - {fileID: 11400000, guid: 03436dd30fd413c44ae0dfa88b263bc0, type: 2}
-  - {fileID: 11400000, guid: 168e2615e9e3b7b49b21dcc5a4047fd9, type: 2}
-  - {fileID: 11400000, guid: 2e165723700f99c4daeaa1d4356b4c2e, type: 2}
-  - {fileID: 11400000, guid: d2ee5c3d491166c4aa56cb8571786fa7, type: 2}
-  - {fileID: 11400000, guid: 79523d5094b764545a1c8bdd2864168b, type: 2}
-  - {fileID: 11400000, guid: 33d40ecd53d0f6247860acde910b31b8, type: 2}
-  - {fileID: 11400000, guid: 943974df81408e749b01cb0dd9546f2a, type: 2}
-  - {fileID: 11400000, guid: 5b3d33399212a5143a710142def11ae3, type: 2}
-  - {fileID: 11400000, guid: 32431a8698722ad488c0647c62344584, type: 2}
   fishGetUIPrefab: {fileID: 5158924256382526496, guid: e9c6550e53f6f6f4785da5a34c9d0c37, type: 3}
   playerTarget: {fileID: 1748367896}
 --- !u!212 &656287734
@@ -718,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bb937b4a2a30445ba148d485197d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameTime: 120
+  gameTime: 10
   timeText: {fileID: 1731444661}
   money: 0
   caughtFishList: []
@@ -1037,8 +1026,8 @@ Transform:
   m_GameObject: {fileID: 1115791218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -5, z: -1}
-  m_LocalScale: {x: 29.000978, y: 9, z: 1}
+  m_LocalPosition: {x: 3.4, y: -5, z: -1}
+  m_LocalScale: {x: 29, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1226,6 +1215,18 @@ MonoBehaviour:
   gameTimeLimit: 10
   spawnCount: 20
   detectRange: 3
+  fishList:
+  - {fileID: 11400000, guid: fa2f6c2e9453b3e49bdb37fd1bef6abe, type: 2}
+  - {fileID: 11400000, guid: 03436dd30fd413c44ae0dfa88b263bc0, type: 2}
+  - {fileID: 11400000, guid: 168e2615e9e3b7b49b21dcc5a4047fd9, type: 2}
+  - {fileID: 11400000, guid: 2e165723700f99c4daeaa1d4356b4c2e, type: 2}
+  - {fileID: 11400000, guid: d2ee5c3d491166c4aa56cb8571786fa7, type: 2}
+  - {fileID: 11400000, guid: 79523d5094b764545a1c8bdd2864168b, type: 2}
+  - {fileID: 11400000, guid: 33d40ecd53d0f6247860acde910b31b8, type: 2}
+  - {fileID: 11400000, guid: 943974df81408e749b01cb0dd9546f2a, type: 2}
+  - {fileID: 11400000, guid: 5b3d33399212a5143a710142def11ae3, type: 2}
+  - {fileID: 11400000, guid: 32431a8698722ad488c0647c62344584, type: 2}
+  pierLevel: 0
   minThrowPower: 5
   maxThrowPower: 20
   maxChargeTime: 2
