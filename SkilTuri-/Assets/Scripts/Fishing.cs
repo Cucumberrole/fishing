@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 public class Fishing : MonoBehaviour
 {
@@ -36,7 +35,6 @@ public class Fishing : MonoBehaviour
     private Rigidbody2D LureRigidbody;  //ルアーのRigidbody2Dコンポーネントを格納する変数
 
     private List<Fish> caughtFishes = new List<Fish>();
-    public FishData[] fishList;
     public FishGetUI fishGetUIPrefab;
 
     private List<Fish> launchedFishes = new List<Fish>();
@@ -317,13 +315,27 @@ public class Fishing : MonoBehaviour
 
     FishData GetRandomFish(FishSize size)
     {
+        if (GManager.instance == null)
+        {
+            Debug.LogError("GManagerが見つかりません！");
+            return null;
+        }
+
+        FishData[] fishList = GManager.instance.fishList;
+
+        if (fishList == null || fishList.Length == 0)
+        {
+            Debug.LogError("GManagerのFish Listが設定されていません！");
+            return null;
+        }
+
         List<FishData> candidates = new List<FishData>();
 
         foreach (FishData fish in fishList)
         {
             if (fish == null)
             {
-                Debug.Log("フィッシュデータが空です！！");
+                Debug.LogWarning("Fish Listに空の項目があります！");
                 continue;
             }
 
@@ -335,6 +347,8 @@ public class Fishing : MonoBehaviour
 
         if (candidates.Count == 0)
         {
+            Debug.LogWarning(size + "サイズの魚がFish Listに登録されていません！");
+
             return null;
         }
 
