@@ -43,6 +43,8 @@ public class Fish : MonoBehaviour
 
     private SpriteRenderer sr; // デバッグ用
 
+    private bool isFacingRight = true; // 現在右を向いているか？
+
 
 
 
@@ -85,6 +87,9 @@ public class Fish : MonoBehaviour
         {
             transform.localScale = Vector3.one * 0.7f;
         }
+
+        // 初期状態の魚の向きを保存
+        isFacingRight = transform.localScale.x >= 0f;
     }
 
 
@@ -135,15 +140,11 @@ public class Fish : MonoBehaviour
             // 移動方向に応じて左右反転
             if (moveDirection.x > 0.01f)
             {
-                Vector3 scale = transform.localScale;
-                scale.x = Mathf.Abs(scale.x);
-                transform.localScale = scale;
+                SetFacing(true);
             }
             else if (moveDirection.x < -0.01f)
             {
-                Vector3 scale = transform.localScale;
-                scale.x = -Mathf.Abs(scale.x);
-                transform.localScale = scale;
+                SetFacing(false);
             }
 
             // 少し揺らす
@@ -166,9 +167,7 @@ public class Fish : MonoBehaviour
 
         if (isLaunching)
         {
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x);
-            transform.localScale = scale;
+            SetFacing(true);
 
             transform.rotation = Quaternion.Euler(0, 0, 90);
 
@@ -201,14 +200,7 @@ public class Fish : MonoBehaviour
 
                 transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
 
-                if (lure.transform.position.x > transform.position.x)
-                {
-                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
+                SetFacing(lure.transform.position.x > transform.position.x);
 
                 if (distance < 0.3f)
                 {
@@ -240,25 +232,54 @@ public class Fish : MonoBehaviour
             ChooseNewTarget();
         }
 
-        if (targetPos.x > transform.position.x)
+        SetFacing(targetPos.x > transform.position.x);
+    }
+
+
+
+
+
+
+    void SetFacing(bool faceRight)
+    {
+        if (sr == null)
         {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            return;
+        }
+
+        // すでに同じ向きなら反転しない
+        if (isFacingRight == faceRight)
+        {
+            return;
+        }
+
+        // 反転前の魚画像の中心位置
+        Vector3 centerBefore = sr.bounds.center;
+
+        Vector3 scale = transform.localScale;
+
+        if (faceRight)
+        {
+            scale.x = Mathf.Abs(scale.x);
         }
         else
         {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            scale.x = -Mathf.Abs(scale.x);
         }
-    }
 
-
-
-
-    void Flip()
-    {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
         transform.localScale = scale;
+
+        // 反転後の魚画像の中心位置
+        Vector3 centerAfter = sr.bounds.center;
+
+        // 魚の体の中心がずれないように位置を補正
+        transform.position += centerBefore - centerAfter;
+
+        isFacingRight = faceRight;
     }
+
+
+
 
 
 
