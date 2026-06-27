@@ -471,15 +471,11 @@ MonoBehaviour:
   Lure: {fileID: 656287732}
   Rodtip: {fileID: 569007269}
   line: {fileID: 226710570}
+  playerTarget: {fileID: 1748367896}
+  fishGetUIPrefab: {fileID: 5158924256382526496, guid: e9c6550e53f6f6f4785da5a34c9d0c37, type: 3}
   throwDirection: {x: 1, y: 1}
-  minPower: 5
-  maxPower: 20
-  maxChargeTime: 2
-  reelSpeed: 5
   segmentCount: 20
   curveHeight: 2
-  fishGetUIPrefab: {fileID: 5158924256382526496, guid: e9c6550e53f6f6f4785da5a34c9d0c37, type: 3}
-  playerTarget: {fileID: 1748367896}
 --- !u!212 &656287734
 SpriteRenderer:
   serializedVersion: 2
@@ -707,11 +703,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bb937b4a2a30445ba148d485197d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameTime: 10
   timeText: {fileID: 1731444661}
+  moneyText: {fileID: 901466938}
+  gameTime: 10
   money: 0
   caughtFishList: []
-  moneyText: {fileID: 901466938}
 --- !u!1 &884337051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,9 +1208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GManager
   roundMoney: 0
   totalMoney: 0
-  gameTimeLimit: 10
+  gameTimeLimit: 20
   spawnCount: 20
   detectRange: 3
+  biteDistance: 0.3
   fishList:
   - {fileID: 11400000, guid: fa2f6c2e9453b3e49bdb37fd1bef6abe, type: 2}
   - {fileID: 11400000, guid: 03436dd30fd413c44ae0dfa88b263bc0, type: 2}
@@ -1226,6 +1223,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 943974df81408e749b01cb0dd9546f2a, type: 2}
   - {fileID: 11400000, guid: 5b3d33399212a5143a710142def11ae3, type: 2}
   - {fileID: 11400000, guid: 32431a8698722ad488c0647c62344584, type: 2}
+  smallFishScale: 0.3
+  mediumFishScale: 0.5
+  largeFishScale: 0.7
+  fishLaunchSpeed: 10
+  fishReturnDuration: 1.2
+  fishReturnCurveHeight: 0.5
+  fishReturnSideOffset: 4
   pierLevel: 5
   minThrowPower: 5
   maxThrowPower: 20
@@ -1818,7 +1822,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   fishPrefab: {fileID: 319958820}
-  spawnCount: 5
   spawnMin: {x: -8, y: -8}
   spawnMax: {x: 8, y: -6}
 --- !u!4 &2127256764

@@ -4,100 +4,64 @@ public class Fish : MonoBehaviour
 {
     public FishSize size;
 
+    [Header("é­šã”ã¨ã«è¨­å®šã™ã‚‹å€¤")]
     public float speed = 2f;
-    public float catchRange = 2.5f;
 
-    private Vector3 startPos;
-    private Vector2 targetPos;
-
-    // private bool movingRight = true;
-
+    [Header("ç¾åœ¨ã®çŠ¶æ…‹")]
     public bool isCaught = false;
     public bool isLaunching = false;
-
     public bool isReturning = false;
     public bool reachedPlayer = false;
+    public bool isInterested = false;
 
     public FishData caughtData;
 
+    private Vector2 targetPos;
+    private BoxCollider2D seaCollider;
+    private GameObject lure;
+    private SpriteRenderer spriteRenderer;
     private Transform returnTarget;
 
-    // –ß‚é‰‰o
-    public float returnDuration = 1.2f;
-    public float returnCurveHeight = 3f;
-    public float returnSideOffset = 2f;
+    private bool isFacingRight = true;
 
+    // GManagerã‹ã‚‰å—ã‘å–ã‚‹å…±é€šè¨­å®š
+    private float detectRange = 3f;
+    private float biteDistance = 0.3f;
+    private float launchSpeed = 10f;
+    private float returnDuration = 1.2f;
+    private float returnCurveHeight = 0.5f;
+    private float returnSideOffset = 4f;
+
+    // æˆ»ã‚‹æ¼”å‡ºã§ä½¿ã†ç¾åœ¨å€¤
     private Vector3 returnStartPosition;
     private Vector3 returnControlPosition;
     private float returnElapsedTime;
 
-    public float detectRange = 3f;
-
-    public float swimRangeX = 3f;
-    public float swimRangeY = 3f;
-
-    private BoxCollider2D seaCollider;
-    private GameObject lure;
-
-    public bool isInterested = false;
-
-    private SpriteRenderer sr; // ƒfƒoƒbƒO—p
-
-    private bool isFacingRight = true; // Œ»İ‰E‚ğŒü‚¢‚Ä‚¢‚é‚©H
-
-
-
-
-    void Start()
+    private void Start()
     {
         GameObject sea = GameObject.FindWithTag("Sea");
-
         lure = GameObject.FindWithTag("Lure");
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         if (lure == null)
         {
-            Debug.Log("ƒ‹ƒA[‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñI");
+            Debug.LogWarning("ãƒ«ã‚¢ãƒ¼ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼");
         }
-        else
-        {
-            Debug.Log("ƒ‹ƒA[”­Œ©I");
-        }
-
-        sr = GetComponent<SpriteRenderer>(); // ƒfƒoƒbƒO—p
 
         if (sea != null)
         {
             seaCollider = sea.GetComponent<BoxCollider2D>();
         }
 
-        startPos = transform.position;
-
+        LoadGlobalSettings();
+        ApplySizeScale();
         ChooseNewTarget();
 
-
-        // ‚»‚ê‚¼‚ê‚Ì‹›‚Ì‘å‚«‚³
-        if (size == FishSize.Small)
-        {
-            transform.localScale = Vector3.one * 0.3f;
-        }
-        else if (size == FishSize.Medium)
-        {
-            transform.localScale = Vector3.one * 0.5f;
-        }
-        else if (size == FishSize.Large)
-        {
-            transform.localScale = Vector3.one * 0.7f;
-        }
-
-        // ‰Šúó‘Ô‚Ì‹›‚ÌŒü‚«‚ğ•Û‘¶
         isFacingRight = transform.localScale.x >= 0f;
     }
 
-
-
-
-    void Update()
+    private void Update()
     {
-        // ƒvƒŒƒCƒ„[‚Ö“’…‚µ‚½‹›‚Í“®‚©‚³‚È‚¢
         if (reachedPlayer)
         {
             return;
@@ -105,74 +69,15 @@ public class Fish : MonoBehaviour
 
         if (isReturning)
         {
-
-
-
-            if (returnTarget == null)
-            {
-                return;
-            }
-
-            returnElapsedTime += Time.deltaTime;
-
-            float duration = Mathf.Max(returnDuration, 0.01f);
-
-            // 0`1‚Ìis“x
-            float t = Mathf.Clamp01(returnElapsedTime / duration);
-
-            // Å‰‚Í‘¬‚­A“’…‘O‚É‚ä‚Á‚­‚è‚É‚È‚é
-            float easedT = 1f - Mathf.Pow(1f - t, 3f);
-
-            Vector3 endPosition = returnTarget.position;
-
-            // “ñŸƒxƒWƒF‹Èü
-            Vector3 pointA = Vector3.Lerp(returnStartPosition, returnControlPosition, easedT);
-
-            Vector3 pointB = Vector3.Lerp(returnControlPosition, endPosition, easedT);
-
-            Vector3 nextPosition = Vector3.Lerp(pointA, pointB, easedT);
-
-            // ˆÚ“®•ûŒü‚ğæ“¾
-            Vector3 moveDirection = nextPosition - transform.position;
-
-            transform.position = nextPosition;
-
-            // ˆÚ“®•ûŒü‚É‰‚¶‚Ä¶‰E”½“]
-            if (moveDirection.x > 0.01f)
-            {
-                SetFacing(true);
-            }
-            else if (moveDirection.x < -0.01f)
-            {
-                SetFacing(false);
-            }
-
-            // ­‚µ—h‚ç‚·
-            float shakeAngle = Mathf.Sin(t * Mathf.PI * 4f) * 12f * (1f - t);
-
-            transform.rotation = Quaternion.Euler(0f, 0f, shakeAngle);
-
-            // ƒvƒŒƒCƒ„[‚Ö“’…
-            if (t >= 1f)
-            {
-                transform.position = endPosition;
-                transform.rotation = Quaternion.identity;
-
-                isReturning = false;
-                reachedPlayer = true;
-            }
-
+            UpdateReturnMovement();
             return;
         }
 
         if (isLaunching)
         {
             SetFacing(true);
-
-            transform.rotation = Quaternion.Euler(0, 0, 90);
-
-            transform.position += Vector3.up * 10f * Time.deltaTime;
-
+            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            transform.position += Vector3.up * launchSpeed * Time.deltaTime;
             return;
         }
 
@@ -180,8 +85,13 @@ public class Fish : MonoBehaviour
         {
             if (lure != null)
             {
-                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * 2f * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(
+                    transform.position,
+                    lure.transform.position,
+                    speed * 2f * Time.deltaTime
+                );
             }
+
             return;
         }
 
@@ -189,43 +99,81 @@ public class Fish : MonoBehaviour
         {
             float distance = Vector2.Distance(transform.position, lure.transform.position);
 
-            // Debug.Log(distance);
-
             if (distance < detectRange)
             {
-                Debug.Log(gameObject.name + " ‚ªƒ‹ƒA[‚ğ”­Œ©");
-                sr.color = Color.red;
-
                 isInterested = true;
 
-                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.red;
+                }
 
                 SetFacing(lure.transform.position.x > transform.position.x);
 
-                if (distance < 0.3f)
+                transform.position = Vector2.MoveTowards(
+                    transform.position,
+                    lure.transform.position,
+                    speed * Time.deltaTime
+                );
+
+                distance = Vector2.Distance(transform.position, lure.transform.position);
+
+                if (distance < biteDistance)
                 {
                     isCaught = true;
-                    Debug.Log("H‚¢‚Â‚¢‚½I");
+                    Debug.Log("é£Ÿã„ã¤ã„ãŸï¼");
                 }
 
                 return;
             }
-            else
+
+            isInterested = false;
+
+            if (spriteRenderer != null)
             {
-                sr.color = Color.white;
-                isInterested = false;
+                spriteRenderer.color = Color.white;
             }
         }
 
         Swim();
     }
 
-
-
-
-    void Swim()
+    private void LoadGlobalSettings()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        if (GManager.instance == null)
+        {
+            Debug.LogWarning("GManagerãŒè¦‹ã¤ã‹ã‚‰ãªã„ãŸã‚ã€Fishã®åˆæœŸå€¤ã‚’ä½¿ã„ã¾ã™");
+            return;
+        }
+
+        detectRange = GManager.instance.detectRange;
+        biteDistance = GManager.instance.biteDistance;
+        launchSpeed = GManager.instance.fishLaunchSpeed;
+        returnDuration = GManager.instance.fishReturnDuration;
+        returnCurveHeight = GManager.instance.fishReturnCurveHeight;
+        returnSideOffset = GManager.instance.fishReturnSideOffset;
+    }
+
+    private void ApplySizeScale()
+    {
+        float scale = size switch
+        {
+            FishSize.Small => GManager.instance != null ? GManager.instance.smallFishScale : 0.3f,
+            FishSize.Medium => GManager.instance != null ? GManager.instance.mediumFishScale : 0.5f,
+            FishSize.Large => GManager.instance != null ? GManager.instance.largeFishScale : 0.7f,
+            _ => 1f
+        };
+
+        transform.localScale = Vector3.one * scale;
+    }
+
+    private void Swim()
+    {
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            targetPos,
+            speed * Time.deltaTime
+        );
 
         if (Vector2.Distance(transform.position, targetPos) < 0.2f)
         {
@@ -235,80 +183,39 @@ public class Fish : MonoBehaviour
         SetFacing(targetPos.x > transform.position.x);
     }
 
-
-
-
-
-
-    void SetFacing(bool faceRight)
+    private void SetFacing(bool faceRight)
     {
-        if (sr == null)
+        if (spriteRenderer == null || isFacingRight == faceRight)
         {
             return;
         }
 
-        // ‚·‚Å‚É“¯‚¶Œü‚«‚È‚ç”½“]‚µ‚È‚¢
-        if (isFacingRight == faceRight)
-        {
-            return;
-        }
-
-        // ”½“]‘O‚Ì‹›‰æ‘œ‚Ì’†SˆÊ’u
-        Vector3 centerBefore = sr.bounds.center;
-
+        Vector3 centerBefore = spriteRenderer.bounds.center;
         Vector3 scale = transform.localScale;
-
-        if (faceRight)
-        {
-            scale.x = Mathf.Abs(scale.x);
-        }
-        else
-        {
-            scale.x = -Mathf.Abs(scale.x);
-        }
-
+        scale.x = faceRight ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
         transform.localScale = scale;
 
-        // ”½“]Œã‚Ì‹›‰æ‘œ‚Ì’†SˆÊ’u
-        Vector3 centerAfter = sr.bounds.center;
-
-        // ‹›‚Ì‘Ì‚Ì’†S‚ª‚¸‚ê‚È‚¢‚æ‚¤‚ÉˆÊ’u‚ğ•â³
+        Vector3 centerAfter = spriteRenderer.bounds.center;
         transform.position += centerBefore - centerAfter;
 
         isFacingRight = faceRight;
     }
 
-
-
-
-
-
-
-    void OnDrawGizmosSelected()
+    private void ChooseNewTarget()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, catchRange);
-    }
-
-
-
-
-    void ChooseNewTarget()
-    {
-        if (seaCollider == null) return;
+        if (seaCollider == null)
+        {
+            return;
+        }
 
         Bounds bounds = seaCollider.bounds;
-
-        float margin = 1f;
+        const float margin = 1f;
 
         float x = Random.Range(bounds.min.x + margin, bounds.max.x - margin);
-
         float y = Random.Range(bounds.min.y + margin, bounds.max.y - margin);
 
         targetPos = new Vector2(x, y);
     }
-
-
 
     public void BeginReturn(Transform target, FishData data)
     {
@@ -324,27 +231,74 @@ public class Fish : MonoBehaviour
 
         returnTarget = target;
         caughtData = data;
-
         returnElapsedTime = 0f;
         returnStartPosition = transform.position;
 
-        // ŠJn’n“_‚ÆƒvƒŒƒCƒ„[‚Ì’†ŠÔ’n“_
-        Vector3 middlePosition = (returnStartPosition + returnTarget.position) / 2f;
+        Vector3 endPosition = returnTarget.position;
+        Vector3 middlePosition = (returnStartPosition + endPosition) / 2f;
+        Vector3 returnDirection = (endPosition - returnStartPosition).normalized;
+        Vector3 perpendicularDirection = new(-returnDirection.y, returnDirection.x, 0f);
+        float sideDirection = Random.value < 0.5f ? -1f : 1f;
 
-        // ‰¡•ûŒü‚Öƒ‰ƒ“ƒ_ƒ€‚É–c‚ç‚Ü‚¹‚é
-        float randomSide = Random.Range(-returnSideOffset, returnSideOffset);
+        returnControlPosition =
+            middlePosition
+            + perpendicularDirection * returnSideOffset * sideDirection
+            + Vector3.up * returnCurveHeight;
 
-        // ‹Èü‚Ì‹È‚ª‚è•û‚ğŒˆ‚ß‚é’n“_
-        returnControlPosition = middlePosition + Vector3.up * returnCurveHeight + Vector3.right * randomSide;
-
-        // ”ò‚Ñã‚ª‚Á‚½‚Æ‚«‚Ì‰ñ“]‚ğ–ß‚·
         transform.rotation = Quaternion.identity;
 
-        // ‹›‰e‚©‚çÀÛ‚Ì‹›‚Ì‰æ‘œ‚Ö•ÏX
-        if (sr != null && data.fishSprite != null)
+        if (spriteRenderer != null && data.fishSprite != null)
         {
-            sr.sprite = data.fishSprite;
-            sr.color = Color.white;
+            spriteRenderer.sprite = data.fishSprite;
+            spriteRenderer.color = Color.white;
         }
+    }
+
+    private void UpdateReturnMovement()
+    {
+        if (returnTarget == null)
+        {
+            return;
+        }
+
+        returnElapsedTime += Time.deltaTime;
+
+        float duration = Mathf.Max(returnDuration, 0.01f);
+        float t = Mathf.Clamp01(returnElapsedTime / duration);
+        float easedT = 1f - Mathf.Pow(1f - t, 3f);
+
+        Vector3 endPosition = returnTarget.position;
+        Vector3 pointA = Vector3.Lerp(returnStartPosition, returnControlPosition, easedT);
+        Vector3 pointB = Vector3.Lerp(returnControlPosition, endPosition, easedT);
+        Vector3 nextPosition = Vector3.Lerp(pointA, pointB, easedT);
+        Vector3 moveDirection = nextPosition - transform.position;
+
+        transform.position = nextPosition;
+
+        if (moveDirection.x > 0.01f)
+        {
+            SetFacing(true);
+        }
+        else if (moveDirection.x < -0.01f)
+        {
+            SetFacing(false);
+        }
+
+        float shakeAngle = Mathf.Sin(t * Mathf.PI * 4f) * 12f * (1f - t);
+        transform.rotation = Quaternion.Euler(0f, 0f, shakeAngle);
+
+        if (t >= 1f)
+        {
+            transform.position = endPosition;
+            transform.rotation = Quaternion.identity;
+            isReturning = false;
+            reachedPlayer = true;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectRange);
     }
 }

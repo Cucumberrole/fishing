@@ -6,197 +6,192 @@ public class Fishing : MonoBehaviour
     public GameObject Lure;
     public Transform Rodtip;
     public LineRenderer line;
+    public Transform playerTarget;
+    public FishGetUI fishGetUIPrefab;
 
-    public Vector2 throwDirection = new Vector2(1f, 1f);
+    [Header("æŠ•ã’ã‚‹æ–¹å‘")]
+    public Vector2 throwDirection = new(1f, 1f);
 
-    // ˆê”Ôã‚¢“Š‚°‚é—Í
-    public float minPower = 5f;
-
-    // Å‘å‚Ü‚Å‚½‚ß‚½‚Æ‚«‚Ì—Í
-    public float maxPower = 20f;
-
-    // Å‘å‚Ü‚Å‚½‚ß‚é‚Ì‚É•K—v‚È•b”
-    public float maxChargeTime = 2f;
-
-    // Œ»İ‚½‚ß‚Ä‚¢‚éŠÔ
-    private float currentChargeTime = 0f;
-
-    // Œ»İ’·‰Ÿ‚µ’†‚©
-    private bool isCharging = false;
-
-    //‚Ç‚ÌŠp“x‚Å“Š‚°‚é‚©
-    // public float power = 10f;
-    public float reelSpeed = 5f; // Šª‚«æ‚è‚Ì‘¬“x
-    private bool isReeling = false; // Šª‚«æ‚è’†‚©‚Ç‚¤‚©‚ğ¦‚·ƒtƒ‰ƒO
-
+    [Header("ç³¸ã®è¦‹ãŸç›®")]
     public int segmentCount = 20;
     public float curveHeight = 2f;
 
-    private Rigidbody2D LureRigidbody;  //ƒ‹ƒA[‚ÌRigidbody2DƒRƒ“ƒ|[ƒlƒ“ƒg‚ğŠi”[‚·‚é•Ï”
+    private float currentChargeTime;
+    private bool isCharging;
+    private bool isReeling;
+    private Rigidbody2D lureRigidbody;
 
-    private List<Fish> caughtFishes = new List<Fish>();
-    public FishGetUI fishGetUIPrefab;
+    private readonly List<Fish> caughtFishes = new();
+    private readonly List<Fish> launchedFishes = new();
 
-    private List<Fish> launchedFishes = new List<Fish>();
+    private float MinPower => GManager.instance != null ? GManager.instance.minThrowPower : 5f;
+    private float MaxPower => GManager.instance != null ? GManager.instance.maxThrowPower : 20f;
+    private float MaxChargeTime => GManager.instance != null ? GManager.instance.maxChargeTime : 2f;
+    private float ReelSpeed => GManager.instance != null ? GManager.instance.reelSpeed : 5f;
 
-    public Transform playerTarget;
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        if (Lure != null)//Lure‚ªnull‚Å‚È‚¢ê‡ARigidbody2DƒRƒ“ƒ|[ƒlƒ“ƒg‚ğæ“¾
+        if (Lure != null)
         {
-            LureRigidbody = Lure.GetComponent<Rigidbody2D>();
-            LureRigidbody.simulated = false;//‰‚ß‚Í•¨—‹““®‚µ‚È‚¢
+            lureRigidbody = Lure.GetComponent<Rigidbody2D>();
+
+            if (lureRigidbody != null)
+            {
+                lureRigidbody.simulated = false;
+            }
         }
+
         if (line != null)
         {
-            line.positionCount = segmentCount; // LineRenderer‚Ì’¸“_”‚ğİ’è(ŠÆæ‚Æƒ‹ƒA[)
+            line.positionCount = segmentCount;
         }
-
     }
 
-
-
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Lure == null || Rodtip == null || LureRigidbody == null) return;
-        // LureARodtipALureRigidbody‚Ì‚¢‚¸‚ê‚©‚ªnull‚Ìê‡‚Íˆ—‚ğ’†’f
-        //ª‚±‚ê‚Å‚«‚é’j‚ª‚â‚é‚â‚Â
+        if (Lure == null || Rodtip == null || lureRigidbody == null)
+        {
+            return;
+        }
 
-        // ¶ƒNƒŠƒbƒN‚ğ‰Ÿ‚µ‚½uŠÔ
-        if (Input.GetMouseButtonDown(0) && isReeling == false)
+        UpdateThrowInput();
+        UpdateReeling();
+        UpdateFishingLine();
+        RegisterCaughtFishes();
+        UpdateLaunchedFishes();
+    }
+
+    private void UpdateThrowInput()
+    {
+        if (Input.GetMouseButtonDown(0) && !isReeling)
         {
             isCharging = true;
             currentChargeTime = 0f;
 
-            // ‚½‚ß‚Ä‚¢‚éŠÔ‚Íƒ‹ƒA[‚ğŠÆæ‚É’u‚­
             Lure.transform.position = Rodtip.position;
-
-            // ‘O‰ñ‚Ì“®‚«‚ğƒŠƒZƒbƒg
-            LureRigidbody.linearVelocity = Vector2.zero;
-            LureRigidbody.angularVelocity = 0f;
-
-            // ‚½‚ß‚Ä‚¢‚éŠÔ‚Í•¨—‹““®‚ğ~‚ß‚é
-            LureRigidbody.simulated = false;
+            lureRigidbody.linearVelocity = Vector2.zero;
+            lureRigidbody.angularVelocity = 0f;
+            lureRigidbody.simulated = false;
         }
 
-        // ¶ƒNƒŠƒbƒN‚ğ‰Ÿ‚µ‚Ä‚¢‚éŠÔ
         if (Input.GetMouseButton(0) && isCharging)
         {
-            currentChargeTime += Time.deltaTime;
+            currentChargeTime = Mathf.Min(
+                currentChargeTime + Time.deltaTime,
+                MaxChargeTime
+            );
 
-            // Å‘åŠÔ‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
-            currentChargeTime = Mathf.Min(currentChargeTime, maxChargeTime);
-
-            // ‚½‚ß‚Ä‚¢‚éŠÔ‚àŠÆæ‚ÉŒÅ’è
             Lure.transform.position = Rodtip.position;
         }
 
-        // ¶ƒNƒŠƒbƒN‚ğ—£‚µ‚½uŠÔ
         if (Input.GetMouseButtonUp(0) && isCharging)
         {
             isCharging = false;
 
-            // ‚½‚ß‹ï‡‚ğ0`1‚Å‹‚ß‚é
-            float chargeRate = Mathf.Clamp01(currentChargeTime / Mathf.Max(maxChargeTime, 0.01f));
+            float chargeRate = Mathf.Clamp01(
+                currentChargeTime / Mathf.Max(MaxChargeTime, 0.01f)
+            );
 
-            // ‚½‚ß‹ï‡‚É‡‚í‚¹‚Ä“Š‚°‚é—Í‚ğŒˆ‚ß‚é
-            float throwPower = Mathf.Lerp(minPower, maxPower, chargeRate);
+            float throwPower = Mathf.Lerp(MinPower, MaxPower, chargeRate);
 
-            LureRigidbody.simulated = true;
-
-            LureRigidbody.AddForce(throwDirection.normalized * throwPower, ForceMode2D.Impulse);
-
-            Debug.Log("‚½‚ßŠÔF" + currentChargeTime + " “Š‚°‚é—ÍF" + throwPower);
+            lureRigidbody.simulated = true;
+            lureRigidbody.AddForce(
+                throwDirection.normalized * throwPower,
+                ForceMode2D.Impulse
+            );
 
             currentChargeTime = 0f;
         }
 
         if (Input.GetMouseButtonDown(1))
         {
+            isCharging = false;
+            currentChargeTime = 0f;
+
             Lure.transform.position = Rodtip.position;
+            lureRigidbody.linearVelocity = Vector2.zero;
+            lureRigidbody.angularVelocity = 0f;
+            lureRigidbody.simulated = false;
 
-            LureRigidbody.simulated = false;
-
-            if (caughtFishes.Count > 0)
+            foreach (Fish fish in caughtFishes)
             {
-                Debug.Log("‹›‚ğ”ò‚Î‚µ‚Ü‚·I");
-
-                foreach (Fish fish in caughtFishes)
+                if (fish == null)
                 {
-                    fish.isLaunching = true;
-                    launchedFishes.Add(fish);
+                    continue;
                 }
 
-                caughtFishes.Clear();
+                fish.isLaunching = true;
+                launchedFishes.Add(fish);
             }
-        }
 
-        if (isReeling)
+            caughtFishes.Clear();
+        }
+    }
+
+    private void UpdateReeling()
+    {
+        if (!isReeling)
         {
-            Lure.transform.position = Vector2.MoveTowards(Lure.transform.position, Rodtip.position, reelSpeed * Time.deltaTime);
-            //Vector2.MoveTowards(¡‚ÌˆÊ’u, –Ú•WˆÊ’u, ˆÚ“®‹——£)‚ç‚µ‚¢
-            // ƒ‹ƒA[‚ğŠÆæ‚ÉŒü‚©‚Á‚Äˆê’è‘¬“x‚ÅˆÚ“®
+            return;
+        }
 
-            //Šª‚­‚Æ‚«˜A‘Å—p
-            //  LureRigidbody.linearVelocity = (Rodtip.position - Lure.transform.position).normalized * reelSpeed;//normalized‚Í•ûŒüƒxƒNƒgƒ‹‚ğ‹³‚¦‚Ä‚­‚ê‚é‚â‚Â
-            //  // ƒ‹ƒA[‚ğŠÆæ‚ÉŒü‚©‚Á‚Äˆê’è‘¬“x‚ÅˆÚ“®
-            //  if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
-            //{
-            //      Lure.transform.position = Rodtip.position; // ƒ‹ƒA[‚ªŠÆæ‚É‹ß‚Ã‚¢‚½‚çˆÊ’u‚ğŠ®‘S‚É‡‚í‚¹‚é
-            //}
-            for (int i = 0; i < caughtFishes.Count; i++)
+        Lure.transform.position = Vector2.MoveTowards(
+            Lure.transform.position,
+            Rodtip.position,
+            ReelSpeed * Time.deltaTime
+        );
+
+        for (int i = 0; i < caughtFishes.Count; i++)
+        {
+            if (caughtFishes[i] != null)
             {
-                caughtFishes[i].transform.position = Lure.transform.position + Vector3.down * (0.7f * (i + 1));
-            }
-
-            if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
-            {
-                Lure.transform.position = Rodtip.position;
-
-                isReeling = false;
+                caughtFishes[i].transform.position =
+                    Lure.transform.position + Vector3.down * (0.7f * (i + 1));
             }
         }
-        //line.SetPosition(0, Rodtip.position);//ŠÆæ‚ÌˆÊ’u‚ğLineRenderer‚Ìn“_‚Éİ’è
-        //line.SetPosition(1, Lure.transform.position);//ƒ‹ƒA[‚ÌˆÊ’u‚ğLineRenderer‚ÌI“_‚Éİ’è
+
+        if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
+        {
+            Lure.transform.position = Rodtip.position;
+            isReeling = false;
+        }
+    }
+
+    private void UpdateFishingLine()
+    {
+        if (line == null || segmentCount < 2)
+        {
+            return;
+        }
+
         Vector3 start = Rodtip.position;
         Vector3 end = Lure.transform.position;
 
         for (int i = 0; i < segmentCount; i++)
         {
             float t = i / (float)(segmentCount - 1);
-
-            // ’¼ü•âŠÔ
             Vector3 point = Vector3.Lerp(start, end, t);
-
-            // •ú•¨ü‚Û‚­‰º‚°‚é
-            float curve = Mathf.Sin(t * Mathf.PI) * curveHeight;
-
-            point.y -= curve;
+            point.y -= Mathf.Sin(t * Mathf.PI) * curveHeight;
             line.SetPosition(i, point);
         }
+    }
 
+    private void RegisterCaughtFishes()
+    {
         Fish[] fishes = FindObjectsByType<Fish>(FindObjectsSortMode.None);
 
         foreach (Fish fish in fishes)
         {
-            if (fish.isCaught)
+            if (fish != null && fish.isCaught && !caughtFishes.Contains(fish))
             {
-                if (!caughtFishes.Contains(fish))
-                {
-                    fish.isCaught = true;
-
-                    caughtFishes.Add(fish);
-
-                    Debug.Log("‹›‚ªH‚¢‚Â‚¢‚½I");
-                }
+                caughtFishes.Add(fish);
+                Debug.Log("é­šãŒé£Ÿã„ã¤ã„ãŸï¼");
             }
         }
+    }
 
+    private void UpdateLaunchedFishes()
+    {
         for (int i = launchedFishes.Count - 1; i >= 0; i--)
         {
             Fish fish = launchedFishes[i];
@@ -207,7 +202,6 @@ public class Fishing : MonoBehaviour
                 continue;
             }
 
-            // ‹›‚ªã‚Ö”ò‚ñ‚Å‚¢‚é“r’†
             if (fish.isLaunching)
             {
                 if (Camera.main == null)
@@ -215,15 +209,19 @@ public class Fishing : MonoBehaviour
                     continue;
                 }
 
-                Vector3 viewPos = Camera.main.WorldToViewportPoint(fish.transform.position);
+                Vector3 viewPosition = Camera.main.WorldToViewportPoint(fish.transform.position);
 
-                // ƒJƒƒ‰‚Ìã‘¤‚Öo‚½
-                if (viewPos.y > 1.0f)
+                if (viewPosition.y > 1f)
                 {
-                    Debug.Log("‹›‚ª‰æ–ÊŠO‚Öo‚Ü‚µ‚½");
+                    if (GManager.instance == null)
+                    {
+                        Debug.LogError("GManagerãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼");
+                        Destroy(fish.gameObject);
+                        launchedFishes.RemoveAt(i);
+                        continue;
+                    }
 
-                    FishData result =
-                        GetRandomFish(fish.size);
+                    FishData result = GManager.instance.GetRandomFish(fish.size);
 
                     if (result == null)
                     {
@@ -232,128 +230,61 @@ public class Fishing : MonoBehaviour
                         continue;
                     }
 
-                    Debug.Log("Šl“¾‚µ‚½‹›F" + result.fishName);
-
-                    Transform target = playerTarget;
-
-                    // playerTarget‚ª–¢İ’è‚È‚çŠÆæ‚Ö–ß‚·
-                    if (target == null)
-                    {
-                        target = Rodtip;
-                    }
-
+                    Transform target = playerTarget != null ? playerTarget : Rodtip;
                     fish.BeginReturn(target, result);
                 }
 
                 continue;
             }
 
-            // ƒvƒŒƒCƒ„[‚Ö“’…‚µ‚½
             if (fish.reachedPlayer)
             {
-                FishData result = fish.caughtData;
-
-                if (result != null)
-                {
-                    if (GameManager.Instance != null)
-                    {
-                        GameManager.Instance.AddMoney(result.money);
-
-                        GameManager.Instance.AddFish(result);
-                    }
-
-                    GameObject canvas = GameObject.Find("Canvas");
-
-                    if (fishGetUIPrefab != null &&
-                        canvas != null)
-                    {
-                        FishGetUI ui = Instantiate(fishGetUIPrefab, canvas.transform);
-
-                        ui.Setup(result);
-                    }
-                }
-
+                GiveFishReward(fish);
                 Destroy(fish.gameObject);
                 launchedFishes.RemoveAt(i);
             }
         }
     }
 
-
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void GiveFishReward(Fish fish)
     {
-        if (other.CompareTag("Sea"))
+        FishData result = fish.caughtData;
+
+        if (result == null)
         {
-            LureRigidbody.linearDamping = 5f;
-            LureRigidbody.angularDamping = 5f;
+            return;
         }
 
-        //Fish fish = other.GetComponent<Fish>();
-
-        //if (fish != null)
-        //{
-        //    caughtFish = fish;
-        //    fish.isCaught = true;
-        //}
-    }
-
-
-
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Sea"))
+        if (GameManager.Instance != null)
         {
-            LureRigidbody.linearDamping = 0f; // ŠC‚©‚ço‚½‚çƒ‹ƒA[‚Ì“®‚«‚ğŒ³‚É–ß‚·
-            LureRigidbody.angularDamping = 0f; // ŠC‚©‚ço‚½‚çƒ‹ƒA[‚Ì‰ñ“]‚àŒ³‚É–ß‚·
+            GameManager.Instance.AddMoney(result.money);
+            GameManager.Instance.AddFish(result);
+        }
+
+        GameObject canvas = GameObject.Find("Canvas");
+
+        if (fishGetUIPrefab != null && canvas != null)
+        {
+            //FishGetUI ui = Instantiate(fishGetUIPrefab, canvas.transform);
+            //ui.Setup(result);
         }
     }
 
-
-
-
-    FishData GetRandomFish(FishSize size)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (GManager.instance == null)
+        if (other.CompareTag("Sea"))
         {
-            Debug.LogError("GManager‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñI");
-            return null;
+            lureRigidbody.linearDamping = 5f;
+            lureRigidbody.angularDamping = 5f;
         }
+    }
 
-        FishData[] fishList = GManager.instance.fishList;
-
-        if (fishList == null || fishList.Length == 0)
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Sea"))
         {
-            Debug.LogError("GManager‚ÌFish List‚ªİ’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñI");
-            return null;
+            lureRigidbody.linearDamping = 0f;
+            lureRigidbody.angularDamping = 0f;
         }
-
-        List<FishData> candidates = new List<FishData>();
-
-        foreach (FishData fish in fishList)
-        {
-            if (fish == null)
-            {
-                Debug.LogWarning("Fish List‚É‹ó‚Ì€–Ú‚ª‚ ‚è‚Ü‚·I");
-                continue;
-            }
-
-            if (fish.size == size)
-            {
-                candidates.Add(fish);
-            }
-        }
-
-        if (candidates.Count == 0)
-        {
-            Debug.LogWarning(size + "ƒTƒCƒY‚Ì‹›‚ªFish List‚É“o˜^‚³‚ê‚Ä‚¢‚Ü‚¹‚ñI");
-
-            return null;
-        }
-
-        int randomIndex = Random.Range(0, candidates.Count);
-
-        return candidates[randomIndex];
     }
 }

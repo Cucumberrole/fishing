@@ -1,25 +1,24 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float gameTime = 10f;
+    [Header("ゲーム中のUI")]
     public TextMeshProUGUI timeText;
-
-    public int money = 0;
-    // public int totalmoney = 0;
-
-    public List<FishData> caughtFishList = new();
-
     public TextMeshProUGUI moneyText;
 
-    private bool isRoundRunning = true;
+    [Header("今回のゲーム中だけ使う値")]
+    public float gameTime;
+    public int money = 0;
+    public List<FishData> caughtFishList = new();
 
-    void Awake()
+    private bool isRoundRunning;
+
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -31,7 +30,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Start()
+    {
+        StartRound();
+    }
+
+    private void Update()
     {
         if (!isRoundRunning)
         {
@@ -42,24 +46,12 @@ public class GameManager : MonoBehaviour
 
         if (timeText != null)
         {
-            timeText.text = Mathf.Ceil(gameTime).ToString();
+            timeText.text = Mathf.CeilToInt(Mathf.Max(gameTime, 0f)).ToString();
         }
 
         if (gameTime <= 0f)
         {
-            gameTime = 0f;
-            isRoundRunning = false;
-
-            if (GManager.instance != null)
-            {
-                GManager.instance.totalMoney = money;
-            }
-            else
-            {
-                Debug.LogError("GManager��������܂���I");
-            }
-
-            SceneManager.LoadScene("Result");
+            EndRound();
         }
     }
 
@@ -69,31 +61,53 @@ public class GameManager : MonoBehaviour
 
         if (moneyText != null)
         {
-            moneyText.text = "MONEY �~ " + money;
+            moneyText.text = "MONEY × " + money;
         }
     }
 
     public void AddFish(FishData fish)
     {
-        if (fish == null)
+        if (fish != null)
         {
-            return;
+            caughtFishList.Add(fish);
         }
-
-        caughtFishList.Add(fish);
     }
 
     public void StartRound()
     {
         money = 0;
-        gameTime = 10f;
         caughtFishList.Clear();
-
         isRoundRunning = true;
+
+        gameTime = GManager.instance != null
+            ? GManager.instance.gameTimeLimit
+            : 10f;
 
         if (moneyText != null)
         {
-            moneyText.text = "MONEY �~ 0";
+            moneyText.text = "MONEY × 0";
         }
+
+        if (timeText != null)
+        {
+            timeText.text = Mathf.CeilToInt(gameTime).ToString();
+        }
+    }
+
+    private void EndRound()
+    {
+        gameTime = 0f;
+        isRoundRunning = false;
+
+        if (GManager.instance != null)
+        {
+            GManager.instance.SaveRoundResult(money, caughtFishList);
+        }
+        else
+        {
+            Debug.LogError("GManagerが見つかりません！");
+        }
+
+        SceneManager.LoadScene("Result");
     }
 }

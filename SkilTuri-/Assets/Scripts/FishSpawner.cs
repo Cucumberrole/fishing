@@ -3,51 +3,42 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour
 {
     public GameObject fishPrefab;
-
-    // GManager‚ª‘¶İ‚µ‚È‚©‚Á‚½ê‡‚Ég‚¤‰Šú’l
-    public int spawnCount = 20;
-
     public Vector2 spawnMin;
     public Vector2 spawnMax;
 
-    void Start()
+    private void Start()
     {
-        // ‹­‰»Ï‚İ‚ÌƒXƒ|[ƒ“”‚ğó‚¯æ‚é
+        int spawnCount = 20;
+
         if (GManager.instance != null)
         {
             spawnCount = GManager.instance.spawnCount;
         }
         else
         {
-            Debug.LogWarning("GManager‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+            Debug.LogWarning("GManagerãŒè¦‹ã¤ã‹ã‚‰ãªã„ãŸã‚ã€é­šã‚’20åŒ¹ç”Ÿæˆã—ã¾ã™");
         }
 
         for (int i = 0; i < spawnCount; i++)
         {
-            Vector2 pos = new Vector2(Random.Range(spawnMin.x, spawnMax.x), Random.Range(spawnMin.y, spawnMax.y));
+            Vector2 position = new(
+                Random.Range(spawnMin.x, spawnMax.x),
+                Random.Range(spawnMin.y, spawnMax.y)
+            );
 
-            GameObject fishObj = Instantiate(fishPrefab, pos, Quaternion.identity);
-
-            Fish fish = fishObj.GetComponent<Fish>();
+            GameObject fishObject = Instantiate(fishPrefab, position, Quaternion.identity);
+            Fish fish = fishObject.GetComponent<Fish>();
 
             if (fish == null)
             {
-                Debug.LogError(fishPrefab.name + "‚ÉFish‚ª•t‚¢‚Ä‚¢‚Ü‚¹‚ñ");
-
-                Destroy(fishObj);
+                Debug.LogError(fishPrefab.name + "ã«Fishã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒã‚ã‚Šã¾ã›ã‚“ï¼");
+                Destroy(fishObject);
                 continue;
             }
 
-            if (GManager.instance != null)
-            {
-                // V‹´ƒŒƒxƒ‹‚É‰‚¶‚½Šm—¦‚ÅƒTƒCƒY‚ğŒˆ‚ß‚é
-                fish.size = GManager.instance.GetRandomFishSize();
-            }
-            else
-            {
-                // GManager‚ª‚È‚¢ê‡‚Í‹Ï“™’Š‘I
-                fish.size = (FishSize)Random.Range(0, 3);
-            }
+            fish.size = GManager.instance != null
+                ? GManager.instance.GetRandomFishSize()
+                : (FishSize)Random.Range(0, 3);
         }
     }
 }

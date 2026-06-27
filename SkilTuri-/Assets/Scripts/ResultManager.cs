@@ -1,18 +1,17 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class ResultManager : MonoBehaviour
 {
     public TextMeshProUGUI resultMoneyText;
-
     public Transform fishListParent;
     public FishGetUI fishUIPrefab;
 
-    void Start()
+    private void Start()
     {
-        if (GameManager.Instance == null)
+        if (GManager.instance == null)
         {
-            Debug.LogError("GameManager‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+            Debug.LogError("GManagerãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ï¼");
             return;
         }
 
@@ -20,19 +19,29 @@ public class ResultManager : MonoBehaviour
         ShowCaughtFish();
     }
 
-    void ShowMoney()
+    private void ShowMoney()
     {
-        int resultMoney = GameManager.Instance.money;
-
-        resultMoneyText.text = "Šl“¾‹àŠzF" + resultMoney.ToString();
+        if (resultMoneyText != null)
+        {
+            resultMoneyText.text = "ç²å¾—é‡‘é¡ï¼š" + GManager.instance.roundMoney;
+        }
     }
 
-    void ShowCaughtFish()
+    private void ShowCaughtFish()
     {
-        foreach (FishData fishData in GameManager.Instance.caughtFishList)
+        if (fishListParent == null || fishUIPrefab == null)
         {
-            FishGetUI fishUI = Instantiate(fishUIPrefab, fishListParent);
+            return;
+        }
 
+        foreach (FishData fishData in GManager.instance.caughtFishList)
+        {
+            if (fishData == null)
+            {
+                continue;
+            }
+
+            FishGetUI fishUI = Instantiate(fishUIPrefab, fishListParent);
             fishUI.Setup(fishData);
         }
     }

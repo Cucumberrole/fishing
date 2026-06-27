@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -214}
+  m_AnchoredPosition: {x: 240, y: -140}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662083540
@@ -437,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228, y: -11}
+  m_AnchoredPosition: {x: 115, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763225712
@@ -494,8 +494,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -740,7 +740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: -215}
+  m_AnchoredPosition: {x: -240, y: -140}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843211619
@@ -1232,8 +1232,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc87e69f0ad4b945be63700edcd5e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GManager
-  totalmoney: 0
-  storeMoney: 0
+  roundMoney: 0
+  totalMoney: 0
+  gameTimeLimit: 10
+  spawnCount: 20
+  detectRange: 3
+  biteDistance: 0.3
+  fishList: []
+  smallFishScale: 0.3
+  mediumFishScale: 0.5
+  largeFishScale: 0.7
+  fishLaunchSpeed: 10
+  fishReturnDuration: 1.2
+  fishReturnCurveHeight: 0.5
+  fishReturnSideOffset: 4
+  pierLevel: 0
+  minThrowPower: 5
+  maxThrowPower: 20
+  maxChargeTime: 2
+  reelSpeed: 5
+  caughtFishList: []
+  gameTimeLevel: 0
+  spawnCountLevel: 0
+  detectRangeLevel: 0
+  throwPowerLevel: 0
+  reelSpeedLevel: 0
 --- !u!4 &1915420483
 Transform:
   m_ObjectHideFlags: 0

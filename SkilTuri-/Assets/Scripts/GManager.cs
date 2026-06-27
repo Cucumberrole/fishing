@@ -3,76 +3,64 @@ using UnityEngine;
 
 public class GManager : MonoBehaviour
 {
-    public static GManager instance = null;
+    public static GManager instance { get; private set; }
 
-    [Header("‚¨‹à")]
-    public int roundMoney = 0; // ’¼‘O‚ÌƒQ[ƒ€‚ÅŠl“¾‚µ‚½‚¨‹à
-    public int totalMoney = 0; // Œ»İ‚Ì‘Š‹à
+    [Header("ãŠé‡‘")]
+    public int roundMoney = 0; // ç›´å‰ã®ã‚²ãƒ¼ãƒ ã§ç²å¾—ã—ãŸãŠé‡‘
+    public int totalMoney = 0; // ç¾åœ¨ã®ç·æ‰€æŒé‡‘
 
-    [Header("ƒQ[ƒ€ŠÔ")]
-    public float gameTimeLimit = 10f; // 1ƒQ[ƒ€‚Ì§ŒÀŠÔ
+    [Header("ã‚²ãƒ¼ãƒ æ™‚é–“")]
+    public float gameTimeLimit = 10f; // 1ã‚²ãƒ¼ãƒ ã®åˆ¶é™æ™‚é–“
 
-    [Header("‹›ŠÖ˜A")]
-    public int spawnCount = 20;       // ‹›‚ÌƒXƒ|[ƒ“”
-    public float detectRange = 3f;    // ‹›‚ªƒ‹ƒA[‚ğŒŸ’m‚·‚é”ÍˆÍ
-    public FishData[] fishList;       // ƒQ[ƒ€‚É“oê‚·‚é‹›ƒf[ƒ^ˆê——
+    [Header("é­šé–¢é€£")]
+    public int spawnCount = 20;          // é­šã®ã‚¹ãƒãƒ¼ãƒ³æ•°
+    public float detectRange = 3f;       // é­šãŒãƒ«ã‚¢ãƒ¼ã‚’æ¤œçŸ¥ã™ã‚‹ç¯„å›²
+    public float biteDistance = 0.3f;    // é­šãŒé£Ÿã„ã¤ãè·é›¢
+    public FishData[] fishList;          // ã‚²ãƒ¼ãƒ ã«ç™»å ´ã™ã‚‹é­šãƒ‡ãƒ¼ã‚¿ä¸€è¦§
 
-    [Header("V‹´")]
+    [Header("é­šã®å¤§ãã•")]
+    public float smallFishScale = 0.3f;
+    public float mediumFishScale = 0.5f;
+    public float largeFishScale = 0.7f;
+
+    [Header("é­šã®é‡£ã‚Šä¸Šã’æ¼”å‡º")]
+    public float fishLaunchSpeed = 10f;
+    public float fishReturnDuration = 1.2f;
+    public float fishReturnCurveHeight = 0.5f;
+    public float fishReturnSideOffset = 4f;
+
+    [Header("æ¡Ÿæ©‹")]
     [Range(0, 12)]
-    public int pierLevel = 0; // Œ»İ‚ÌV‹´ƒŒƒxƒ‹
+    public int pierLevel = 0;
 
-    [Header("“Š‚°‚é—Í")]
-    public float minThrowPower = 5f;  // Å’á‚Ì“Š±—Í
-    public float maxThrowPower = 20f; // Å‘å‚Ì“Š±—Í
-    public float maxChargeTime = 2f;  // Å‘å‚Ü‚Å‚½‚ß‚éŠÔ
+    [Header("æŠ•ã’ã‚‹åŠ›")]
+    public float minThrowPower = 5f;
+    public float maxThrowPower = 20f;
+    public float maxChargeTime = 2f;
 
-    [Header("Šª‚«æ‚è")]
-    public float reelSpeed = 5f; // ƒ‹ƒA[‚ÌŠª‚«æ‚è‘¬“x
+    [Header("å·»ãå–ã‚Š")]
+    public float reelSpeed = 5f;
 
-    [Header("’¼‘O‚Ì’Ş‰Ê")]
+    [Header("ç›´å‰ã®é‡£æœ")]
     public List<FishData> caughtFishList = new();
 
-    [Header("ƒXƒLƒ‹ƒŒƒxƒ‹")]
+    [Header("ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«")]
     public int gameTimeLevel = 0;
     public int spawnCountLevel = 0;
     public int detectRangeLevel = 0;
     public int throwPowerLevel = 0;
     public int reelSpeedLevel = 0;
 
-    // V‹´ƒŒƒxƒ‹‚²‚Æ‚Ì¬Œ^‹›‚ÌoŒ»Šm—¦
     private readonly int[] smallRates =
     {
-        80, // ƒŒƒxƒ‹0
-        70, // ƒŒƒxƒ‹1
-        60, // ƒŒƒxƒ‹2
-        50, // ƒŒƒxƒ‹3
-        40, // ƒŒƒxƒ‹4
-        30, // ƒŒƒxƒ‹5
-        20, // ƒŒƒxƒ‹6
-        10, // ƒŒƒxƒ‹7
-        0,  // ƒŒƒxƒ‹8
-        0,  // ƒŒƒxƒ‹9
-        0,  // ƒŒƒxƒ‹10
-        0,  // ƒŒƒxƒ‹11
-        0   // ƒŒƒxƒ‹12
+        80, 70, 60, 50, 40, 30, 20,
+        10, 0, 0, 0, 0, 0
     };
 
-    // V‹´ƒŒƒxƒ‹‚²‚Æ‚Ì’†Œ^‹›‚ÌoŒ»Šm—¦
     private readonly int[] mediumRates =
     {
-        20, // ƒŒƒxƒ‹0
-        25, // ƒŒƒxƒ‹1
-        30, // ƒŒƒxƒ‹2
-        35, // ƒŒƒxƒ‹3
-        40, // ƒŒƒxƒ‹4
-        45, // ƒŒƒxƒ‹5
-        50, // ƒŒƒxƒ‹6
-        55, // ƒŒƒxƒ‹7
-        50, // ƒŒƒxƒ‹8
-        40, // ƒŒƒxƒ‹9
-        30, // ƒŒƒxƒ‹10
-        20, // ƒŒƒxƒ‹11
-        0   // ƒŒƒxƒ‹12
+        20, 25, 30, 35, 40, 45, 50,
+        55, 50, 40, 30, 20, 0
     };
 
     private void Awake()
@@ -90,41 +78,77 @@ public class GManager : MonoBehaviour
 
     public FishSize GetRandomFishSize()
     {
-        // V‹´ƒŒƒxƒ‹‚ª0`12‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
         int level = Mathf.Clamp(pierLevel, 0, 12);
+        int randomValue = Random.Range(0, 100);
 
         int smallRate = smallRates[level];
         int mediumRate = mediumRates[level];
 
-        // 0`99‚ğ’Š‘I
-        int randomValue = Random.Range(0, 100);
-
-        // ¬Œ^‹›‚ÌŠm—¦
         if (randomValue < smallRate)
         {
             return FishSize.Small;
         }
 
-        // ’†Œ^‹›‚ÌŠm—¦
         if (randomValue < smallRate + mediumRate)
         {
             return FishSize.Medium;
         }
 
-        // c‚è‚ÌŠm—¦‚Í‘åŒ^‹›
         return FishSize.Large;
+    }
+
+    public FishData GetRandomFish(FishSize size)
+    {
+        if (fishList == null || fishList.Length == 0)
+        {
+            Debug.LogError("GManagerã®Fish ListãŒè¨­å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ï¼");
+            return null;
+        }
+
+        List<FishData> candidates = new();
+
+        foreach (FishData fishData in fishList)
+        {
+            if (fishData == null)
+            {
+                Debug.LogWarning("Fish Listã«ç©ºã®é …ç›®ãŒã‚ã‚Šã¾ã™ï¼");
+                continue;
+            }
+
+            if (fishData.size == size)
+            {
+                candidates.Add(fishData);
+            }
+        }
+
+        if (candidates.Count == 0)
+        {
+            Debug.LogWarning(size + "ã‚µã‚¤ã‚ºã®é­šãŒFish Listã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã›ã‚“ï¼");
+            return null;
+        }
+
+        return candidates[Random.Range(0, candidates.Count)];
+    }
+
+    public void SaveRoundResult(int earnedMoney, List<FishData> caughtFishes)
+    {
+        roundMoney = earnedMoney;
+        totalMoney += earnedMoney;
+
+        caughtFishList = caughtFishes != null
+            ? new List<FishData>(caughtFishes)
+            : new List<FishData>();
     }
 
     public void LevelUpPier()
     {
         if (pierLevel >= 12)
         {
-            Debug.Log("V‹´‚ÍÅ‘åƒŒƒxƒ‹‚Å‚·");
+            Debug.Log("æ¡Ÿæ©‹ã¯æœ€å¤§ãƒ¬ãƒ™ãƒ«ã§ã™");
             return;
         }
 
         pierLevel++;
-
-        Debug.Log("V‹´ƒŒƒxƒ‹F" + pierLevel);
+        Debug.Log("æ¡Ÿæ©‹ãƒ¬ãƒ™ãƒ«ï¼š" + pierLevel);
     }
 }

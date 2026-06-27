@@ -1,6 +1,6 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class FishGetUI : MonoBehaviour
 {
@@ -9,8 +9,20 @@ public class FishGetUI : MonoBehaviour
 
     public void Setup(FishData data)
     {
-        fishImage.sprite = data.fishSprite;
+        if (data == null)
+        {
+            Debug.LogError("FishDataがありません！");
+            return;
+        }
 
-        fishNameText.text = data.fishName + " GET!!";
+        if (fishImage != null)
+        {
+            fishImage.sprite = data.fishSprite;
+        }
+
+        if (fishNameText != null)
+        {
+            fishNameText.text = data.fishName + " GET!!";
+        }
     }
 }
