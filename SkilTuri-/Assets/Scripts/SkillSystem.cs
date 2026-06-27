@@ -1,111 +1,92 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
-//　スキルのタイプ
 public enum SkillType
 {
-    Hook1,
-    Hook2,
-    Hook3,
-    GrowFish1,
-    GrowFish2,
-    GrowFish3,
-    Money1,
-    Money2,
-    Money3,
-    Time1,
-    Time2,
-    Time3,
-    Repop1,
-    Repop2,
-    Repop3,
-    Pier1,
-    Pier2,
-    Hook4,
-    Hook5,
-    Hook6,
-    GrowFish4,
-    GrowFish5,
-    GrowFish6,
-    Money4,
-    Money5,
-    Money6,
-    Time4,
-    Time5,
-    Time6,
-    Repop4,
-    Repop5,
-    Repop6,
-    Pier3,
-    Pier4
-};
+    Hook1, Hook2, Hook3,
+    GrowFish1, GrowFish2, GrowFish3,
+    Money1, Money2, Money3,
+    Time1, Time2, Time3,
+    Repop1, Repop2, Repop3,
+    Pier1, Pier2,
+    Hook4, Hook5, Hook6,
+    GrowFish4, GrowFish5, GrowFish6,
+    Money4, Money5, Money6,
+    Time4, Time5, Time6,
+    Repop4, Repop5, Repop6,
+    Pier3, Pier4
+}
 
 public class SkillSystem : MonoBehaviour
 {
-    //　スキルを覚える為のスキルポイント
+    public static SkillSystem Instance;
+
     [SerializeField] private int skillPoint;
     [SerializeField] private int skillCount;
-    //　スキルを覚えているかどうかのフラグ
-    [SerializeField] private bool[] skills;
-    //　スキル毎のパラメータ
-    [SerializeField] private SkillParam[] skillParams;
-    //　スキルポイントを表示するテキストUI
+
+    private bool[] skills;
+    public int SkillPoint => skillPoint;
+    public int SkillCount => skillCount;
+
     public Text skillText;
 
     void Awake()
     {
-        //　スキル数分の配列を確保
-        skills = new bool[skillParams.Length];
+        PlayerPrefs.DeleteAll();
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        skills = new bool[System.Enum.GetValues(typeof(SkillType)).Length];
+
+        // ロード
+        for (int i = 0; i < skills.Length; i++)
+        {
+            skills[i] = PlayerPrefs.GetInt(((SkillType)i).ToString(), 0) == 1;
+        }
+
+        skillPoint = PlayerPrefs.GetInt("SkillPoint", skillPoint);
+        skillCount = PlayerPrefs.GetInt("SkillCount", skillCount);
+
         SetText();
     }
-    //　スキルを覚える
-    public void LearnSkill(SkillType type, int point,int count)
+
+    public void LearnSkill(SkillType type, int point, int count)
     {
         skills[(int)type] = true;
-        SetSkillPoint(point);
-        SetText();
-        CheckOnOff();
-       
-        SetSkillCount();
-        //skillCount;
+
+        PlayerPrefs.SetInt(type.ToString(), 1);
+
+        skillPoint -= point;
+        PlayerPrefs.SetInt("SkillPoint", skillPoint);
+
+        skillCount++;
+        PlayerPrefs.SetInt("SkillCount", skillCount);
+
+        PlayerPrefs.Save();
+        ApplySkillEffect(type);
+
     }
-    //　スキルを覚えているかどうかのチェック
+
     public bool IsSkill(SkillType type)
     {
         return skills[(int)type];
     }
-    //　スキルポイントを減らす
-    public void SetSkillPoint(int point)
+
+    public bool CanLearnSkill(SkillType type, int spendPoint = 0, int spendCount = 0)
     {
-        skillPoint -= point;
-    }
-    public void SetSkillCount()
-    {
-        skillCount ++;
-    }
-    //　スキルポイントを取得
-    public int GetSkillPoint()
-    {
-        return skillPoint;
-    }
-    //　スキルを覚えられるかチェック
-    public bool CanLearnSkill(SkillType type, int spendPoint = 0,int spendCount = 0)
-    {
-        //　持っているスキルポイントが足りない
-        if (skillPoint < spendPoint)
-        {
-            return false;
-        }
-        if (skillCount < spendCount)
-        {
-            return false;
-        }
-        //　攻撃UP2は攻撃UP1を覚えていなければダメ
+        if (skillPoint < spendPoint) return false;
+        if (skillCount < spendCount) return false;
+
+        // ここはそのままでOK（条件ツリー）
         if (type == SkillType.Hook2)
         {
             return skills[(int)SkillType.Hook1];
-            //　防御UP2は防御UP1を覚えていなければダメ
         }
         else if (type == SkillType.Hook3)
         {
@@ -126,7 +107,6 @@ public class SkillSystem : MonoBehaviour
         else if (type == SkillType.GrowFish2)
         {
             return skills[(int)SkillType.GrowFish1];
-            //　速さUP2は速さUP1を覚えていなければダメ
         }
         else if (type == SkillType.GrowFish3)
         {
@@ -140,19 +120,19 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.GrowFish4];
         }
-        else if (type ==SkillType.GrowFish6)
+        else if (type == SkillType.GrowFish6)
         {
             return skills[(int)SkillType.GrowFish5];
         }
         else if (type == SkillType.Money2)
         {
             return skills[(int)SkillType.Money1];
-            //　コンボは攻撃UP2と防御２を覚えていなければダメ
         }
         else if (type == SkillType.Money3)
         {
             return skills[(int)SkillType.Money2];
-        }else if (type == SkillType.Money4)
+        }
+        else if (type == SkillType.Money4)
         {
             return skills[(int)SkillType.Pier2] && skills[(int)SkillType.Money3];
         }
@@ -176,7 +156,7 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.Time2];
         }
-        else if (type == SkillType.Time4)
+        else if (type == SkillType.Time4) 
         {
             return skills[(int)SkillType.Pier3] && skills[(int)SkillType.Time3];
         }
@@ -202,9 +182,9 @@ public class SkillSystem : MonoBehaviour
         }
         else if (type == SkillType.Repop4)
         {
-            return skills[(int)SkillType.Pier3]&&skills[(int)SkillType.Repop3];
+            return skills[(int)SkillType.Pier3] && skills[(int)SkillType.Repop3];
         }
-        else if (type ==SkillType.Repop5)
+        else if (type == SkillType.Repop5)
         {
             return skills[(int)SkillType.Repop4];
         }
@@ -216,33 +196,47 @@ public class SkillSystem : MonoBehaviour
         {
             return skills[(int)SkillType.Hook3] || skills[(int)SkillType.GrowFish3] || skills[(int)SkillType.Money3];
         }
-        else if (type == SkillType.Pier2)
+        if (type == SkillType.Pier2)
         {
             return skills[(int)SkillType.Time3] || skills[(int)SkillType.Repop3];
-            //　マスタースキルは全てのスキルを覚えていなければダメ
         }
-        else if (type == SkillType.Pier3)
+        if (type == SkillType.Pier3)
         {
             return skills[(int)SkillType.Hook6] || skills[(int)SkillType.GrowFish6] || skills[(int)SkillType.Money6];
         }
-        else if(type == SkillType.Pier4)
+        else if (type == SkillType.Pier4)
         {
             return skills[(int)SkillType.Time6] || skills[(int)SkillType.Repop6];
         }
 
-            return true;
-    }
-    //　スキル毎にボタンのオン・オフをする処理を実行させる
-    void CheckOnOff()
-    {
-        foreach (var skillParam in skillParams)
-        {
-            skillParam.CheckButtonOnOff();
-        }
+           
+
+        return true;
     }
 
-    void SetText()
+    public void SetText()
     {
-        skillText.text = "スキルポイント：" + skillPoint;
+        if (skillText != null)
+            skillText.text = "スキルポイント：" + skillPoint;
+    }
+    private void ApplySkillEffect(SkillType type)
+    {
+        Debug.Log("スキル効果実行：" + type);
+        switch (type)
+        {
+            case SkillType.Hook1:
+                GManager.instance.detectRange += 1f;
+                Debug.Log("detectRange=" + GManager.instance.detectRange);
+                break;
+
+            case SkillType.Hook2:
+                GManager.instance.detectRange += 2f;
+                break;
+
+            case SkillType.Hook3:
+                GManager.instance.detectRange += 2f;
+                break;
+
+        }
     }
 }

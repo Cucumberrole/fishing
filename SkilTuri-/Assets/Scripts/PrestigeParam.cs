@@ -45,7 +45,8 @@ public class PrestigeParam : MonoBehaviour
         {
             //　スキルを覚えさせる
             PrestigeSystem.LearnSkill(type, spendPoint);
-
+            ButtonManager.Instance.buttonPressed = true;
+            Debug.Log(ButtonManager.Instance.buttonPressed);
             ChangeButtonColor(new Color(0f, 0f, 1f, 1f));
 
             text.text = PrestigeTitle + "を覚えた";
