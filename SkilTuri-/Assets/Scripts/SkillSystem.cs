@@ -21,11 +21,10 @@ public class SkillSystem : MonoBehaviour
 {
     public static SkillSystem Instance;
 
-    [SerializeField] private int skillPoint;
     [SerializeField] private int skillCount;
 
     private bool[] skills;
-    public int SkillPoint => skillPoint;
+    public int SkillPoint => GManager.instance.totalMoney;
     public int SkillCount => skillCount;
 
     public Text skillText;
@@ -50,9 +49,16 @@ public class SkillSystem : MonoBehaviour
             skills[i] = PlayerPrefs.GetInt(((SkillType)i).ToString(), 0) == 1;
         }
 
-        skillPoint = PlayerPrefs.GetInt("SkillPoint", skillPoint);
-        skillCount = PlayerPrefs.GetInt("SkillCount", skillCount);
+        
+        skillCount = PlayerPrefs.GetInt("SkillCount", 0);
 
+        for (int i = 0; i < skills.Length; i++)
+        {
+            if (skills[i])
+            {
+                ApplySkillEffect((SkillType)i);
+            }
+        }
         SetText();
     }
 
@@ -61,16 +67,18 @@ public class SkillSystem : MonoBehaviour
         skills[(int)type] = true;
 
         PlayerPrefs.SetInt(type.ToString(), 1);
+        GManager.instance.totalMoney -= point;
+        PlayerPrefs.SetInt(
+           "TotalMoney",
+           GManager.instance.totalMoney);
 
-        skillPoint -= point;
-        PlayerPrefs.SetInt("SkillPoint", skillPoint);
 
-        skillCount++;
+       skillCount++;
         PlayerPrefs.SetInt("SkillCount", skillCount);
 
         PlayerPrefs.Save();
         ApplySkillEffect(type);
-
+        SetText();
     }
 
     public bool IsSkill(SkillType type)
@@ -80,7 +88,7 @@ public class SkillSystem : MonoBehaviour
 
     public bool CanLearnSkill(SkillType type, int spendPoint = 0, int spendCount = 0)
     {
-        if (skillPoint < spendPoint) return false;
+        if (GManager.instance.totalMoney < spendPoint) return false;
         if (skillCount < spendCount) return false;
 
         // ここはそのままでOK（条件ツリー）
@@ -217,7 +225,7 @@ public class SkillSystem : MonoBehaviour
     public void SetText()
     {
         if (skillText != null)
-            skillText.text = "スキルポイント：" + skillPoint;
+            skillText.text = "スキルポイント：" + GManager.instance.totalMoney;
     }
     private void ApplySkillEffect(SkillType type)
     {
@@ -226,15 +234,91 @@ public class SkillSystem : MonoBehaviour
         {
             case SkillType.Hook1:
                 GManager.instance.detectRange += 1f;
-                Debug.Log("detectRange=" + GManager.instance.detectRange);
+                GManager.instance.detectRangeLevel += 1;
                 break;
-
             case SkillType.Hook2:
                 GManager.instance.detectRange += 2f;
+                GManager.instance.detectRangeLevel += 1;
                 break;
-
             case SkillType.Hook3:
                 GManager.instance.detectRange += 2f;
+                GManager.instance.detectRangeLevel += 1;
+                break;
+            case SkillType.Hook4:
+                GManager.instance.detectRange += 2f;
+                GManager.instance.detectRangeLevel += 1;
+                break;
+            case SkillType.Hook5:
+                GManager.instance.detectRange += 2f;
+                GManager.instance.detectRangeLevel += 1;
+                break;
+            case SkillType.Hook6:
+                GManager.instance.detectRange += 2f;
+                GManager.instance.detectRangeLevel += 1;
+                break;
+
+            case SkillType.GrowFish1:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+            case SkillType.GrowFish2:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+            case SkillType.GrowFish3:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+            case SkillType.GrowFish4:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+            case SkillType.GrowFish5:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+                case SkillType.GrowFish6:
+                GManager.instance.spawnCount += 5;
+                GManager.instance.spawnCountLevel += 1;
+                break;
+
+            case SkillType.Time1:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+
+            case SkillType.Time2:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+            case SkillType.Time3:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+            case SkillType.Time4:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+            case SkillType.Time5:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+            case SkillType.Time6:
+                GManager.instance.gameTimeLimit += 5;
+                GManager.instance.gameTimeLevel += 1;
+                break;
+
+            case SkillType.Pier1:
+                GManager.instance.pierLevel += 1;
+                break;
+            case SkillType.Pier2:
+                GManager.instance.pierLevel += 1;
+                break;
+            case SkillType.Pier3:
+                GManager.instance.pierLevel += 1;
+                break;
+                case SkillType.Pier4:
+                GManager.instance.pierLevel += 1;
                 break;
 
         }
