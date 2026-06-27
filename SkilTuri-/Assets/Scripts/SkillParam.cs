@@ -1,97 +1,148 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using System;
 
 public class SkillParam : MonoBehaviour
 {
-    //　スキル管理システム
-    [SerializeField]
+    [SerializeField] private SkillType type;
+
+    [SerializeField] private int spendPoint;
+    [SerializeField] private int spendCount;
+
+    [SerializeField] private string skillTitle;
+    [SerializeField] private string skillInformation;
+
+    [SerializeField] private Text text;
+
     private SkillSystem skillSystem;
-    //　このスキルの種類
-    [SerializeField]
-    private SkillType type;
-    //　このスキルを覚える為に必要なスキルポイント
-    [SerializeField]
-    private int spendPoint;
-    [SerializeField]
-    private int spendCount;
-    //　スキルのタイトル
-    [SerializeField]
-    private string skillTitle;
-    //　スキル情報
-    [SerializeField]
-    private string skillInformation;
-    //　スキル情報を載せるテキストUI
-    [SerializeField]
-    private Text text;
 
-    // Use this for initialization
-    void Start()
+  
+        void Start()
+        {
+            Invoke(nameof(Init), 0.1f);
+        }
+
+        void Init()
+        {
+            skillSystem = SkillSystem.Instance;
+
+            if (text == null)
+                text = GetComponentInChildren<Text>();
+
+            Refresh();
+        }
+    
+
+    private void Refresh()
     {
-        //　スキルを覚えられる状態でなければボタンを無効化
+        if (skillSystem == null) return;
+
         CheckButtonOnOff();
-    }
 
-    //　スキルボタンを押した時に実行するメソッド
-    public void OnClick()
-    {
-        //　スキルを覚えていたら何もせずreturn
         if (skillSystem.IsSkill(type))
         {
+            ChangeButtonColor(Color.blue);
+        }
+    }
+
+    public void OnClick()
+    {
+        Debug.Log("クリックされた");
+
+        if (skillSystem == null)
+        {
+            Debug.LogError("SkillSystemがnull");
             return;
         }
-        //　スキルを覚えられるかどうかチェック
-        if (skillSystem.CanLearnSkill(type, spendPoint,spendCount))
+
+        if (skillSystem.IsSkill(type))
+            return;
+
+        if (skillSystem.CanLearnSkill(type, spendPoint, spendCount))
         {
-            //　スキルを覚えさせる
-            skillSystem.LearnSkill(type, spendPoint,spendCount);
+            skillSystem.LearnSkill(type, spendPoint, spendCount);
 
-            ChangeButtonColor(new Color(0f, 0f, 1f, 1f));
+            ChangeButtonColor(Color.blue);
 
-            text.text = skillTitle + "を覚えた";
+            if (text != null)
+                text.text = skillTitle + "を覚えた";
         }
         else
         {
-            text.text = "スキルを覚えられません。";
+            if (text != null)
+                text.text = "スキルを覚えられません。";
+        }
+
+        RefreshAll();
+    }
+
+    private void RefreshAll()
+    {
+        SkillParam[] all = FindObjectsOfType<SkillParam>();
+
+        foreach (var s in all)
+        {
+            if (s != null)
+                s.RefreshInternal();
         }
     }
 
-    //　他のスキルを習得した後の自身のボタンの処理
+    private void RefreshInternal()
+    {
+        if (skillSystem == null) return;
+
+        CheckButtonOnOff();
+
+        if (skillSystem.IsSkill(type))
+        {
+            ChangeButtonColor(Color.blue);
+        }
+    }
+
     public void CheckButtonOnOff()
     {
-        //　スキルを覚えられるかどうかチェック
-        if (!skillSystem.CanLearnSkill(type))
+        if (skillSystem == null) return;
+
+        if (skillSystem.IsSkill(type))
+        {
+            ChangeButtonColor(Color.blue);
+        }
+        else if (!skillSystem.CanLearnSkill(type))
         {
             ChangeButtonColor(new Color(0.8f, 0.8f, 0.8f, 0.8f));
-            //　スキルをまだ覚えていない
         }
-        else if (!skillSystem.IsSkill(type))
+        else
         {
-            ChangeButtonColor(new Color(1f, 1f, 1f, 1f));
+            ChangeButtonColor(Color.white);
         }
     }
-    //　スキル情報を表示
+
     public void SetText()
     {
-        text.text = skillTitle + "：消費スキルポイント" + spendPoint + "\n" + skillInformation;
+        if (text == null) return;
+
+        text.text =
+            skillTitle +
+            "：消費スキルポイント" +
+            spendPoint +
+            "\n" +
+            skillInformation;
     }
-    //　スキル情報をリセット
+
     public void ResetText()
     {
+        if (text == null) return;
         text.text = "";
     }
-    //　ボタンの色を変更する
+
     public void ChangeButtonColor(Color color)
     {
-        //　ボタンコンポーネントを取得
-        Button button = gameObject.GetComponent<Button>();
-        //　ボタンのカラー情報を取得（一時変数を作成し、色情報を変えてからそれをbutton.colorsに設定しないとエラーになる）
+        Button button = GetComponent<Button>();
+        if (button == null) return;
+
         ColorBlock cb = button.colors;
-        //　取得済みのスキルボタンの色を変える
         cb.normalColor = color;
         cb.pressedColor = color;
-        //　ボタンのカラー情報を設定
         button.colors = cb;
+        button.interactable = true;
     }
 }
