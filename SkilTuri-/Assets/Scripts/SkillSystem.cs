@@ -320,6 +320,9 @@ public class SkillSystem : MonoBehaviour
                 case SkillType.Pier4:
                 GManager.instance.pierLevel += 1;
                 break;
+            case SkillType.Money1:
+                
+                break;
 
         }
     }

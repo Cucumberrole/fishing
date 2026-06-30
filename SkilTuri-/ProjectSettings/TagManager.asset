@@ -46,5 +46,8 @@ TagManager:
   - name: canvas
     uniqueID: 268878769
     locked: 0
+  - name: Line
+    uniqueID: 3726815283
+    locked: 0
   m_RenderingLayers:
   - Default
