@@ -24,6 +24,7 @@ public class PrestigeParam : MonoBehaviour
     //　スキル情報を載せるテキストUI
     [SerializeField]
     private Text text;
+    public Renderer[] targetRenderers;
 
     // Use this for initialization
     void Start()
@@ -35,6 +36,13 @@ public class PrestigeParam : MonoBehaviour
     //　スキルボタンを押した時に実行するメソッド
     public void OnClick()
     {
+        foreach (Renderer renderer in targetRenderers)
+        {
+            if (renderer != null)
+            {
+                renderer.material.color = Color.black;
+            }
+        }
         //　スキルを覚えていたら何もせずreturn
         if (PrestigeSystem.IsSkill(type))
         {

@@ -12,6 +12,7 @@ public class SkillParam : MonoBehaviour
     [SerializeField] private string skillInformation;
 
     [SerializeField] private Text text;
+    public Renderer[] targetRenderers;
 
     private SkillSystem skillSystem;
 
@@ -60,6 +61,13 @@ public class SkillParam : MonoBehaviour
         if (skillSystem.CanLearnSkill(type, spendPoint, spendCount))
         {
             skillSystem.LearnSkill(type, spendPoint, spendCount);
+            foreach (Renderer renderer in targetRenderers)
+            {
+                if (renderer != null)
+                {
+                    renderer.material.color = Color.black;
+                }
+            }
 
             ChangeButtonColor(Color.blue);
 
