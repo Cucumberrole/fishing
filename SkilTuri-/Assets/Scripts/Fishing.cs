@@ -88,17 +88,12 @@ public class Fishing : MonoBehaviour
         {
             isCharging = false;
 
-            float chargeRate = Mathf.Clamp01(
-                currentChargeTime / Mathf.Max(MaxChargeTime, 0.01f)
-            );
+            float chargeRate = Mathf.Clamp01(currentChargeTime / Mathf.Max(MaxChargeTime, 0.01f));
 
             float throwPower = Mathf.Lerp(MinPower, MaxPower, chargeRate);
 
             lureRigidbody.simulated = true;
-            lureRigidbody.AddForce(
-                throwDirection.normalized * throwPower,
-                ForceMode2D.Impulse
-            );
+            lureRigidbody.AddForce(throwDirection.normalized * throwPower, ForceMode2D.Impulse);
 
             currentChargeTime = 0f;
         }

@@ -85,11 +85,7 @@ public class Fish : MonoBehaviour
         {
             if (lure != null)
             {
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    lure.transform.position,
-                    speed * 2f * Time.deltaTime
-                );
+                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * 2f * Time.deltaTime);
             }
 
             return;
@@ -110,11 +106,7 @@ public class Fish : MonoBehaviour
 
                 SetFacing(lure.transform.position.x > transform.position.x);
 
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    lure.transform.position,
-                    speed * Time.deltaTime
-                );
+                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
 
                 distance = Vector2.Distance(transform.position, lure.transform.position);
 
@@ -169,11 +161,7 @@ public class Fish : MonoBehaviour
 
     private void Swim()
     {
-        transform.position = Vector2.MoveTowards(
-            transform.position,
-            targetPos,
-            speed * Time.deltaTime
-        );
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, targetPos) < 0.2f)
         {
@@ -240,10 +228,7 @@ public class Fish : MonoBehaviour
         Vector3 perpendicularDirection = new(-returnDirection.y, returnDirection.x, 0f);
         float sideDirection = Random.value < 0.5f ? -1f : 1f;
 
-        returnControlPosition =
-            middlePosition
-            + perpendicularDirection * returnSideOffset * sideDirection
-            + Vector3.up * returnCurveHeight;
+        returnControlPosition = middlePosition + perpendicularDirection * returnSideOffset * sideDirection + Vector3.up * returnCurveHeight;
 
         transform.rotation = Quaternion.identity;
 
