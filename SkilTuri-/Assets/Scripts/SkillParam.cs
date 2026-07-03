@@ -12,25 +12,35 @@ public class SkillParam : MonoBehaviour
     [SerializeField] private string skillInformation;
 
     [SerializeField] private Text text;
-    public Renderer[] targetRenderers;
+    
 
     private SkillSystem skillSystem;
 
   
-        void Start()
+    void Start()
+    {
+        Init();
+       
+     }
+    void Awake()
+    {
+        skillSystem = SkillSystem.Instance;
+     }   
+
+    void Init()
         {
-            Invoke(nameof(Init), 0.1f);
-        }
+        skillSystem = SkillSystem.Instance;
 
-        void Init()
-        {
-            skillSystem = SkillSystem.Instance;
+        if (text == null)
+            text = GetComponentInChildren<Text>();
 
-            if (text == null)
-                text = GetComponentInChildren<Text>();
+        string key = "ColorState_" + type;
+        int state = PlayerPrefs.GetInt(key, 0);
 
-            Refresh();
-        }
+     
+
+        Refresh();
+    }
     
 
     private void Refresh()
@@ -47,6 +57,7 @@ public class SkillParam : MonoBehaviour
 
     public void OnClick()
     {
+
         Debug.Log("クリックされた");
 
         if (skillSystem == null)
@@ -61,13 +72,7 @@ public class SkillParam : MonoBehaviour
         if (skillSystem.CanLearnSkill(type, spendPoint, spendCount))
         {
             skillSystem.LearnSkill(type, spendPoint, spendCount);
-            foreach (Renderer renderer in targetRenderers)
-            {
-                if (renderer != null)
-                {
-                    renderer.material.color = Color.black;
-                }
-            }
+            
 
             ChangeButtonColor(Color.blue);
 
@@ -79,6 +84,9 @@ public class SkillParam : MonoBehaviour
             if (text != null)
                 text.text = "スキルを覚えられません。";
         }
+        string key = "ColorState_" + type;
+
+    
 
         RefreshAll();
     }
@@ -130,7 +138,7 @@ public class SkillParam : MonoBehaviour
 
         text.text =
             skillTitle +
-            "：消費スキルポイント" +
+            "：消費金額" +
             spendPoint +
             "\n" +
             skillInformation;
@@ -153,4 +161,5 @@ public class SkillParam : MonoBehaviour
         button.colors = cb;
         button.interactable = true;
     }
+   
 }
