@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Giant squid_N
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30C0\u30A4\u30AA\u30A6\u30A4\u30AB"
+  fishSprite: {fileID: 6503742438301508282, guid: 7c2acb123d321e646adedf76c0d04a7d, type: 3}
+  money: 100
+  size: 2

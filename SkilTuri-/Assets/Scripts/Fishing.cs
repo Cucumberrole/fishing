@@ -34,25 +34,15 @@ public class Fishing : MonoBehaviour
         if (Lure != null)
         {
             lureRigidbody = Lure.GetComponent<Rigidbody2D>();
-
-            if (lureRigidbody != null)
-            {
-                lureRigidbody.simulated = false;
-            }
+            if (lureRigidbody != null) lureRigidbody.simulated = false;
         }
 
-        if (line != null)
-        {
-            line.positionCount = segmentCount;
-        }
+        if (line != null) line.positionCount = segmentCount;
     }
 
     private void Update()
     {
-        if (Lure == null || Rodtip == null || lureRigidbody == null)
-        {
-            return;
-        }
+        if (Lure == null || Rodtip == null || lureRigidbody == null) return;
 
         UpdateThrowInput();
         UpdateReeling();
@@ -67,7 +57,6 @@ public class Fishing : MonoBehaviour
         {
             isCharging = true;
             currentChargeTime = 0f;
-
             Lure.transform.position = Rodtip.position;
             lureRigidbody.linearVelocity = Vector2.zero;
             lureRigidbody.angularVelocity = 0f;
@@ -76,25 +65,18 @@ public class Fishing : MonoBehaviour
 
         if (Input.GetMouseButton(0) && isCharging)
         {
-            currentChargeTime = Mathf.Min(
-                currentChargeTime + Time.deltaTime,
-                MaxChargeTime
-            );
-
+            currentChargeTime = Mathf.Min(currentChargeTime + Time.deltaTime, MaxChargeTime);
             Lure.transform.position = Rodtip.position;
         }
 
         if (Input.GetMouseButtonUp(0) && isCharging)
         {
             isCharging = false;
-
             float chargeRate = Mathf.Clamp01(currentChargeTime / Mathf.Max(MaxChargeTime, 0.01f));
-
             float throwPower = Mathf.Lerp(MinPower, MaxPower, chargeRate);
 
             lureRigidbody.simulated = true;
             lureRigidbody.AddForce(throwDirection.normalized * throwPower, ForceMode2D.Impulse);
-
             currentChargeTime = 0f;
         }
 
@@ -108,15 +90,15 @@ public class Fishing : MonoBehaviour
             lureRigidbody.angularVelocity = 0f;
             lureRigidbody.simulated = false;
 
+            Transform target = playerTarget != null ? playerTarget : Rodtip;
+
             foreach (Fish fish in caughtFishes)
             {
-                if (fish == null)
-                {
-                    continue;
-                }
+                if (fish == null) continue;
 
-                fish.isLaunching = true;
-                launchedFishes.Add(fish);
+                fish.BeginLaunch(target);
+
+                if (!launchedFishes.Contains(fish)) launchedFishes.Add(fish);
             }
 
             caughtFishes.Clear();
@@ -125,24 +107,13 @@ public class Fishing : MonoBehaviour
 
     private void UpdateReeling()
     {
-        if (!isReeling)
-        {
-            return;
-        }
+        if (!isReeling) return;
 
-        Lure.transform.position = Vector2.MoveTowards(
-            Lure.transform.position,
-            Rodtip.position,
-            ReelSpeed * Time.deltaTime
-        );
+        Lure.transform.position = Vector2.MoveTowards(Lure.transform.position, Rodtip.position, ReelSpeed * Time.deltaTime);
 
         for (int i = 0; i < caughtFishes.Count; i++)
         {
-            if (caughtFishes[i] != null)
-            {
-                caughtFishes[i].transform.position =
-                    Lure.transform.position + Vector3.down * (0.7f * (i + 1));
-            }
+            if (caughtFishes[i] != null) caughtFishes[i].transform.position = Lure.transform.position + Vector3.down * (0.7f * (i + 1));
         }
 
         if (Vector2.Distance(Lure.transform.position, Rodtip.position) < 0.5f)
@@ -154,10 +125,7 @@ public class Fishing : MonoBehaviour
 
     private void UpdateFishingLine()
     {
-        if (line == null || segmentCount < 2)
-        {
-            return;
-        }
+        if (line == null || segmentCount < 2) return;
 
         Vector3 start = Rodtip.position;
         Vector3 end = Lure.transform.position;
@@ -177,11 +145,10 @@ public class Fishing : MonoBehaviour
 
         foreach (Fish fish in fishes)
         {
-            if (fish != null && fish.isCaught && !caughtFishes.Contains(fish))
-            {
-                caughtFishes.Add(fish);
-                Debug.Log("魚が食いついた！");
-            }
+            if (fish == null || !fish.isCaught || caughtFishes.Contains(fish)) continue;
+
+            caughtFishes.Add(fish);
+            Debug.Log("魚が食いついた！");
         }
     }
 
@@ -197,38 +164,31 @@ public class Fishing : MonoBehaviour
                 continue;
             }
 
-            if (fish.isLaunching)
+            if (fish.isLaunching) continue;
+
+            if (fish.launchFinished)
             {
-                if (Camera.main == null)
+                if (GManager.instance == null)
                 {
+                    Debug.LogError("GManagerが見つかりません！");
+                    Destroy(fish.gameObject);
+                    launchedFishes.RemoveAt(i);
                     continue;
                 }
 
-                Vector3 viewPosition = Camera.main.WorldToViewportPoint(fish.transform.position);
+                FishData result = GManager.instance.GetRandomFish(fish.size);
 
-                if (viewPosition.y > 1f)
+                if (result == null)
                 {
-                    if (GManager.instance == null)
-                    {
-                        Debug.LogError("GManagerが見つかりません！");
-                        Destroy(fish.gameObject);
-                        launchedFishes.RemoveAt(i);
-                        continue;
-                    }
-
-                    FishData result = GManager.instance.GetRandomFish(fish.size);
-
-                    if (result == null)
-                    {
-                        Destroy(fish.gameObject);
-                        launchedFishes.RemoveAt(i);
-                        continue;
-                    }
-
-                    Transform target = playerTarget != null ? playerTarget : Rodtip;
-                    fish.BeginReturn(target, result);
+                    Destroy(fish.gameObject);
+                    launchedFishes.RemoveAt(i);
+                    continue;
                 }
 
+                Debug.Log("獲得した魚：" + result.fishName);
+
+                Transform target = playerTarget != null ? playerTarget : Rodtip;
+                fish.BeginReturn(target, result);
                 continue;
             }
 
@@ -244,11 +204,7 @@ public class Fishing : MonoBehaviour
     private void GiveFishReward(Fish fish)
     {
         FishData result = fish.caughtData;
-
-        if (result == null)
-        {
-            return;
-        }
+        if (result == null) return;
 
         if (GameManager.Instance != null)
         {
@@ -260,26 +216,24 @@ public class Fishing : MonoBehaviour
 
         if (fishGetUIPrefab != null && canvas != null)
         {
-            //FishGetUI ui = Instantiate(fishGetUIPrefab, canvas.transform);
-            //ui.Setup(result);
+            // FishGetUI ui = Instantiate(fishGetUIPrefab, canvas.transform);
+            // ui.Setup(result);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Sea"))
-        {
-            lureRigidbody.linearDamping = 5f;
-            lureRigidbody.angularDamping = 5f;
-        }
+        if (!other.CompareTag("Sea") || lureRigidbody == null) return;
+
+        lureRigidbody.linearDamping = 5f;
+        lureRigidbody.angularDamping = 5f;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Sea"))
-        {
-            lureRigidbody.linearDamping = 0f;
-            lureRigidbody.angularDamping = 0f;
-        }
+        if (!other.CompareTag("Sea") || lureRigidbody == null) return;
+
+        lureRigidbody.linearDamping = 0f;
+        lureRigidbody.angularDamping = 0f;
     }
 }

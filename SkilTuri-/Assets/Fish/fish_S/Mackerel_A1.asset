@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Mackerel_A1
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30B5\u30D0\u3000\u732B"
+  fishSprite: {fileID: -6323737299920477059, guid: fb0ef6d993084cf4e97aabf760c52b00, type: 3}
+  money: 5000
+  size: 0

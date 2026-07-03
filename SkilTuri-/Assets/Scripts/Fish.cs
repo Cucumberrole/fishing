@@ -10,6 +10,7 @@ public class Fish : MonoBehaviour
     [Header("現在の状態")]
     public bool isCaught = false;
     public bool isLaunching = false;
+    public bool launchFinished = false;
     public bool isReturning = false;
     public bool reachedPlayer = false;
     public bool isInterested = false;
@@ -21,18 +22,20 @@ public class Fish : MonoBehaviour
     private GameObject lure;
     private SpriteRenderer spriteRenderer;
     private Transform returnTarget;
-
+    private Transform arcTarget;
     private bool isFacingRight = true;
 
-    // GManagerから受け取る共通設定
     private float detectRange = 3f;
     private float biteDistance = 0.3f;
-    private float launchSpeed = 10f;
+    private float launchDuration = 0.8f;
+    private float launchCurveHeight = 2f;
     private float returnDuration = 1.2f;
-    private float returnCurveHeight = 0.5f;
-    private float returnSideOffset = 4f;
 
-    // 戻る演出で使う現在値
+    private Vector3 launchStartPosition;
+    private Vector3 launchControlPosition;
+    private Vector3 arcApexPosition;
+    private float launchElapsedTime;
+
     private Vector3 returnStartPosition;
     private Vector3 returnControlPosition;
     private float returnElapsedTime;
@@ -43,15 +46,8 @@ public class Fish : MonoBehaviour
         lure = GameObject.FindWithTag("Lure");
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (lure == null)
-        {
-            Debug.LogWarning("ルアーが見つかりません！");
-        }
-
-        if (sea != null)
-        {
-            seaCollider = sea.GetComponent<BoxCollider2D>();
-        }
+        if (lure == null) Debug.LogWarning("ルアーが見つかりません！");
+        if (sea != null) seaCollider = sea.GetComponent<BoxCollider2D>();
 
         LoadGlobalSettings();
         ApplySizeScale();
@@ -62,10 +58,7 @@ public class Fish : MonoBehaviour
 
     private void Update()
     {
-        if (reachedPlayer)
-        {
-            return;
-        }
+        if (reachedPlayer) return;
 
         if (isReturning)
         {
@@ -75,19 +68,13 @@ public class Fish : MonoBehaviour
 
         if (isLaunching)
         {
-            SetFacing(true);
-            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
-            transform.position += Vector3.up * launchSpeed * Time.deltaTime;
+            UpdateLaunchMovement();
             return;
         }
 
         if (isCaught)
         {
-            if (lure != null)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * 2f * Time.deltaTime);
-            }
-
+            if (lure != null) transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * 2f * Time.deltaTime);
             return;
         }
 
@@ -98,16 +85,10 @@ public class Fish : MonoBehaviour
             if (distance < detectRange)
             {
                 isInterested = true;
-
-                if (spriteRenderer != null)
-                {
-                    spriteRenderer.color = Color.red;
-                }
+                if (spriteRenderer != null) spriteRenderer.color = Color.red;
 
                 SetFacing(lure.transform.position.x > transform.position.x);
-
                 transform.position = Vector2.MoveTowards(transform.position, lure.transform.position, speed * Time.deltaTime);
-
                 distance = Vector2.Distance(transform.position, lure.transform.position);
 
                 if (distance < biteDistance)
@@ -120,11 +101,7 @@ public class Fish : MonoBehaviour
             }
 
             isInterested = false;
-
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.color = Color.white;
-            }
+            if (spriteRenderer != null) spriteRenderer.color = Color.white;
         }
 
         Swim();
@@ -140,10 +117,9 @@ public class Fish : MonoBehaviour
 
         detectRange = GManager.instance.detectRange;
         biteDistance = GManager.instance.biteDistance;
-        launchSpeed = GManager.instance.fishLaunchSpeed;
+        launchDuration = GManager.instance.fishLaunchDuration;
+        launchCurveHeight = GManager.instance.fishLaunchCurveHeight;
         returnDuration = GManager.instance.fishReturnDuration;
-        returnCurveHeight = GManager.instance.fishReturnCurveHeight;
-        returnSideOffset = GManager.instance.fishReturnSideOffset;
     }
 
     private void ApplySizeScale()
@@ -163,20 +139,14 @@ public class Fish : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, targetPos) < 0.2f)
-        {
-            ChooseNewTarget();
-        }
+        if (Vector2.Distance(transform.position, targetPos) < 0.2f) ChooseNewTarget();
 
         SetFacing(targetPos.x > transform.position.x);
     }
 
     private void SetFacing(bool faceRight)
     {
-        if (spriteRenderer == null || isFacingRight == faceRight)
-        {
-            return;
-        }
+        if (spriteRenderer == null || isFacingRight == faceRight) return;
 
         Vector3 centerBefore = spriteRenderer.bounds.center;
         Vector3 scale = transform.localScale;
@@ -185,16 +155,12 @@ public class Fish : MonoBehaviour
 
         Vector3 centerAfter = spriteRenderer.bounds.center;
         transform.position += centerBefore - centerAfter;
-
         isFacingRight = faceRight;
     }
 
     private void ChooseNewTarget()
     {
-        if (seaCollider == null)
-        {
-            return;
-        }
+        if (seaCollider == null) return;
 
         Bounds bounds = seaCollider.bounds;
         const float margin = 1f;
@@ -205,14 +171,82 @@ public class Fish : MonoBehaviour
         targetPos = new Vector2(x, y);
     }
 
-    public void BeginReturn(Transform target, FishData data)
+    public void BeginLaunch(Transform target)
     {
-        if (target == null || data == null)
+        if (target == null)
         {
+            Debug.LogWarning("弧の終点となるプレイヤーが設定されていません！");
             return;
         }
 
+        isCaught = false;
+        isReturning = false;
+        reachedPlayer = false;
+        isLaunching = true;
+        launchFinished = false;
+
+        arcTarget = target;
+        returnTarget = target;
+        launchElapsedTime = 0f;
+        launchStartPosition = transform.position;
+
+        Vector3 endPosition = arcTarget.position;
+        float apexY = Mathf.Max(launchStartPosition.y, endPosition.y) + launchCurveHeight;
+        Camera mainCamera = Camera.main;
+
+        if (mainCamera != null)
+        {
+            float cameraDistance = Mathf.Abs(mainCamera.transform.position.z - transform.position.z);
+            Vector3 cameraTopPosition = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 1f, cameraDistance));
+            apexY = Mathf.Max(apexY, cameraTopPosition.y + launchCurveHeight);
+        }
+
+        arcApexPosition = new Vector3((launchStartPosition.x + endPosition.x) / 2f, apexY, transform.position.z);
+        launchControlPosition = new Vector3((launchStartPosition.x + arcApexPosition.x) / 2f, arcApexPosition.y, transform.position.z);
+
+        SetFacing(arcApexPosition.x >= launchStartPosition.x);
+        transform.rotation = Quaternion.identity;
+    }
+
+    private void UpdateLaunchMovement()
+    {
+        launchElapsedTime += Time.deltaTime;
+
+        float duration = Mathf.Max(launchDuration, 0.01f);
+        float t = Mathf.Clamp01(launchElapsedTime / duration);
+
+        Vector3 pointA = Vector3.Lerp(launchStartPosition, launchControlPosition, t);
+        Vector3 pointB = Vector3.Lerp(launchControlPosition, arcApexPosition, t);
+        Vector3 nextPosition = Vector3.Lerp(pointA, pointB, t);
+        Vector3 moveDirection = nextPosition - transform.position;
+
+        transform.position = nextPosition;
+
+        if (moveDirection.sqrMagnitude > 0.0001f)
+        {
+            SetFacing(moveDirection.x >= 0f);
+
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            if (!isFacingRight) angle -= 180f;
+
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
+
+        if (t >= 1f)
+        {
+            transform.position = arcApexPosition;
+            transform.rotation = Quaternion.identity;
+            isLaunching = false;
+            launchFinished = true;
+        }
+    }
+
+    public void BeginReturn(Transform target, FishData data)
+    {
+        if (target == null || data == null) return;
+
         isLaunching = false;
+        launchFinished = false;
         isReturning = true;
         isCaught = false;
         reachedPlayer = false;
@@ -223,12 +257,7 @@ public class Fish : MonoBehaviour
         returnStartPosition = transform.position;
 
         Vector3 endPosition = returnTarget.position;
-        Vector3 middlePosition = (returnStartPosition + endPosition) / 2f;
-        Vector3 returnDirection = (endPosition - returnStartPosition).normalized;
-        Vector3 perpendicularDirection = new(-returnDirection.y, returnDirection.x, 0f);
-        float sideDirection = Random.value < 0.5f ? -1f : 1f;
-
-        returnControlPosition = middlePosition + perpendicularDirection * returnSideOffset * sideDirection + Vector3.up * returnCurveHeight;
+        returnControlPosition = new Vector3((returnStartPosition.x + endPosition.x) / 2f, returnStartPosition.y, transform.position.z);
 
         transform.rotation = Quaternion.identity;
 
@@ -241,16 +270,13 @@ public class Fish : MonoBehaviour
 
     private void UpdateReturnMovement()
     {
-        if (returnTarget == null)
-        {
-            return;
-        }
+        if (returnTarget == null) return;
 
         returnElapsedTime += Time.deltaTime;
 
         float duration = Mathf.Max(returnDuration, 0.01f);
         float t = Mathf.Clamp01(returnElapsedTime / duration);
-        float easedT = 1f - Mathf.Pow(1f - t, 3f);
+        float easedT = t;
 
         Vector3 endPosition = returnTarget.position;
         Vector3 pointA = Vector3.Lerp(returnStartPosition, returnControlPosition, easedT);
@@ -260,14 +286,8 @@ public class Fish : MonoBehaviour
 
         transform.position = nextPosition;
 
-        if (moveDirection.x > 0.01f)
-        {
-            SetFacing(true);
-        }
-        else if (moveDirection.x < -0.01f)
-        {
-            SetFacing(false);
-        }
+        if (moveDirection.x > 0.01f) SetFacing(true);
+        else if (moveDirection.x < -0.01f) SetFacing(false);
 
         float shakeAngle = Mathf.Sin(t * Mathf.PI * 4f) * 12f * (1f - t);
         transform.rotation = Quaternion.Euler(0f, 0f, shakeAngle);

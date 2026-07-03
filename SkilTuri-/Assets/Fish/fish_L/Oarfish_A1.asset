@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Oarfish_A1
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30EA\u30E5\u30A6\u30B0\u30A6\u30CE\u30C4\u30AB\u30A4\u3000\u96F7\u795E"
+  fishSprite: {fileID: -2214243789007592881, guid: dd8572971160e7e46b4a4ec99e368188, type: 3}
+  money: 5000
+  size: 2
