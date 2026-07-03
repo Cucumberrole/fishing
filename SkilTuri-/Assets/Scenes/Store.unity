@@ -205,11 +205,11 @@ Transform:
   m_GameObject: {fileID: 11234525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.703, y: 2.48, z: 0}
+  m_LocalPosition: {x: -137.8728, y: -4.79255, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11234528
 MonoBehaviour:
@@ -685,6 +685,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 22562028}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -956,12 +968,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25247399}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.35543317, w: 0.9347017}
-  m_LocalPosition: {x: 198.97, y: 0.034999758, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.35543317, w: 0.9347017}
+  m_LocalPosition: {x: 65.8002, y: -7.2375503, z: 0}
   m_LocalScale: {x: 1.5725555, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.64}
 --- !u!1 &28042518
 GameObject:
@@ -1397,11 +1409,11 @@ Transform:
   m_GameObject: {fileID: 33647328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 141.7747, y: -1.407, z: 0}
+  m_LocalPosition: {x: 8.604904, y: -8.67955, z: 0}
   m_LocalScale: {x: 1.001832, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35259024
 GameObject:
@@ -1598,6 +1610,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 35259028}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -1918,6 +1942,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 40072074}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -2189,12 +2225,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60734950}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.06348725, w: 0.9979827}
-  m_LocalPosition: {x: 43.2396, y: 1.1107, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.06348725, w: 0.9979827}
+  m_LocalPosition: {x: -89.9302, y: -6.16185, z: 0}
   m_LocalScale: {x: 8.384108, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.28}
 --- !u!1 &62830177
 GameObject:
@@ -2528,6 +2564,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 64788386}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -3037,6 +3085,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &76844946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,6 +3467,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 84425900}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -3652,6 +3724,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 86442402}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -3924,11 +4008,11 @@ Transform:
   m_GameObject: {fileID: 93476018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157.53299, y: 1.6070001, z: 0}
+  m_LocalPosition: {x: 24.36319, y: -5.66555, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &93700440
 GameObject:
@@ -4152,11 +4236,11 @@ Transform:
   m_GameObject: {fileID: 99364782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.182, y: 0.532, z: 0}
+  m_LocalPosition: {x: -98.9878, y: -6.74055, z: 0}
   m_LocalScale: {x: 1.0001894, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105536500
 GameObject:
@@ -4591,12 +4675,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137234792}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.39233714, w: 0.9198215}
-  m_LocalPosition: {x: 0.5451, y: 1.4919, z: 0}
-  m_LocalScale: {x: 2.6977932, y: 0.08556678, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.39233714, w: 0.9198215}
+  m_LocalPosition: {x: -132.6247, y: -5.78065, z: 0}
+  m_LocalScale: {x: 2.6977935, y: 0.08556679, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -46.2}
 --- !u!1 &137421713
 GameObject:
@@ -4683,11 +4767,11 @@ Transform:
   m_GameObject: {fileID: 137421713}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.244, y: 1.587, z: 0}
+  m_LocalPosition: {x: -117.9258, y: -5.68555, z: 0}
   m_LocalScale: {x: 1.0361382, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &138690327
 GameObject:
@@ -5400,12 +5484,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156418156}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.051900197, w: 0.99865234}
-  m_LocalPosition: {x: 115.2082, y: 0.1168, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.051900197, w: 0.99865234}
+  m_LocalPosition: {x: -17.961601, y: -7.1557503, z: 0}
   m_LocalScale: {x: 9.023674, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.95}
 --- !u!1 &159675089
 GameObject:
@@ -5492,11 +5576,11 @@ Transform:
   m_GameObject: {fileID: 159675089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.89, y: 0.48, z: 0}
+  m_LocalPosition: {x: -65.2798, y: -6.79255, z: 0}
   m_LocalScale: {x: 0.9885953, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &163331601
 GameObject:
@@ -5693,6 +5777,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 163331605}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -5828,11 +5924,11 @@ Transform:
   m_GameObject: {fileID: 168399873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.8, y: 2.45, z: 0}
+  m_LocalPosition: {x: -27.369797, y: -4.82255, z: 0}
   m_LocalScale: {x: 0.9888851, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173963355
 GameObject:
@@ -6192,12 +6288,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176505252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.35543317, w: 0.9347017}
-  m_LocalPosition: {x: 54.3536, y: 0.0389, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.35543317, w: 0.9347017}
+  m_LocalPosition: {x: -78.8162, y: -7.23365, z: 0}
   m_LocalScale: {x: 1.5725555, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.64}
 --- !u!1 &177840600
 GameObject:
@@ -6382,6 +6478,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 177840603}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -6806,6 +6914,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 185701329}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -7158,6 +7278,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 186160954}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -7316,6 +7448,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &186890039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7354,6 +7498,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186890035}
   m_CullTransparentMesh: 1
+--- !u!1 &188970671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188970674}
+  - component: {fileID: 188970673}
+  - component: {fileID: 188970672}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &188970672
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188970671}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bb581f586dc418a489572400b693d8e6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &188970673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188970671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d078d29497b414495ff4c7ba0f9201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  audioSource: {fileID: 188970672}
+  jingle: {fileID: 8300000, guid: bb581f586dc418a489572400b693d8e6, type: 3}
+--- !u!4 &188970674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188970671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6942, y: -0.71583, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191397440
 GameObject:
   m_ObjectHideFlags: 0
@@ -7686,6 +7974,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 195836736}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -8679,6 +8979,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 236140327}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -8826,11 +9138,11 @@ Transform:
   m_GameObject: {fileID: 237987423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 141.7661, y: 2.49, z: 0}
+  m_LocalPosition: {x: 8.596298, y: -4.78255, z: 0}
   m_LocalScale: {x: 0.9888851, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239739876
 GameObject:
@@ -8916,12 +9228,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239739876}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.051203046, w: 0.9986883}
-  m_LocalPosition: {x: 187.2298, y: 1.1727, z: 0}
-  m_LocalScale: {x: 9.866956, y: 0.07962021, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.051203046, w: 0.9986883}
+  m_LocalPosition: {x: 54.059998, y: -6.09985, z: 0}
+  m_LocalScale: {x: 9.866957, y: 0.07962022, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.87}
 --- !u!1 &240946778
 GameObject:
@@ -9106,6 +9418,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 240946781}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -9849,6 +10173,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 262507859}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -10219,6 +10555,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 270134393}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -11224,6 +11572,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &281275864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11347,11 +11707,11 @@ Transform:
   m_GameObject: {fileID: 284547180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.0489, y: -0.41800022, z: 0}
+  m_LocalPosition: {x: 60.879105, y: -7.6905503, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286624344
 GameObject:
@@ -11959,6 +12319,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 309368602}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -12279,6 +12651,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 312231613}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -12688,11 +13072,11 @@ Transform:
   m_GameObject: {fileID: 318029310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.37169, y: -1.407, z: 0}
+  m_LocalPosition: {x: 6.201889, y: -8.67955, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321229652
 GameObject:
@@ -12778,12 +13162,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321229652}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.42972326, w: 0.90296066}
-  m_LocalPosition: {x: 108.4952, y: -0.41390002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42972326, w: 0.90296066}
+  m_LocalPosition: {x: -24.674599, y: -7.68645, z: 0}
   m_LocalScale: {x: 2.457048, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.9}
 --- !u!1 &321969863
 GameObject:
@@ -13281,11 +13665,11 @@ Transform:
   m_GameObject: {fileID: 325261208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7109, y: 0.537, z: 0}
+  m_LocalPosition: {x: -137.8807, y: -6.73555, z: 0}
   m_LocalScale: {x: 0.9803828, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &329140420
 GameObject:
@@ -14213,6 +14597,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 353616575}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -14360,11 +14756,11 @@ Transform:
   m_GameObject: {fileID: 354612623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7095, y: -1.376, z: 0}
+  m_LocalPosition: {x: -137.8793, y: -8.64855, z: 0}
   m_LocalScale: {x: 1.0031847, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &356628631
 GameObject:
@@ -14949,12 +15345,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369896304}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.4336591, w: 0.901077}
-  m_LocalPosition: {x: 144.4598, y: 1.5763999, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43365914, w: 0.90107703}
+  m_LocalPosition: {x: 11.289993, y: -5.6961503, z: 0}
   m_LocalScale: {x: 2.5184727, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.4}
 --- !u!1 &374528573
 GameObject:
@@ -15040,12 +15436,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374528573}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.051203046, w: 0.9986883}
-  m_LocalPosition: {x: 151.172, y: 1.06, z: 0}
-  m_LocalScale: {x: 9.054746, y: 0.07962021, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.051203046, w: 0.9986883}
+  m_LocalPosition: {x: 18.002197, y: -6.21255, z: 0}
+  m_LocalScale: {x: 9.054746, y: 0.07962022, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.87}
 --- !u!1 &377575562
 GameObject:
@@ -15132,11 +15528,11 @@ Transform:
   m_GameObject: {fileID: 377575562}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.132996, y: 1.667, z: 0}
+  m_LocalPosition: {x: -48.036804, y: -5.60555, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379805998
 GameObject:
@@ -15223,11 +15619,11 @@ Transform:
   m_GameObject: {fileID: 379805998}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 144.46779, y: 0.5799999, z: 0}
+  m_LocalPosition: {x: 11.297989, y: -6.69255, z: 0}
   m_LocalScale: {x: 1.6106786, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380044881
 GameObject:
@@ -15636,6 +16032,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 391226829}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -15907,12 +16315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402242336}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.09376082, w: 0.9955948}
-  m_LocalPosition: {x: 96.809, y: 1.4972, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.09376082, w: 0.9955948}
+  m_LocalPosition: {x: -36.3608, y: -5.77535, z: 0}
   m_LocalScale: {x: 9.593753, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.76}
 --- !u!1 &402543305
 GameObject:
@@ -16211,11 +16619,11 @@ Transform:
   m_GameObject: {fileID: 406027746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.177, y: -1.467, z: 0}
+  m_LocalPosition: {x: -98.9928, y: -8.73955, z: 0}
   m_LocalScale: {x: 1.001832, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413444895
 GameObject:
@@ -16412,6 +16820,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 413444899}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -16684,11 +17104,11 @@ Transform:
   m_GameObject: {fileID: 416984926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157.54001, y: -0.44000018, z: 0}
+  m_LocalPosition: {x: 24.370209, y: -7.71255, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &429593217
 GameObject:
@@ -16775,11 +17195,11 @@ Transform:
   m_GameObject: {fileID: 429593217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.8701, y: 0.52, z: 0}
+  m_LocalPosition: {x: -96.2997, y: -6.75255, z: 0}
   m_LocalScale: {x: 1.6106786, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437903044
 GameObject:
@@ -16866,11 +17286,11 @@ Transform:
   m_GameObject: {fileID: 437903044}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.81361, y: 0.5519999, z: 0}
+  m_LocalPosition: {x: -27.356194, y: -6.72055, z: 0}
   m_LocalScale: {x: 1.0001894, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439762849
 GameObject:
@@ -17553,6 +17973,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 464745955}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -17900,11 +18332,11 @@ Transform:
   m_GameObject: {fileID: 469010295}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.597, y: -0.426, z: 0}
+  m_LocalPosition: {x: -11.5728, y: -7.69855, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469613548
 GameObject:
@@ -18127,12 +18559,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478058501}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.37541556, w: 0.92685664}
-  m_LocalPosition: {x: 54.3436, y: 1.0539, z: 0}
-  m_LocalScale: {x: 1.6012536, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37541556, w: 0.92685664}
+  m_LocalPosition: {x: -78.8262, y: -6.21865, z: 0}
+  m_LocalScale: {x: 1.6012535, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.1}
 --- !u!1 &478470418
 GameObject:
@@ -18466,6 +18898,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 487724667}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -18600,12 +19044,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487815838}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.09376082, w: 0.9955948}
-  m_LocalPosition: {x: 168.8077, y: 1.3564, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.09376082, w: 0.9955948}
+  m_LocalPosition: {x: 35.637894, y: -5.91615, z: 0}
   m_LocalScale: {x: 8.745161, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.76}
 --- !u!1 &494300903
 GameObject:
@@ -18929,6 +19373,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &504443000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19189,11 +19645,11 @@ Transform:
   m_GameObject: {fileID: 533927227}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.36, y: 2.49, z: 0}
+  m_LocalPosition: {x: 6.190201, y: -4.78255, z: 0}
   m_LocalScale: {x: 0.9907209, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535273203
 GameObject:
@@ -19629,11 +20085,11 @@ Transform:
   m_GameObject: {fileID: 557913698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.3477, y: 0.6, z: 0}
+  m_LocalPosition: {x: -107.8221, y: -6.67255, z: 0}
   m_LocalScale: {x: 9.027381, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561831475
 GameObject:
@@ -19795,11 +20251,11 @@ Transform:
   m_GameObject: {fileID: 563155267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.2241, y: -0.493, z: 0}
+  m_LocalPosition: {x: -117.9457, y: -7.76555, z: 0}
   m_LocalScale: {x: 0.9762684, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565459519
 GameObject:
@@ -20071,6 +20527,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 573561090}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -20342,12 +20810,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578665360}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.4336591, w: 0.901077}
-  m_LocalPosition: {x: 108.493706, y: 1.5364, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43365914, w: 0.90107703}
+  m_LocalPosition: {x: -24.676094, y: -5.7361503, z: 0}
   m_LocalScale: {x: 2.5184727, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.4}
 --- !u!1 &579321490
 GameObject:
@@ -20783,11 +21251,11 @@ Transform:
   m_GameObject: {fileID: 614371142}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87.5411, y: 1.658, z: 0}
+  m_LocalPosition: {x: -45.6287, y: -5.61455, z: 0}
   m_LocalScale: {x: 0.96644557, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &616086967
 GameObject:
@@ -20984,6 +21452,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 616086971}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -21366,6 +21846,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 621876755}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -21501,11 +21993,11 @@ Transform:
   m_GameObject: {fileID: 622412256}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.8958, y: -1.513, z: 0}
+  m_LocalPosition: {x: -65.274, y: -8.78555, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624696782
 GameObject:
@@ -21667,11 +22159,11 @@ Transform:
   m_GameObject: {fileID: 629220884}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 108.5017, y: 0.53999996, z: 0}
+  m_LocalPosition: {x: -24.668098, y: -6.73255, z: 0}
   m_LocalScale: {x: 1.6106786, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630826662
 GameObject:
@@ -22047,9 +22539,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 644793059}
-        m_TargetAssemblyTypeName: ChangeColor, Assembly-CSharp
-        m_MethodName: ChangeToBlack
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22947,6 +23439,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 658586705}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -23192,6 +23696,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 672138932}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -23425,6 +23941,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 673851704}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -23586,6 +24114,18 @@ MonoBehaviour:
       - m_Target: {fileID: 674702335}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24015,6 +24555,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &690704988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24298,6 +24850,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &698995453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24444,6 +25008,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704754467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24566,12 +25142,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705167475}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.35543317, w: 0.9347017}
-  m_LocalPosition: {x: 126.536995, y: 0.018999964, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.35543317, w: 0.9347017}
+  m_LocalPosition: {x: -6.632805, y: -7.25355, z: 0}
   m_LocalScale: {x: 1.5725555, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.64}
 --- !u!1 &708129349
 GameObject:
@@ -25042,6 +25618,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 711494237}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -25316,6 +25904,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 720149781}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -25868,6 +26468,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729763137}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -26100,6 +26712,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 730709505}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -26447,11 +27071,11 @@ Transform:
   m_GameObject: {fileID: 742634830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.3998, y: 0.546, z: 0}
+  m_LocalPosition: {x: -29.769997, y: -6.72655, z: 0}
   m_LocalScale: {x: 0.9885953, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747328208
 GameObject:
@@ -26538,11 +27162,11 @@ Transform:
   m_GameObject: {fileID: 747328208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.04189, y: 1.6290001, z: 0}
+  m_LocalPosition: {x: 60.872086, y: -5.64355, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747680021
 GameObject:
@@ -26769,6 +27393,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 748553728}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -27746,6 +28382,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 780683580}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -28295,6 +28943,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795144822}
   m_CullTransparentMesh: 1
+--- !u!1 &798315392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 798315393}
+  - component: {fileID: 798315395}
+  - component: {fileID: 798315394}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &798315393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798315392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1823100286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &798315394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798315392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d078d29497b414495ff4c7ba0f9201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  audioSource: {fileID: 798315395}
+  jingle: {fileID: 8300000, guid: bb581f586dc418a489572400b693d8e6, type: 3}
+--- !u!82 &798315395
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798315392}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bb581f586dc418a489572400b693d8e6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &799528158
 GameObject:
   m_ObjectHideFlags: 0
@@ -28517,11 +29309,11 @@ Transform:
   m_GameObject: {fileID: 804527970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.331, y: -0.455, z: 0}
+  m_LocalPosition: {x: -83.8388, y: -7.72755, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &808192561
 GameObject:
@@ -28608,11 +29400,11 @@ Transform:
   m_GameObject: {fileID: 808192561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 177.39842, y: 0.57589996, z: 0}
+  m_LocalPosition: {x: 44.228622, y: -6.69665, z: 0}
   m_LocalScale: {x: 1.0001894, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815583630
 GameObject:
@@ -29211,11 +30003,11 @@ Transform:
   m_GameObject: {fileID: 840245680}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.812, y: -0.469, z: 0}
+  m_LocalPosition: {x: -81.3578, y: -7.74155, z: 0}
   m_LocalScale: {x: 1.1125039, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843412222
 GameObject:
@@ -29513,12 +30305,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852572561}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.06348725, w: 0.9979827}
-  m_LocalPosition: {x: 79.2007, y: 1.0696, z: 0}
-  m_LocalScale: {x: 8.062997, y: 0.07962021, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.06348725, w: 0.9979827}
+  m_LocalPosition: {x: -53.9691, y: -6.20295, z: 0}
+  m_LocalScale: {x: 8.062998, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.28}
 --- !u!1 &855743976
 GameObject:
@@ -29619,6 +30411,18 @@ MonoBehaviour:
       - m_Target: {fileID: 855743978}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29861,6 +30665,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 856820610}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -30071,11 +30887,11 @@ Transform:
   m_GameObject: {fileID: 861284590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 174.97871, y: 2.4739003, z: 0}
+  m_LocalPosition: {x: 41.808914, y: -4.79865, z: 0}
   m_LocalScale: {x: 0.9907209, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864744809
 GameObject:
@@ -30162,11 +30978,11 @@ Transform:
   m_GameObject: {fileID: 864744809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.2988, y: -1.513, z: 0}
+  m_LocalPosition: {x: -62.871002, y: -8.78555, z: 0}
   m_LocalScale: {x: 1.001832, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864791191
 GameObject:
@@ -30363,6 +31179,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 864791195}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -31358,12 +32186,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914947285}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.42972326, w: 0.90296066}
-  m_LocalPosition: {x: 36.8636, y: -0.4339, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42972326, w: 0.90296066}
+  m_LocalPosition: {x: -96.3062, y: -7.70645, z: 0}
   m_LocalScale: {x: 2.457048, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.9}
 --- !u!1 &916523717
 GameObject:
@@ -31834,6 +32662,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 925570209}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -32341,6 +33181,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 933076731}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -33110,12 +33962,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947888875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.4336591, w: 0.901077}
-  m_LocalPosition: {x: 36.8621, y: 1.5164, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43365914, w: 0.90107703}
+  m_LocalPosition: {x: -96.3077, y: -5.7561502, z: 0}
   m_LocalScale: {x: 2.5184727, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.4}
 --- !u!1 &949000180
 GameObject:
@@ -33524,6 +34376,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 968300572}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -33795,12 +34659,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973745052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.4336591, w: 0.901077}
-  m_LocalPosition: {x: 72.9839, y: 1.4704, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43365914, w: 0.90107703}
+  m_LocalPosition: {x: -60.185898, y: -5.8021502, z: 0}
   m_LocalScale: {x: 2.5184727, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.4}
 --- !u!1 &973998056
 GameObject:
@@ -34134,6 +34998,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 978997578}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -34367,6 +35243,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 980348637}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -34514,11 +35402,11 @@ Transform:
   m_GameObject: {fileID: 980465181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.324, y: 1.592, z: 0}
+  m_LocalPosition: {x: -83.845795, y: -5.68055, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &982030057
 GameObject:
@@ -34852,6 +35740,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 986616789}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -35138,11 +36038,11 @@ Transform:
   m_GameObject: {fileID: 989715964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.9919, y: 0.47399995, z: 0}
+  m_LocalPosition: {x: -60.177902, y: -6.79855, z: 0}
   m_LocalScale: {x: 1.6106786, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990605460
 GameObject:
@@ -35339,6 +36239,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 990605464}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -35474,11 +36386,11 @@ Transform:
   m_GameObject: {fileID: 995692322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 123.9981, y: 1.6120001, z: 0}
+  m_LocalPosition: {x: -9.1717, y: -5.66055, z: 0}
   m_LocalScale: {x: 0.96644557, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &997147712
 GameObject:
@@ -35799,6 +36711,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1006360462}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -36032,6 +36956,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1006582754}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -36193,6 +37129,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1009386701}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36771,6 +37719,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1042986934}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -37270,12 +38230,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056868341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.051203046, w: 0.9986883}
-  m_LocalPosition: {x: 115.2119, y: 1.066, z: 0}
-  m_LocalScale: {x: 9.054746, y: 0.07962021, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.051203046, w: 0.9986883}
+  m_LocalPosition: {x: -17.957901, y: -6.20655, z: 0}
+  m_LocalScale: {x: 9.054746, y: 0.07962022, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.87}
 --- !u!1 &1060942676
 GameObject:
@@ -37909,12 +38869,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080973412}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.37541556, w: 0.92685664}
-  m_LocalPosition: {x: 90.07, y: 1.08, z: 0}
-  m_LocalScale: {x: 1.6012536, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37541556, w: 0.92685664}
+  m_LocalPosition: {x: -43.0998, y: -6.19255, z: 0}
+  m_LocalScale: {x: 1.6012535, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.1}
 --- !u!1 &1084550493
 GameObject:
@@ -38015,6 +38975,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1084550495}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38149,6 +39121,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1086024551}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: SceneChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38294,11 +39278,11 @@ Transform:
   m_GameObject: {fileID: 1092343204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.7623, y: 2.43, z: 0}
+  m_LocalPosition: {x: -101.4075, y: -4.8425503, z: 0}
   m_LocalScale: {x: 0.9907209, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103372541
 GameObject:
@@ -38832,6 +39816,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1116606485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39053,6 +40049,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1117350689}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -39200,11 +40208,11 @@ Transform:
   m_GameObject: {fileID: 1120824341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 174.9846, y: 0.56990004, z: 0}
+  m_LocalPosition: {x: 41.814804, y: -6.70265, z: 0}
   m_LocalScale: {x: 0.9885953, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123995911
 GameObject:
@@ -39476,6 +40484,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1127577965}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -40024,11 +41044,11 @@ Transform:
   m_GameObject: {fileID: 1141844312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 174.9904, y: -1.4230999, z: 0}
+  m_LocalPosition: {x: 41.820602, y: -8.69565, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156760965
 GameObject:
@@ -40213,6 +41233,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1156760968}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -40360,11 +41392,11 @@ Transform:
   m_GameObject: {fileID: 1158568156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196.4569, y: -0.43200022, z: 0}
+  m_LocalPosition: {x: 63.287094, y: -7.7045503, z: 0}
   m_LocalScale: {x: 0.9683234, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160173549
 GameObject:
@@ -40561,6 +41593,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1160173553}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -41107,11 +42151,11 @@ Transform:
   m_GameObject: {fileID: 1166567210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 159.9411, y: 1.598, z: 0}
+  m_LocalPosition: {x: 26.771301, y: -5.67455, z: 0}
   m_LocalScale: {x: 0.96644557, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168983285
 GameObject:
@@ -41687,6 +42731,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1173935236}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -42626,12 +43682,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196482899}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.37541556, w: 0.92685664}
-  m_LocalPosition: {x: 162.47, y: 1.02, z: 0}
-  m_LocalScale: {x: 1.6012536, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37541556, w: 0.92685664}
+  m_LocalPosition: {x: 29.300201, y: -6.25255, z: 0}
+  m_LocalScale: {x: 1.6012535, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.1}
 --- !u!1 &1201504809
 GameObject:
@@ -42992,11 +44048,11 @@ Transform:
   m_GameObject: {fileID: 1207844241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.4056, y: -1.4469999, z: 0}
+  m_LocalPosition: {x: -29.764198, y: -8.71955, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210724578
 GameObject:
@@ -43082,12 +44138,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210724578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.051900197, w: 0.99865234}
-  m_LocalPosition: {x: 187.2339, y: 0.1391, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.051900197, w: 0.99865234}
+  m_LocalPosition: {x: 54.064102, y: -7.13345, z: 0}
   m_LocalScale: {x: 9.852047, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.95}
 --- !u!1 &1211353221
 GameObject:
@@ -43284,6 +44340,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1211353225}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -43556,11 +44624,11 @@ Transform:
   m_GameObject: {fileID: 1225078093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3129, y: 2.457, z: 0}
+  m_LocalPosition: {x: -135.4827, y: -4.81555, z: 0}
   m_LocalScale: {x: 0.9724601, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1225835694
 GameObject:
@@ -43757,6 +44825,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1225835698}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -44002,9 +45082,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1248045926}
-        m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44014,9 +45094,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1248045924}
-        m_TargetAssemblyTypeName: ChangeColor, Assembly-CSharp
-        m_MethodName: ChangeToBlack
+      - m_Target: {fileID: 1248045926}
+        m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44259,6 +45339,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1252677848}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -44408,6 +45500,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1253350528}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44650,6 +45754,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1264286145}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -44921,12 +46037,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273112201}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.09376082, w: 0.9955948}
-  m_LocalPosition: {x: 25.325, y: 1.465, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.09376082, w: 0.9955948}
+  m_LocalPosition: {x: -107.8448, y: -5.80755, z: 0}
   m_LocalScale: {x: 9.234194, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.76}
 --- !u!1 &1273337732
 GameObject:
@@ -45198,6 +46314,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1274724610}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -45545,11 +46673,11 @@ Transform:
   m_GameObject: {fileID: 1292208292}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 177.38481, y: 2.4739003, z: 0}
+  m_LocalPosition: {x: 44.21501, y: -4.79865, z: 0}
   m_LocalScale: {x: 0.9888851, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294501042
 GameObject:
@@ -45746,6 +46874,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1294501046}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -46093,11 +47233,11 @@ Transform:
   m_GameObject: {fileID: 1302760435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 133.015, y: 0.565, z: 0}
+  m_LocalPosition: {x: -0.15480042, y: -6.70755, z: 0}
   m_LocalScale: {x: 8.9344225, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304207666
 GameObject:
@@ -46273,6 +47413,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1305206931}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46727,6 +47879,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1309859097}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -47137,12 +48301,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315948863}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.098190814, w: 0.9951677}
-  m_LocalPosition: {x: 96.806, y: -0.3721, z: 0}
-  m_LocalScale: {x: 9.592958, y: 0.08069991, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.098190814, w: 0.9951677}
+  m_LocalPosition: {x: -36.3638, y: -7.64465, z: 0}
+  m_LocalScale: {x: 9.592959, y: 0.08069991, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.27}
 --- !u!1 &1317304849
 GameObject:
@@ -47232,6 +48396,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1317304854}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -47611,11 +48787,11 @@ Transform:
   m_GameObject: {fileID: 1320262536}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.59, y: 1.6210002, z: 0}
+  m_LocalPosition: {x: -11.579803, y: -5.65155, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322297128
 GameObject:
@@ -47812,6 +48988,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1322297132}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -48295,12 +49483,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343147090}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.42972326, w: 0.90296066}
-  m_LocalPosition: {x: 72.9854, y: -0.47989997, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42972326, w: 0.90296066}
+  m_LocalPosition: {x: -60.184402, y: -7.75245, z: 0}
   m_LocalScale: {x: 2.457048, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.9}
 --- !u!1 &1344295221
 GameObject:
@@ -49245,6 +50433,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1367178136}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -49392,11 +50592,11 @@ Transform:
   m_GameObject: {fileID: 1375691666}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 124.005, y: -0.44, z: 0}
+  m_LocalPosition: {x: -9.164803, y: -7.71255, z: 0}
   m_LocalScale: {x: 0.9683234, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378281209
 GameObject:
@@ -49497,6 +50697,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1378281211}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49739,6 +50951,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1378624108}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -49948,12 +51172,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383585416}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.4336591, w: 0.901077}
-  m_LocalPosition: {x: 180.0785, y: 1.5603, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.43365914, w: 0.90107703}
+  m_LocalPosition: {x: 46.908707, y: -5.71225, z: 0}
   m_LocalScale: {x: 2.5184727, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.4}
 --- !u!1 &1385274850
 GameObject:
@@ -50738,11 +51962,11 @@ Transform:
   m_GameObject: {fileID: 1404431724}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.774, y: -1.467, z: 0}
+  m_LocalPosition: {x: -101.3958, y: -8.73955, z: 0}
   m_LocalScale: {x: 0.9661799, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409110150
 GameObject:
@@ -51178,11 +52402,11 @@ Transform:
   m_GameObject: {fileID: 1429823746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.8268, y: 1.58, z: 0}
+  m_LocalPosition: {x: -120.343, y: -5.69255, z: 0}
   m_LocalScale: {x: 0.9676869, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1429937163
 GameObject:
@@ -51406,11 +52630,11 @@ Transform:
   m_GameObject: {fileID: 1433882305}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.8086, y: -1.4469999, z: 0}
+  m_LocalPosition: {x: -27.361198, y: -8.71955, z: 0}
   m_LocalScale: {x: 1.001832, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1437351401
 GameObject:
@@ -51607,6 +52831,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1437351405}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -52143,6 +53379,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472483617}
   m_CullTransparentMesh: 1
+--- !u!1 &1474826740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474826741}
+  - component: {fileID: 1474826743}
+  - component: {fileID: 1474826742}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1474826741
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474826740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1640714522}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -367.3, y: -3}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1474826742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474826740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -3311323376781529084, guid: 467b714f86723304ab5cf8ca9c470423, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1474826743
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474826740}
+  m_CullTransparentMesh: 1
 --- !u!1 &1475333678
 GameObject:
   m_ObjectHideFlags: 0
@@ -52577,11 +53888,11 @@ Transform:
   m_GameObject: {fileID: 1482159591}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196.45, y: 1.62, z: 0}
+  m_LocalPosition: {x: 63.280197, y: -5.65255, z: 0}
   m_LocalScale: {x: 0.96644557, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1483831968
 GameObject:
@@ -52915,6 +54226,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1484296646}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -53049,12 +54372,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499885550}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.098190814, w: 0.9951677}
-  m_LocalPosition: {x: 61.1808, y: -0.4556, z: 0}
-  m_LocalScale: {x: 9.816781, y: 0.08069991, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.098190814, w: 0.9951677}
+  m_LocalPosition: {x: -71.989, y: -7.72815, z: 0}
+  m_LocalScale: {x: 9.81678, y: 0.08069991, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.27}
 --- !u!1 &1505971356
 GameObject:
@@ -53388,6 +54711,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1508478570}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -53770,6 +55105,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1512683263}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -54042,11 +55389,11 @@ Transform:
   m_GameObject: {fileID: 1520057771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.8273, y: -0.494, z: 0}
+  m_LocalPosition: {x: -120.3425, y: -7.76655, z: 0}
   m_LocalScale: {x: 0.9867352, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522522102
 GameObject:
@@ -54284,6 +55631,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1522811772}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54937,6 +56296,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1539406447}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -55170,6 +56541,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1542383501}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -55804,6 +57187,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1551929711}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -55973,11 +57368,11 @@ Transform:
   m_GameObject: {fileID: 1552106687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 177.39342, y: -1.4230999, z: 0}
+  m_LocalPosition: {x: 44.223618, y: -8.69565, z: 0}
   m_LocalScale: {x: 1.001832, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554707221
 GameObject:
@@ -56350,12 +57745,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559498586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.10886683, w: 0.9940564}
-  m_LocalPosition: {x: 25.337, y: -0.428, z: 0}
-  m_LocalScale: {x: 9.301624, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.10886683, w: 0.9940564}
+  m_LocalPosition: {x: -107.8328, y: -7.70055, z: 0}
+  m_LocalScale: {x: 9.301623, y: 0.081795976, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.5}
 --- !u!1 &1560219060
 GameObject:
@@ -56578,12 +57973,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562933354}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.051900197, w: 0.99865234}
-  m_LocalPosition: {x: 79.2176, y: 0.0955, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.051900197, w: 0.99865234}
+  m_LocalPosition: {x: -53.9522, y: -7.17705, z: 0}
   m_LocalScale: {x: 8.07642, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.95}
 --- !u!1 &1574601745
 GameObject:
@@ -56926,11 +58321,11 @@ Transform:
   m_GameObject: {fileID: 1582276617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.8841, y: 2.384, z: 0}
+  m_LocalPosition: {x: -65.2857, y: -4.88855, z: 0}
   m_LocalScale: {x: 0.9907209, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586501339
 GameObject:
@@ -57017,11 +58412,11 @@ Transform:
   m_GameObject: {fileID: 1586501339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 180.0865, y: 0.5639, z: 0}
+  m_LocalPosition: {x: 46.916702, y: -6.70865, z: 0}
   m_LocalScale: {x: 1.6106786, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592031053
 GameObject:
@@ -57107,12 +58502,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592031053}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.35543317, w: 0.9347017}
-  m_LocalPosition: {x: 162.48, y: 0.0049997866, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.35543317, w: 0.9347017}
+  m_LocalPosition: {x: 29.310196, y: -7.2675505, z: 0}
   m_LocalScale: {x: 1.5725555, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.64}
 --- !u!1 &1592249758
 GameObject:
@@ -57198,12 +58593,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592249758}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.051900197, w: 0.99865234}
-  m_LocalPosition: {x: 151.16829, y: 0.11079997, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.051900197, w: 0.99865234}
+  m_LocalPosition: {x: 17.99849, y: -7.1617503, z: 0}
   m_LocalScale: {x: 9.023674, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.95}
 --- !u!1 &1595682005
 GameObject:
@@ -57525,6 +58920,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1595845628}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -57675,6 +59082,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1599379848}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -58027,6 +59446,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1599552348}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -58409,6 +59840,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1604534895}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -58905,12 +60348,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619913016}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.098190814, w: 0.9951677}
-  m_LocalPosition: {x: 168.8068, y: -0.351, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.098190814, w: 0.9951677}
+  m_LocalPosition: {x: 35.636993, y: -7.62355, z: 0}
   m_LocalScale: {x: 8.747184, y: 0.08069991, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.27}
 --- !u!1 &1620733027
 GameObject:
@@ -59818,12 +61261,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635865135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.42972326, w: 0.90296066}
-  m_LocalPosition: {x: 144.46129, y: -0.37390006, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42972326, w: 0.90296066}
+  m_LocalPosition: {x: 11.291489, y: -7.64645, z: 0}
   m_LocalScale: {x: 2.457048, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.9}
 --- !u!1 &1640714521
 GameObject:
@@ -59856,6 +61299,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1871038418}
+  - {fileID: 1474826741}
   m_Father: {fileID: 1885324263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.9058847}
@@ -60856,6 +62300,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1674833944}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -60990,12 +62446,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676191255}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.42972326, w: 0.90296066}
-  m_LocalPosition: {x: 180.08, y: -0.39, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42972326, w: 0.90296066}
+  m_LocalPosition: {x: 46.910202, y: -7.66255, z: 0}
   m_LocalScale: {x: 2.457048, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.9}
 --- !u!1 &1678072077
 GameObject:
@@ -61096,6 +62552,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1678072079}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61365,11 +62833,11 @@ Transform:
   m_GameObject: {fileID: 1678938767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.393906, y: 2.45, z: 0}
+  m_LocalPosition: {x: -29.775894, y: -4.82255, z: 0}
   m_LocalScale: {x: 0.9907209, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683359063
 GameObject:
@@ -61704,6 +63172,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1702722625}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -62125,11 +63605,11 @@ Transform:
   m_GameObject: {fileID: 1706897506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 87.548, y: -0.394, z: 0}
+  m_LocalPosition: {x: -45.621803, y: -7.66655, z: 0}
   m_LocalScale: {x: 0.9683234, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709157475
 GameObject:
@@ -62221,6 +63701,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1709157482}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62529,6 +64021,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1713786520}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63003,6 +64507,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1715772773}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -63225,11 +64741,11 @@ Transform:
   m_GameObject: {fileID: 1718236262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.2902, y: 2.384, z: 0}
+  m_LocalPosition: {x: -62.8796, y: -4.88855, z: 0}
   m_LocalScale: {x: 0.9888851, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720854416
 GameObject:
@@ -63316,11 +64832,11 @@ Transform:
   m_GameObject: {fileID: 1720854416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 168.8158, y: 0.537, z: 0}
+  m_LocalPosition: {x: 35.645996, y: -6.73555, z: 0}
   m_LocalScale: {x: 8.517829, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722296826
 GameObject:
@@ -63579,6 +65095,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1724047756}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -64235,6 +65763,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1736531676}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -64480,9 +66020,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1740398998}
-        m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -64492,9 +66032,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1740398996}
-        m_TargetAssemblyTypeName: ChangeColor, Assembly-CSharp
-        m_MethodName: ChangeToBlack
+      - m_Target: {fileID: 1740398998}
+        m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -65252,12 +66792,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755818804}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.37541556, w: 0.92685664}
-  m_LocalPosition: {x: 126.527, y: 1.0340002, z: 0}
-  m_LocalScale: {x: 1.6012536, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37541556, w: 0.92685664}
+  m_LocalPosition: {x: -6.6427994, y: -6.23855, z: 0}
+  m_LocalScale: {x: 1.6012535, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.1}
 --- !u!1 &1757621193
 GameObject:
@@ -65767,12 +67307,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763685667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.09376082, w: 0.9955948}
-  m_LocalPosition: {x: 133.001, y: 1.4228, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.09376082, w: 0.9955948}
+  m_LocalPosition: {x: -0.16879272, y: -5.84975, z: 0}
   m_LocalScale: {x: 9.157237, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.76}
 --- !u!1 &1765222380
 GameObject:
@@ -65873,6 +67413,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1765222382}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -66429,11 +67981,11 @@ Transform:
   m_GameObject: {fileID: 1777361868}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.3038, y: 0.48599997, z: 0}
+  m_LocalPosition: {x: -62.865997, y: -6.78655, z: 0}
   m_LocalScale: {x: 1.0001894, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782003120
 GameObject:
@@ -66519,12 +68071,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782003120}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.051900197, w: 0.99865234}
-  m_LocalPosition: {x: 43.243, y: 0.101, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.051900197, w: 0.99865234}
+  m_LocalPosition: {x: -89.9268, y: -7.1715503, z: 0}
   m_LocalScale: {x: 8.369348, y: 0.07962021, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.95}
 --- !u!1 &1783166355
 GameObject:
@@ -67423,6 +68975,154 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821833881}
   m_CullTransparentMesh: 1
+--- !u!1 &1823100285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823100286}
+  m_Layer: 0
+  m_Name: Lines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823100286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823100285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 133.1698, y: 7.27255, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 798315393}
+  - {fileID: 11234527}
+  - {fileID: 1092343206}
+  - {fileID: 980465183}
+  - {fileID: 804527972}
+  - {fileID: 840245682}
+  - {fileID: 1860915305}
+  - {fileID: 478058503}
+  - {fileID: 176505254}
+  - {fileID: 614371144}
+  - {fileID: 377575564}
+  - {fileID: 1706897508}
+  - {fileID: 2068376651}
+  - {fileID: 705167477}
+  - {fileID: 1755818806}
+  - {fileID: 469010297}
+  - {fileID: 1166567212}
+  - {fileID: 93476020}
+  - {fileID: 2016484072}
+  - {fileID: 416984928}
+  - {fileID: 1196482901}
+  - {fileID: 1592031055}
+  - {fileID: 25247401}
+  - {fileID: 2011889498}
+  - {fileID: 284547182}
+  - {fileID: 1158568158}
+  - {fileID: 747328210}
+  - {fileID: 1482159593}
+  - {fileID: 1375691668}
+  - {fileID: 1320262538}
+  - {fileID: 995692324}
+  - {fileID: 1080973414}
+  - {fileID: 1997577190}
+  - {fileID: 1928482689}
+  - {fileID: 1404431726}
+  - {fileID: 406027748}
+  - {fileID: 99364784}
+  - {fileID: 429593219}
+  - {fileID: 1936197213}
+  - {fileID: 947888877}
+  - {fileID: 60734952}
+  - {fileID: 1782003122}
+  - {fileID: 1562933356}
+  - {fileID: 1056868343}
+  - {fileID: 156418158}
+  - {fileID: 1592249760}
+  - {fileID: 239739878}
+  - {fileID: 1210724580}
+  - {fileID: 374528575}
+  - {fileID: 852572563}
+  - {fileID: 914947287}
+  - {fileID: 1718236264}
+  - {fileID: 159675091}
+  - {fileID: 622412258}
+  - {fileID: 437903046}
+  - {fileID: 1433882307}
+  - {fileID: 629220886}
+  - {fileID: 321229654}
+  - {fileID: 237987425}
+  - {fileID: 2031060391}
+  - {fileID: 808192563}
+  - {fileID: 1552106689}
+  - {fileID: 1586501341}
+  - {fileID: 1676191257}
+  - {fileID: 1383585418}
+  - {fileID: 861284592}
+  - {fileID: 1141844314}
+  - {fileID: 1120824343}
+  - {fileID: 1292208294}
+  - {fileID: 318029312}
+  - {fileID: 533927229}
+  - {fileID: 369896306}
+  - {fileID: 1635865137}
+  - {fileID: 379806000}
+  - {fileID: 33647330}
+  - {fileID: 2072092530}
+  - {fileID: 578665362}
+  - {fileID: 1678938769}
+  - {fileID: 1207844243}
+  - {fileID: 742634832}
+  - {fileID: 168399875}
+  - {fileID: 1582276619}
+  - {fileID: 973745054}
+  - {fileID: 1343147092}
+  - {fileID: 989715966}
+  - {fileID: 864744811}
+  - {fileID: 1777361870}
+  - {fileID: 1429823748}
+  - {fileID: 1520057773}
+  - {fileID: 563155269}
+  - {fileID: 557913700}
+  - {fileID: 2121990005}
+  - {fileID: 137421715}
+  - {fileID: 1273112203}
+  - {fileID: 1559498588}
+  - {fileID: 1499885552}
+  - {fileID: 1920954422}
+  - {fileID: 402242338}
+  - {fileID: 1315948865}
+  - {fileID: 1957723299}
+  - {fileID: 1720854418}
+  - {fileID: 487815840}
+  - {fileID: 1619913018}
+  - {fileID: 1763685669}
+  - {fileID: 1302760437}
+  - {fileID: 1932202808}
+  - {fileID: 1827746387}
+  - {fileID: 2108737540}
+  - {fileID: 1225078095}
+  - {fileID: 137234794}
+  - {fileID: 325261210}
+  - {fileID: 1833309467}
+  - {fileID: 1829848128}
+  - {fileID: 354612625}
+  - {fileID: 1902530790}
+  - {fileID: 1839256043}
+  - {fileID: 2135281735}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825925601
 GameObject:
   m_ObjectHideFlags: 0
@@ -67645,11 +69345,11 @@ Transform:
   m_GameObject: {fileID: 1827746385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.1838, y: 0.537, z: 0}
+  m_LocalPosition: {x: -71.986, y: -6.73555, z: 0}
   m_LocalScale: {x: 9.555401, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829174815
 GameObject:
@@ -67873,11 +69573,11 @@ Transform:
   m_GameObject: {fileID: 1829848126}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.566, y: 0.513, z: 0}
+  m_LocalPosition: {x: -132.6038, y: -6.75955, z: 0}
   m_LocalScale: {x: 1.9454553, y: 0.07975926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832176419
 GameObject:
@@ -68074,6 +69774,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1832176423}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -68209,11 +69921,11 @@ Transform:
   m_GameObject: {fileID: 1833309465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3149, y: 0.533, z: 0}
+  m_LocalPosition: {x: -135.4847, y: -6.73955, z: 0}
   m_LocalScale: {x: 0.9742958, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837997641
 GameObject:
@@ -68436,12 +70148,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839256041}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.39233714, w: 0.9198215}
-  m_LocalPosition: {x: 0.5524, y: -0.4508, z: 0}
-  m_LocalScale: {x: 2.7135518, y: 0.08556678, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.39233714, w: 0.9198215}
+  m_LocalPosition: {x: -132.6174, y: -7.72335, z: 0}
+  m_LocalScale: {x: 2.713552, y: 0.08556679, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 46.2}
 --- !u!1 &1839921732
 GameObject:
@@ -68701,6 +70413,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1850356661}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -68923,11 +70647,11 @@ Transform:
   m_GameObject: {fileID: 1860915303}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.804, y: 1.583, z: 0}
+  m_LocalPosition: {x: -81.3658, y: -5.6895504, z: 0}
   m_LocalScale: {x: 1.1103464, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868112776
 GameObject:
@@ -69248,6 +70972,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1869271108}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -69397,6 +71133,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1870496068}
         m_TargetAssemblyTypeName: GetCamera, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -69706,6 +71454,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1875888521}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -70309,11 +72069,11 @@ Transform:
   m_GameObject: {fileID: 1902530788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3138, y: -1.391, z: 0}
+  m_LocalPosition: {x: -135.4836, y: -8.66355, z: 0}
   m_LocalScale: {x: 0.980576, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906015042
 GameObject:
@@ -70634,6 +72394,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1914392521}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -71016,6 +72788,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1919093229}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -71249,6 +73033,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1920089033}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -71396,11 +73192,11 @@ Transform:
   m_GameObject: {fileID: 1920954420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.8244, y: 0.59860003, z: 0}
+  m_LocalPosition: {x: -36.345398, y: -6.67395, z: 0}
   m_LocalScale: {x: 9.366204, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928482687
 GameObject:
@@ -71487,11 +73283,11 @@ Transform:
   m_GameObject: {fileID: 1928482687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.7682, y: 0.526, z: 0}
+  m_LocalPosition: {x: -101.401596, y: -6.74655, z: 0}
   m_LocalScale: {x: 0.9885953, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932202806
 GameObject:
@@ -71577,12 +73373,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932202806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.09376082, w: 0.9955948}
-  m_LocalPosition: {x: 61.1674, y: 1.4534, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.09376082, w: 0.9955948}
+  m_LocalPosition: {x: -72.002396, y: -5.81915, z: 0}
   m_LocalScale: {x: 9.784552, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.76}
 --- !u!1 &1932695432
 GameObject:
@@ -71779,6 +73575,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1932695436}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -71937,6 +73745,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1933193794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72066,6 +73886,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1933569391}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -72380,11 +74212,11 @@ Transform:
   m_GameObject: {fileID: 1936197211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.1684, y: 2.43, z: 0}
+  m_LocalPosition: {x: -99.0014, y: -4.8425503, z: 0}
   m_LocalScale: {x: 0.9888851, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937498433
 GameObject:
@@ -72718,6 +74550,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1944641513}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -73322,12 +75166,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957723297}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.098190814, w: 0.9951677}
-  m_LocalPosition: {x: 133.0029, y: -0.3639, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.098190814, w: 0.9951677}
+  m_LocalPosition: {x: -0.16690063, y: -7.6364503, z: 0}
   m_LocalScale: {x: 9.1651125, y: 0.08069991, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.27}
 --- !u!1 &1963242544
 GameObject:
@@ -73512,6 +75356,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1963242547}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -74146,12 +76002,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997577188}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.35543317, w: 0.9347017}
-  m_LocalPosition: {x: 90.079994, y: 0.06499997, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.35543317, w: 0.9347017}
+  m_LocalPosition: {x: -43.089806, y: -7.20755, z: 0}
   m_LocalScale: {x: 1.5725555, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.64}
 --- !u!1 &2001822029
 GameObject:
@@ -74640,12 +76496,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011889496}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.37541556, w: 0.92685664}
-  m_LocalPosition: {x: 198.96, y: 1.05, z: 0}
-  m_LocalScale: {x: 1.6012536, y: 0.08179598, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37541556, w: 0.92685664}
+  m_LocalPosition: {x: 65.79021, y: -6.2225504, z: 0}
+  m_LocalScale: {x: 1.6012535, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.1}
 --- !u!1 &2012023885
 GameObject:
@@ -74747,6 +76603,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2012023887}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: SceneChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -75016,11 +76884,11 @@ Transform:
   m_GameObject: {fileID: 2016484070}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 159.948, y: -0.45400017, z: 0}
+  m_LocalPosition: {x: 26.778198, y: -7.72655, z: 0}
   m_LocalScale: {x: 0.9683234, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028258387
 GameObject:
@@ -75217,6 +77085,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2028258391}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -75352,11 +77232,11 @@ Transform:
   m_GameObject: {fileID: 2031060389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.36589, y: 0.58599997, z: 0}
+  m_LocalPosition: {x: 6.1960907, y: -6.68655, z: 0}
   m_LocalScale: {x: 0.9885953, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032892327
 GameObject:
@@ -75952,6 +77832,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2054736659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76260,6 +78152,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2056316755}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -76532,11 +78436,11 @@ Transform:
   m_GameObject: {fileID: 2068376649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.14, y: -0.38, z: 0}
+  m_LocalPosition: {x: -48.0298, y: -7.65255, z: 0}
   m_LocalScale: {x: 1.0024117, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072092528
 GameObject:
@@ -76623,11 +78527,11 @@ Transform:
   m_GameObject: {fileID: 2072092528}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 141.77971, y: 0.5919999, z: 0}
+  m_LocalPosition: {x: 8.609909, y: -6.68055, z: 0}
   m_LocalScale: {x: 1.0001894, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2079008486
 GameObject:
@@ -76887,6 +78791,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2080656882}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -77281,6 +79197,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2090842957}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -77663,6 +79591,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2102169673}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -77896,6 +79836,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2102945540}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -78042,12 +79994,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108737538}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.2096186, w: 0.97778326}
-  m_LocalPosition: {x: 18.2555, y: 1.0633, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2096186, w: 0.97778326}
+  m_LocalPosition: {x: -114.9143, y: -6.20925, z: 0}
   m_LocalScale: {x: 2.4701924, y: 0.07189867, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.2}
 --- !u!1 &2110831379
 GameObject:
@@ -78444,6 +80396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2114953360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78566,12 +80530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121990003}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.2044961, w: 0.97886735}
-  m_LocalPosition: {x: 18.247, y: 0.0495, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.2044961, w: 0.97886735}
+  m_LocalPosition: {x: -114.9228, y: -7.22305, z: 0}
   m_LocalScale: {x: 2.4629903, y: 0.08179598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23.6}
 --- !u!1 &2122946372
 GameObject:
@@ -78672,6 +80636,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2122946374}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78818,6 +80794,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2123430789}
         m_TargetAssemblyTypeName: pre, Assembly-CSharp
         m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79210,6 +81198,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2133867745}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -79419,12 +81419,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135281733}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.064358145, w: 0.9979269}
-  m_LocalPosition: {x: 6.9302, y: 0.0363, z: -1.33}
-  m_LocalScale: {x: 8.023285, y: 0.095963046, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.064358145, w: 0.9979269}
+  m_LocalPosition: {x: -126.2396, y: -7.23625, z: -1.33}
+  m_LocalScale: {x: 8.023285, y: 0.09596306, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1823100286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.38}
 --- !u!1 &2138647105
 GameObject:
@@ -79621,6 +81621,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 188970673}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayJingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2138647109}
         m_TargetAssemblyTypeName: SkillParam, Assembly-CSharp
         m_MethodName: OnClick
@@ -79943,124 +81955,10 @@ SceneRoots:
   - {fileID: 1047165016}
   - {fileID: 1885324263}
   - {fileID: 2001822033}
-  - {fileID: 11234527}
-  - {fileID: 1092343206}
-  - {fileID: 980465183}
-  - {fileID: 804527972}
-  - {fileID: 840245682}
-  - {fileID: 1860915305}
-  - {fileID: 478058503}
-  - {fileID: 176505254}
-  - {fileID: 614371144}
-  - {fileID: 377575564}
-  - {fileID: 1706897508}
-  - {fileID: 2068376651}
-  - {fileID: 705167477}
-  - {fileID: 1755818806}
-  - {fileID: 469010297}
-  - {fileID: 1166567212}
-  - {fileID: 93476020}
-  - {fileID: 2016484072}
-  - {fileID: 416984928}
-  - {fileID: 1196482901}
-  - {fileID: 1592031055}
-  - {fileID: 25247401}
-  - {fileID: 2011889498}
-  - {fileID: 284547182}
-  - {fileID: 1158568158}
-  - {fileID: 747328210}
-  - {fileID: 1482159593}
-  - {fileID: 1375691668}
-  - {fileID: 1320262538}
-  - {fileID: 995692324}
-  - {fileID: 1080973414}
-  - {fileID: 1997577190}
-  - {fileID: 1928482689}
-  - {fileID: 1404431726}
-  - {fileID: 406027748}
-  - {fileID: 99364784}
-  - {fileID: 429593219}
-  - {fileID: 1936197213}
-  - {fileID: 947888877}
-  - {fileID: 60734952}
-  - {fileID: 1782003122}
-  - {fileID: 1562933356}
-  - {fileID: 1056868343}
-  - {fileID: 156418158}
-  - {fileID: 1592249760}
-  - {fileID: 239739878}
-  - {fileID: 1210724580}
-  - {fileID: 374528575}
-  - {fileID: 852572563}
-  - {fileID: 914947287}
-  - {fileID: 1718236264}
-  - {fileID: 159675091}
-  - {fileID: 622412258}
-  - {fileID: 437903046}
-  - {fileID: 1433882307}
-  - {fileID: 629220886}
-  - {fileID: 321229654}
-  - {fileID: 237987425}
-  - {fileID: 2031060391}
-  - {fileID: 808192563}
-  - {fileID: 1552106689}
-  - {fileID: 1586501341}
-  - {fileID: 1676191257}
-  - {fileID: 1383585418}
-  - {fileID: 861284592}
-  - {fileID: 1141844314}
-  - {fileID: 1120824343}
-  - {fileID: 1292208294}
-  - {fileID: 318029312}
-  - {fileID: 533927229}
-  - {fileID: 369896306}
-  - {fileID: 1635865137}
-  - {fileID: 379806000}
-  - {fileID: 33647330}
-  - {fileID: 2072092530}
-  - {fileID: 578665362}
-  - {fileID: 1678938769}
-  - {fileID: 1207844243}
-  - {fileID: 742634832}
-  - {fileID: 168399875}
-  - {fileID: 1582276619}
-  - {fileID: 973745054}
-  - {fileID: 1343147092}
-  - {fileID: 989715966}
-  - {fileID: 864744811}
-  - {fileID: 1777361870}
-  - {fileID: 1429823748}
-  - {fileID: 1520057773}
-  - {fileID: 563155269}
-  - {fileID: 557913700}
-  - {fileID: 2121990005}
-  - {fileID: 137421715}
-  - {fileID: 1273112203}
-  - {fileID: 1559498588}
-  - {fileID: 1499885552}
-  - {fileID: 1920954422}
-  - {fileID: 402242338}
-  - {fileID: 1315948865}
-  - {fileID: 1957723299}
-  - {fileID: 1720854418}
-  - {fileID: 487815840}
-  - {fileID: 1619913018}
-  - {fileID: 1763685669}
-  - {fileID: 1302760437}
-  - {fileID: 1932202808}
-  - {fileID: 1827746387}
-  - {fileID: 2108737540}
-  - {fileID: 1225078095}
-  - {fileID: 137234794}
-  - {fileID: 325261210}
-  - {fileID: 1833309467}
-  - {fileID: 1829848128}
-  - {fileID: 354612625}
-  - {fileID: 1902530790}
-  - {fileID: 1839256043}
-  - {fileID: 2135281735}
+  - {fileID: 1823100286}
   - {fileID: 1886109502216048067}
   - {fileID: 332629421}
   - {fileID: 1945751217}
   - {fileID: 3875317930248743712}
   - {fileID: 1574601746}
+  - {fileID: 188970674}
