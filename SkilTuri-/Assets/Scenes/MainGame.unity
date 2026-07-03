@@ -1215,20 +1215,59 @@ MonoBehaviour:
   detectRange: 3
   biteDistance: 0.3
   fishList:
-  - {fileID: 11400000, guid: fa2f6c2e9453b3e49bdb37fd1bef6abe, type: 2}
-  - {fileID: 11400000, guid: 03436dd30fd413c44ae0dfa88b263bc0, type: 2}
-  - {fileID: 11400000, guid: 168e2615e9e3b7b49b21dcc5a4047fd9, type: 2}
-  - {fileID: 11400000, guid: 2e165723700f99c4daeaa1d4356b4c2e, type: 2}
-  - {fileID: 11400000, guid: d2ee5c3d491166c4aa56cb8571786fa7, type: 2}
-  - {fileID: 11400000, guid: 79523d5094b764545a1c8bdd2864168b, type: 2}
-  - {fileID: 11400000, guid: 33d40ecd53d0f6247860acde910b31b8, type: 2}
-  - {fileID: 11400000, guid: 943974df81408e749b01cb0dd9546f2a, type: 2}
-  - {fileID: 11400000, guid: 5b3d33399212a5143a710142def11ae3, type: 2}
-  - {fileID: 11400000, guid: 32431a8698722ad488c0647c62344584, type: 2}
+  - {fileID: 11400000, guid: 327e23e3685ccb945bc9a8874af3099f, type: 2}
+  - {fileID: 11400000, guid: 4f1e7dc7998381a46b37d8a83af02444, type: 2}
+  - {fileID: 11400000, guid: a40f83f601d9d9446abfc7e78e667d7e, type: 2}
+  - {fileID: 11400000, guid: 4d48d305f66597e46810f7d38a095754, type: 2}
+  - {fileID: 11400000, guid: af1ab209ad7da764c8e71e2db0e508e6, type: 2}
+  - {fileID: 11400000, guid: d9feeb4eca5a8df449dac9707a8d0ac4, type: 2}
+  - {fileID: 11400000, guid: 513c34ab32befbc4ba5ba434dcbb4302, type: 2}
+  - {fileID: 11400000, guid: 7449e9e8d72f0e1408af04f3ec6089df, type: 2}
+  - {fileID: 11400000, guid: 97ef62eea40363b4bb24600d1d6e256c, type: 2}
+  - {fileID: 11400000, guid: 9fed7e43148d1794ca9c4b2f12c1bb7e, type: 2}
+  - {fileID: 11400000, guid: e5aeef00dfc78e6479a90d6cabf76368, type: 2}
+  - {fileID: 11400000, guid: d0d222bf295e38f46b78c2cc31c70e91, type: 2}
+  - {fileID: 11400000, guid: 37d067a3dbb97d34e9108efa801e6313, type: 2}
+  - {fileID: 11400000, guid: 8d56cc0fe95fe6044a1ead202fb344c3, type: 2}
+  - {fileID: 11400000, guid: 005c56e51cc1e1a46b7412e395ff253f, type: 2}
+  - {fileID: 11400000, guid: 163478af4bb89e146a4f284d12858a31, type: 2}
+  - {fileID: 11400000, guid: 00922ce98a4018449bc7ca79c1e69a0a, type: 2}
+  - {fileID: 11400000, guid: 36040aabe8b486e40a1f38244a6f41d6, type: 2}
+  - {fileID: 11400000, guid: b8eb74eec3d265e4d8e6e81272305290, type: 2}
+  - {fileID: 11400000, guid: 2ca406d3d755ae24ebdcbd358f35c4db, type: 2}
+  - {fileID: 11400000, guid: 236e1d3ca8260424f87a4e26f7259b33, type: 2}
+  - {fileID: 11400000, guid: b8eb74eec3d265e4d8e6e81272305290, type: 2}
+  - {fileID: 11400000, guid: 2ca406d3d755ae24ebdcbd358f35c4db, type: 2}
+  - {fileID: 11400000, guid: 236e1d3ca8260424f87a4e26f7259b33, type: 2}
+  - {fileID: 11400000, guid: 00c240dde224baa4c952c31231ce27b6, type: 2}
+  - {fileID: 11400000, guid: e822b34a3cfd35d41844d02c5524b4d1, type: 2}
+  - {fileID: 11400000, guid: 663fa6c1b8e62f146bfbaafa7867601f, type: 2}
+  - {fileID: 11400000, guid: 4a1cc6734a718e644b788b9b6f1b9201, type: 2}
+  - {fileID: 11400000, guid: 288fa8a27afc7db43afc3c95fe5807a7, type: 2}
+  - {fileID: 11400000, guid: c8763d1f8776820438117541d12db069, type: 2}
+  - {fileID: 11400000, guid: aa442196ae655004081b5462b4d17242, type: 2}
+  - {fileID: 11400000, guid: 012eb686b66ecbc48b48b6aad30aa150, type: 2}
+  - {fileID: 11400000, guid: d0e51afb5356a1849975de228de72200, type: 2}
+  - {fileID: 11400000, guid: 7f018fad2a7c94c459ee4c44579e23d3, type: 2}
+  - {fileID: 11400000, guid: 38cf341cee7233b4298069db89440f1c, type: 2}
+  - {fileID: 11400000, guid: 80086423d1bc8784b867c0cfdac53bf0, type: 2}
+  - {fileID: 11400000, guid: 210e052ac80f4924f9c051e1c337d40e, type: 2}
+  - {fileID: 11400000, guid: 0da207d8580dee241953475736005ccd, type: 2}
+  - {fileID: 11400000, guid: aad1899c822f36b4182423dd5ad2d4aa, type: 2}
+  - {fileID: 11400000, guid: b0ab669a3e2c2fb498e33a7615bda872, type: 2}
+  - {fileID: 11400000, guid: 19abcf6ba3d2bc54799dfb61312b6e73, type: 2}
+  - {fileID: 11400000, guid: efadedd0eeb5c84498ff4f3ea263489b, type: 2}
+  - {fileID: 11400000, guid: d9aa48b6a52b6bd47bce5002ec2fe732, type: 2}
+  - {fileID: 11400000, guid: 88fc8e69a0e23004f9e73725bf75eb02, type: 2}
+  - {fileID: 11400000, guid: 6937ebc108ad52348baa9d85e0b83c1b, type: 2}
+  - {fileID: 11400000, guid: fb466e9c577e8994a8402c69377ffa89, type: 2}
+  - {fileID: 11400000, guid: 8f2850d2b97c67f4fa69e80c473e5378, type: 2}
   smallFishScale: 0.3
   mediumFishScale: 0.5
   largeFishScale: 0.7
-  fishLaunchSpeed: 10
+  fishLaunchDuration: 0.8
+  fishLaunchCurveHeight: 2
+  fishLaunchSideOffset: 3
   fishReturnDuration: 1.2
   fishReturnCurveHeight: 0.5
   fishReturnSideOffset: 4
