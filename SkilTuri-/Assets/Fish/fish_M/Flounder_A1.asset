@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Flounder_A1
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30D2\u30E9\u30E1\u3000\u30B8\u30B0\u30BD\u30FC\u30D1\u30BA\u30EB"
+  fishSprite: {fileID: -5605669940466401395, guid: d6a562db125e187448221f960d6cbf7d, type: 3}
+  money: 5000
+  size: 1
