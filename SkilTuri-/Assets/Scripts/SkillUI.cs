@@ -12,6 +12,6 @@ public class SkillUI : MonoBehaviour
 
     public void UpdateText()
     {
-        skillText.text = "スキルポイント：" + SkillSystem.Instance.SkillPoint;
+        skillText.text = "      x：" + SkillSystem.Instance.SkillPoint;
     }
 }
