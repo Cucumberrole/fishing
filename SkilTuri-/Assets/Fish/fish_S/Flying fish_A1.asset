@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0c52e3b63c1a04f943fdb5ae564d87, type: 3}
+  m_Name: Flying fish_A1
+  m_EditorClassIdentifier: Assembly-CSharp::FishData
+  fishName: "\u30C8\u30D3\u30A6\u30AA\u3000\u5929\u4F7F"
+  fishSprite: {fileID: -8347644449526914623, guid: af49d9fa7d44e0a448477028a9aaaa9d, type: 3}
+  money: 5000
+  size: 0
