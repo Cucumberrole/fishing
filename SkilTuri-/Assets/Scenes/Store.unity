@@ -4859,10 +4859,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1754010039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.04}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.03142123, y: 0}
   m_AnchorMax: {x: 0.77831227, y: 1}
-  m_AnchoredPosition: {x: -0.36999512, y: -0.66000366}
-  m_SizeDelta: {x: -3.55, y: 0.88}
+  m_AnchoredPosition: {x: -0.23999023, y: -1.9199982}
+  m_SizeDelta: {x: -3.82, y: 3.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155032888
 MonoBehaviour:
@@ -51533,7 +51533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421f323c77d9e79458e71272122142c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorManager
-  target: {fileID: 0}
 --- !u!1 &1579261788
 GameObject:
   m_ObjectHideFlags: 0
@@ -72015,8 +72014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8282195, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1060.6, y: 11.339996}
-  m_SizeDelta: {x: -158.31, y: -22.68}
+  m_AnchoredPosition: {x: -742.57, y: 11.339996}
+  m_SizeDelta: {x: -116.8, y: -22.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134942964
 MonoBehaviour:
