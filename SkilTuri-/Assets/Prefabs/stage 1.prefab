@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 268878769
-  m_SortingLayer: -4
+  m_SortingLayerID: 1005659911
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3836954968553550457, guid: 9e007747978b7194ab1f60462509bf05, type: 3}
@@ -101,8 +101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3869686497983352586}
   - component: {fileID: 1815994342736619101}
-  - component: {fileID: 1940147698427150917}
-  - component: {fileID: 7823940034553345603}
   m_Layer: 0
   m_Name: cloud3_0
   m_TagString: Untagged
@@ -170,8 +168,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -568152013
-  m_SortingLayer: -3
+  m_SortingLayerID: 1329856355
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5692308257841091951, guid: 615389581d48e2945982e788c5b8c27b, type: 3}
@@ -184,48 +182,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &1940147698427150917
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775050002022436325}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &7823940034553345603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775050002022436325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2400514dcce31448cca8a4fe8c2d16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
-  speed: 1
-  startX: -15
-  endX: 15
 --- !u!1 &2740130095923523392
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +259,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 290619949
+  m_SortingLayerID: -1266012341
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -394,8 +350,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 268878769
-  m_SortingLayer: -4
+  m_SortingLayerID: 1005659911
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4075018952876869554, guid: 1fed253193db56f43bfe1b779f5ffec9, type: 3}
@@ -523,8 +479,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 268878769
-  m_SortingLayer: -4
+  m_SortingLayerID: 1005659911
+  m_SortingLayer: -3
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 166739837942290310, guid: 7f5f63ec75f724144900c9d014a3b067, type: 3}
@@ -547,7 +503,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5735065733991090014}
   - component: {fileID: 3036977448442801061}
-  - component: {fileID: 7129720277135972070}
   m_Layer: 0
   m_Name: cloud1_0
   m_TagString: Untagged
@@ -615,8 +570,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 268878769
-  m_SortingLayer: -4
+  m_SortingLayerID: 1329856355
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5457230233444185960, guid: 603bf0e54a9e76f40836f86d643b6be8, type: 3}
@@ -629,21 +584,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7129720277135972070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5947221591188770927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2400514dcce31448cca8a4fe8c2d16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
-  speed: 0.5
-  startX: -15
-  endX: 15
 --- !u!1 &6575937275138676187
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,8 +661,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 268878769
-  m_SortingLayer: -4
+  m_SortingLayerID: 1329856355
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8308182837629929065, guid: 064f23f0466e5ea478a6e8d202d5fcad, type: 3}
