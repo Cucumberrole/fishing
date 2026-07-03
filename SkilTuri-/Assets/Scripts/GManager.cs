@@ -26,7 +26,10 @@ public class GManager : MonoBehaviour
     public float largeFishScale = 0.7f; // 大型魚の大きさ
 
     [Header("魚の釣り上げ演出")]
-    public float fishLaunchSpeed = 10f; // 魚影が飛び上がる速さ
+    public float fishLaunchDuration = 0.8f; // 魚影が画面外へ飛ぶ時間
+    public float fishLaunchCurveHeight = 2f; // 釣り上げる弧の高さ
+    public float fishLaunchSideOffset = 3f; // 釣り上げる弧の横幅
+
     public float fishReturnDuration = 1.2f; // 魚が戻るまでの時間
     public float fishReturnCurveHeight = 0.5f; // 戻る弧の高さ
     public float fishReturnSideOffset = 4f; // 戻る弧の横幅
