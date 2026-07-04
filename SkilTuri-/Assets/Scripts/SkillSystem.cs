@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public enum SkillType
 {
-    Hook1, Hook2, Hook3, Hook4, Hook5, Hook6,Hook7,Hook8, Hook9, Hook10, Hook11, Hook12, Hook13, Hook14, Hook15, Hook16, Hook17,Hook18,
-    GrowFish1, GrowFish2, GrowFish3, GrowFish4, GrowFish5, GrowFish6,GrowFish7,GrowFish8,GrowFish9,GrowFish10,GrowFish11,GrowFish12,GrowFish13,GrowFish14,GrowFish15,GrowFish16,GrowFish17,GrowFish18,
-    Money1, Money2, Money3, Money4, Money5, Money6,Money7,Money8,Money9,Money10,Money11,Money12,Money13,Money14,Money15,Money16,Money17,Money18,
-    Time1, Time2, Time3, Time4, Time5, Time6,Time7,Time8,Time9,Time10,Time11,Time12,Time13,Time14,Time15,Time16,Time17,Time18,
-    Repop1, Repop2, Repop3, Repop4, Repop5, Repop6,Repop7,Repop8,Repop9,Repop10,Repop11,Repop12,Repop13,Repop14,Repop15,Repop16,Repop17,Repop18,
-    Pier1, Pier2, Pier3, Pier4,Pier5,Pier6,Pier7,Pier8,Pier9,Pier10,Pier11,Pier12
+    Hook1, Hook2, Hook3, Hook4, Hook5, Hook6, Hook7, Hook8, Hook9, Hook10, Hook11, Hook12, Hook13, Hook14, Hook15, Hook16, Hook17, Hook18,
+    GrowFish1, GrowFish2, GrowFish3, GrowFish4, GrowFish5, GrowFish6, GrowFish7, GrowFish8, GrowFish9, GrowFish10, GrowFish11, GrowFish12, GrowFish13, GrowFish14, GrowFish15, GrowFish16, GrowFish17, GrowFish18,
+    Money1, Money2, Money3, Money4, Money5, Money6, Money7, Money8, Money9, Money10, Money11, Money12, Money13, Money14, Money15, Money16, Money17, Money18,
+    Time1, Time2, Time3, Time4, Time5, Time6, Time7, Time8, Time9, Time10, Time11, Time12, Time13, Time14, Time15, Time16, Time17, Time18,
+    Repop1, Repop2, Repop3, Repop4, Repop5, Repop6, Repop7, Repop8, Repop9, Repop10, Repop11, Repop12, Repop13, Repop14, Repop15, Repop16, Repop17, Repop18,
+    Pier1, Pier2, Pier3, Pier4, Pier5, Pier6, Pier7, Pier8, Pier9, Pier10, Pier11, Pier12
 }
 
 public class SkillSystem : MonoBehaviour
@@ -43,7 +43,7 @@ public class SkillSystem : MonoBehaviour
             skills[i] = PlayerPrefs.GetInt(((SkillType)i).ToString(), 0) == 1;
         }
 
-        
+
         skillCount = PlayerPrefs.GetInt("SkillCount", 0);
 
         for (int i = 0; i < skills.Length; i++)
@@ -67,7 +67,7 @@ public class SkillSystem : MonoBehaviour
            GManager.instance.totalMoney);
 
 
-       skillCount++;
+        skillCount++;
         PlayerPrefs.SetInt("SkillCount", skillCount);
 
         PlayerPrefs.Save();
@@ -462,32 +462,32 @@ public class SkillSystem : MonoBehaviour
         }
         else if (type == SkillType.Pier7)
         {
-            return skills[(int)SkillType.Hook12] || skills[(int)SkillType.GrowFish12]||skills[(int)SkillType.Money12];
+            return skills[(int)SkillType.Hook12] || skills[(int)SkillType.GrowFish12] || skills[(int)SkillType.Money12];
         }
         else if (type == SkillType.Pier8)
         {
-            return skills[(int)SkillType.Time12]|| skills[(int)SkillType.Repop12];
+            return skills[(int)SkillType.Time12] || skills[(int)SkillType.Repop12];
         }
-        else if(type == SkillType.Pier9)
+        else if (type == SkillType.Pier9)
         {
-            return skills[(int)SkillType.Hook15] || skills[(int)SkillType.GrowFish15]||skills[(int)SkillType.Money15];
+            return skills[(int)SkillType.Hook15] || skills[(int)SkillType.GrowFish15] || skills[(int)SkillType.Money15];
         }
-        else if(type == SkillType.Pier10)
+        else if (type == SkillType.Pier10)
         {
-            return skills[(int)SkillType.Time15]||skills[((int)SkillType.Repop15)];
+            return skills[(int)SkillType.Time15] || skills[((int)SkillType.Repop15)];
         }
-        else if(type == SkillType.Pier11)
+        else if (type == SkillType.Pier11)
         {
             return skills[(int)SkillType.Hook18] || skills[(int)SkillType.GrowFish18] || skills[(int)SkillType.Money18];
         }
-        else if(type == SkillType.Pier12)
+        else if (type == SkillType.Pier12)
         {
             return skills[(int)SkillType.Time18] || skills[(int)SkillType.Repop18];
         }
 
 
 
-            return true;
+        return true;
     }
 
     public void SetText()
@@ -545,7 +545,7 @@ public class SkillSystem : MonoBehaviour
             case SkillType.Hook13:
                 GManager.instance.detectRange += 2f;
                 break;
-            case  SkillType.Hook14:
+            case SkillType.Hook14:
                 GManager.instance.detectRange += 2f;
                 break;
             case SkillType.Hook15:
@@ -583,55 +583,55 @@ public class SkillSystem : MonoBehaviour
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish6:
+            case SkillType.GrowFish6:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish7:
+            case SkillType.GrowFish7:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish8:
+            case SkillType.GrowFish8:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish9:
+            case SkillType.GrowFish9:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish10:
+            case SkillType.GrowFish10:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish11:
+            case SkillType.GrowFish11:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish12:
+            case SkillType.GrowFish12:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish13:
+            case SkillType.GrowFish13:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish14:
+            case SkillType.GrowFish14:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish15:
+            case SkillType.GrowFish15:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish16:
+            case SkillType.GrowFish16:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish17:
+            case SkillType.GrowFish17:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
-                case SkillType.GrowFish18:
+            case SkillType.GrowFish18:
                 GManager.instance.spawnCount += 5;
                 GManager.instance.spawnCountLevel += 1;
                 break;
@@ -661,51 +661,51 @@ public class SkillSystem : MonoBehaviour
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time7:
+            case SkillType.Time7:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time8:
+            case SkillType.Time8:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time9:
+            case SkillType.Time9:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time10:
+            case SkillType.Time10:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time11:
+            case SkillType.Time11:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time12:
+            case SkillType.Time12:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time13:
+            case SkillType.Time13:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time14:
+            case SkillType.Time14:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time15:
+            case SkillType.Time15:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time16:
+            case SkillType.Time16:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time17:
+            case SkillType.Time17:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
-                case SkillType.Time18:
+            case SkillType.Time18:
                 GManager.instance.gameTimeLimit += 5;
                 GManager.instance.gameTimeLevel += 1;
                 break;
@@ -719,31 +719,31 @@ public class SkillSystem : MonoBehaviour
             case SkillType.Pier3:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier4:
+            case SkillType.Pier4:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier5:
+            case SkillType.Pier5:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier6:
+            case SkillType.Pier6:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier7:
+            case SkillType.Pier7:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier8:
+            case SkillType.Pier8:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier9:
+            case SkillType.Pier9:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier10:
+            case SkillType.Pier10:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier11:
+            case SkillType.Pier11:
                 GManager.instance.pierLevel += 1;
                 break;
-                case SkillType.Pier12:
+            case SkillType.Pier12:
                 GManager.instance.pierLevel += 1;
                 break;
 
@@ -765,40 +765,40 @@ public class SkillSystem : MonoBehaviour
             case SkillType.Money6:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money7:
+            case SkillType.Money7:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money8:
-                GManager.instance.moneyMultiplier += 1;
-                break;  
-                case SkillType.Money9:
+            case SkillType.Money8:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money10:
+            case SkillType.Money9:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money11:
+            case SkillType.Money10:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money12:
+            case SkillType.Money11:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money13:
+            case SkillType.Money12:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money14:
+            case SkillType.Money13:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money15:
+            case SkillType.Money14:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money16:
+            case SkillType.Money15:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money17:
+            case SkillType.Money16:
                 GManager.instance.moneyMultiplier += 1;
                 break;
-                case SkillType.Money18:
+            case SkillType.Money17:
+                GManager.instance.moneyMultiplier += 1;
+                break;
+            case SkillType.Money18:
                 GManager.instance.moneyMultiplier += 1;
                 break;
             case SkillType.Repop1:
@@ -819,40 +819,40 @@ public class SkillSystem : MonoBehaviour
             case SkillType.Repop6:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop7:
+            case SkillType.Repop7:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop8:
+            case SkillType.Repop8:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop9:
+            case SkillType.Repop9:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop10:
+            case SkillType.Repop10:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop11:
+            case SkillType.Repop11:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop12:
-                GManager.instance.fishRespawnTime -= 0.05f;
-                break;  
-                case SkillType.Repop13:
+            case SkillType.Repop12:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop14:
+            case SkillType.Repop13:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop15:
+            case SkillType.Repop14:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop16:
+            case SkillType.Repop15:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop17:
+            case SkillType.Repop16:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
-                case SkillType.Repop18:
+            case SkillType.Repop17:
+                GManager.instance.fishRespawnTime -= 0.05f;
+                break;
+            case SkillType.Repop18:
                 GManager.instance.fishRespawnTime -= 0.05f;
                 break;
 

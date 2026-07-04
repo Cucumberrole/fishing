@@ -12,6 +12,6 @@ public class SkillUI : MonoBehaviour
 
     public void UpdateText()
     {
-        skillText.text = "      xÅF" + SkillSystem.Instance.SkillPoint;
+        skillText.text = "MONEY : " + +SkillSystem.Instance.SkillPoint;
     }
 }
