@@ -1599,7 +1599,7 @@ MonoBehaviour:
   roundMoney: 0
   totalMoney: 0
   moneyMultiplier: 1
-  gameTimeLimit: 20
+  gameTimeLimit: 10
   spawnCount: 20
   fishRespawnTime: 5
   detectRange: 3
