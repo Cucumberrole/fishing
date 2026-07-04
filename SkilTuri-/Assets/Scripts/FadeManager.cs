@@ -14,6 +14,7 @@ public class FadeManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isTransitioning)
         {
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayButtonSE();
             StartCoroutine(FadeAndLoadScene());
         }
     }
@@ -21,14 +22,12 @@ public class FadeManager : MonoBehaviour
     IEnumerator FadeAndLoadScene()
     {
         isTransitioning = true;
-
         Color color = fadeImage.color;
 
         while (color.a < 1f)
         {
             color.a += Time.deltaTime * fadeSpeed;
             fadeImage.color = color;
-
             yield return null;
         }
 

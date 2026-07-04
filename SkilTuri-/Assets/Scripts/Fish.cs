@@ -30,6 +30,11 @@ public class Fish : MonoBehaviour
     private float launchDuration = 0.8f;
     private float launchCurveHeight = 2f;
     private float returnDuration = 1.2f;
+    private int chainIndex;
+
+    [Header("連結して釣り上げる動き")]
+    [SerializeField] private float chainDelay = 0.12f;
+    [SerializeField] private float chainSpacing = 0.6f;
 
     private Vector3 launchStartPosition;
     private Vector3 launchControlPosition;
@@ -171,7 +176,7 @@ public class Fish : MonoBehaviour
         targetPos = new Vector2(x, y);
     }
 
-    public void BeginLaunch(Transform target)
+    public void BeginLaunch(Transform target, int index = 0)
     {
         if (target == null)
         {
@@ -179,6 +184,7 @@ public class Fish : MonoBehaviour
             return;
         }
 
+        chainIndex = index;
         isCaught = false;
         isReturning = false;
         reachedPlayer = false;
@@ -187,10 +193,10 @@ public class Fish : MonoBehaviour
 
         arcTarget = target;
         returnTarget = target;
-        launchElapsedTime = 0f;
+        launchElapsedTime = -chainDelay * chainIndex;
         launchStartPosition = transform.position;
 
-        Vector3 endPosition = arcTarget.position;
+        Vector3 endPosition = arcTarget.position + Vector3.down * (chainSpacing * chainIndex);
         float apexY = Mathf.Max(launchStartPosition.y, endPosition.y) + launchCurveHeight;
         Camera mainCamera = Camera.main;
 
@@ -201,7 +207,7 @@ public class Fish : MonoBehaviour
             apexY = Mathf.Max(apexY, cameraTopPosition.y + launchCurveHeight);
         }
 
-        arcApexPosition = new Vector3((launchStartPosition.x + endPosition.x) / 2f, apexY, transform.position.z);
+        arcApexPosition = new Vector3((launchStartPosition.x + endPosition.x) / 2f, apexY + chainSpacing * chainIndex, transform.position.z);
         launchControlPosition = new Vector3((launchStartPosition.x + arcApexPosition.x) / 2f, arcApexPosition.y, transform.position.z);
 
         SetFacing(arcApexPosition.x >= launchStartPosition.x);
@@ -211,6 +217,7 @@ public class Fish : MonoBehaviour
     private void UpdateLaunchMovement()
     {
         launchElapsedTime += Time.deltaTime;
+        if (launchElapsedTime < 0f) return;
 
         float duration = Mathf.Max(launchDuration, 0.01f);
         float t = Mathf.Clamp01(launchElapsedTime / duration);
@@ -253,10 +260,10 @@ public class Fish : MonoBehaviour
 
         returnTarget = target;
         caughtData = data;
-        returnElapsedTime = 0f;
+        returnElapsedTime = -chainDelay * chainIndex;
         returnStartPosition = transform.position;
 
-        Vector3 endPosition = returnTarget.position;
+        Vector3 endPosition = returnTarget.position + Vector3.down * (chainSpacing * chainIndex);
         returnControlPosition = new Vector3((returnStartPosition.x + endPosition.x) / 2f, returnStartPosition.y, transform.position.z);
 
         transform.rotation = Quaternion.identity;
@@ -273,12 +280,13 @@ public class Fish : MonoBehaviour
         if (returnTarget == null) return;
 
         returnElapsedTime += Time.deltaTime;
+        if (returnElapsedTime < 0f) return;
 
         float duration = Mathf.Max(returnDuration, 0.01f);
         float t = Mathf.Clamp01(returnElapsedTime / duration);
         float easedT = t;
 
-        Vector3 endPosition = returnTarget.position;
+        Vector3 endPosition = returnTarget.position + Vector3.down * (chainSpacing * chainIndex);
         Vector3 pointA = Vector3.Lerp(returnStartPosition, returnControlPosition, easedT);
         Vector3 pointB = Vector3.Lerp(returnControlPosition, endPosition, easedT);
         Vector3 nextPosition = Vector3.Lerp(pointA, pointB, easedT);

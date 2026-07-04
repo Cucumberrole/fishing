@@ -7,6 +7,7 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayButtonSE();
             SceneManager.LoadScene("MainGame");
         }
     }

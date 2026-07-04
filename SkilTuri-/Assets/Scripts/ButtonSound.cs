@@ -7,6 +7,7 @@ public class ButtonSound : MonoBehaviour
 
     public void PlayJingle()
     {
-        audioSource.PlayOneShot(jingle);
+        if (AudioManager.Instance != null) { AudioManager.Instance.PlayButtonSE(); return; }
+        if (audioSource != null && jingle != null) audioSource.PlayOneShot(jingle);
     }
 }
