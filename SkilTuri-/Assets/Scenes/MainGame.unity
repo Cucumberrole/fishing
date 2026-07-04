@@ -2088,13 +2088,13 @@ MonoBehaviour:
   - {fileID: 8566506440353401655, guid: cf661f6c2c3abe141a61787472eb9018, type: 3}
   - {fileID: 8775747788500498085, guid: 56018420e316b7f4d92db6f9f047ebbf, type: 3}
   - {fileID: 1862506547720064714, guid: db9663f347cd2cc48a18c99e6e6e488f, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8616842274530052208, guid: ba306d7758a898e459def9420c56915a, type: 3}
+  - {fileID: 8616842274530052208, guid: ba306d7758a898e459def9420c56915a, type: 3}
+  - {fileID: 6326380286726439926, guid: 423edb66fd739b14a804401d2fad7af5, type: 3}
+  - {fileID: 8566506440353401655, guid: cf661f6c2c3abe141a61787472eb9018, type: 3}
+  - {fileID: 8775747788500498085, guid: 56018420e316b7f4d92db6f9f047ebbf, type: 3}
+  - {fileID: 1862506547720064714, guid: db9663f347cd2cc48a18c99e6e6e488f, type: 3}
+  - {fileID: 8616842274530052208, guid: ba306d7758a898e459def9420c56915a, type: 3}
 --- !u!4 &1820887104
 Transform:
   m_ObjectHideFlags: 0

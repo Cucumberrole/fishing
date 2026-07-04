@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3869686497983352586}
   - component: {fileID: 1815994342736619101}
+  - component: {fileID: 1331230188427978687}
   m_Layer: 0
   m_Name: cloud3_0
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 1775050002022436325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.288499, y: 6.7699995, z: 0}
+  m_LocalPosition: {x: 9.41, y: 6.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,6 +183,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1331230188427978687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775050002022436325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 1
+  startX: -20
+  endX: 20
 --- !u!1 &2740130095923523392
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +368,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1005659911
   m_SortingLayer: -3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4075018952876869554, guid: 1fed253193db56f43bfe1b779f5ffec9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5294118}
@@ -481,7 +497,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1005659911
   m_SortingLayer: -3
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 166739837942290310, guid: 7f5f63ec75f724144900c9d014a3b067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8784314}
@@ -503,6 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5735065733991090014}
   - component: {fileID: 3036977448442801061}
+  - component: {fileID: 6527630189977945805}
   m_Layer: 0
   m_Name: cloud1_0
   m_TagString: Untagged
@@ -519,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 5947221591188770927}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.081502, y: 7.6899996, z: 0}
+  m_LocalPosition: {x: -10.5, y: 7.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -584,6 +601,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6527630189977945805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947221591188770927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 0.5
+  startX: -20
+  endX: 20
 --- !u!1 &6575937275138676187
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2953628312497897087}
   - component: {fileID: 6094376830303477492}
+  - component: {fileID: 7064040524228500299}
   m_Layer: 0
   m_Name: cloud2_0
   m_TagString: Untagged
@@ -610,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 6575937275138676187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.841502, y: 7.63, z: 0}
+  m_LocalPosition: {x: 1.03, y: 4.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -675,3 +708,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7064040524228500299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575937275138676187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 2
+  startX: -20
+  endX: 20

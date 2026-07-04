@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1005659911
   m_SortingLayer: -3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4075018952876869554, guid: 1fed253193db56f43bfe1b779f5ffec9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5294118}
@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6892587444307810663}
   - component: {fileID: 3287975308807105368}
+  - component: {fileID: 6790375931600891137}
   m_Layer: 0
   m_Name: cloud1_0
   m_TagString: Untagged
@@ -182,6 +183,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6790375931600891137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522838132154417913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 0.5
+  startX: -20
+  endX: 20
 --- !u!1 &5565060914275115146
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7747768751050679184}
   - component: {fileID: 2091049163542553530}
+  - component: {fileID: 8064014830011462900}
   m_Layer: 0
   m_Name: cloud3_0
   m_TagString: Untagged
@@ -364,6 +381,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8064014830011462900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890590803515915099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 1
+  startX: -20
+  endX: 20
 --- !u!1 &8017309570377185544
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2207940610825045780}
   - component: {fileID: 7490504358626023496}
+  - component: {fileID: 8348536801172206182}
   m_Layer: 0
   m_Name: cloud2_0
   m_TagString: Untagged
@@ -455,6 +488,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8348536801172206182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017309570377185544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113294154b7aacb46bd5fbeee62423b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudMove
+  speed: 2
+  startX: -20
+  endX: 20
 --- !u!1 &8569308697822381647
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +711,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1005659911
   m_SortingLayer: -3
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3635069121467687302, guid: f23ecb63c7c952a4288dadf40164d794, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
