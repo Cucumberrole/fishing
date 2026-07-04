@@ -20,14 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) { Instance = this; }
+        else { Destroy(gameObject); }
     }
 
     private void Start()
@@ -37,40 +31,23 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isRoundRunning)
-        {
-            return;
-        }
-
+        if (!isRoundRunning) return;
         gameTime -= Time.deltaTime;
 
-        if (timeText != null)
-        {
-            timeText.text = Mathf.CeilToInt(Mathf.Max(gameTime, 0f)).ToString();
-        }
-
-        if (gameTime <= 0f)
-        {
-            EndRound();
-        }
+        if (timeText != null) timeText.text = Mathf.CeilToInt(Mathf.Max(gameTime, 0f)).ToString();
+        if (gameTime <= 0f) EndRound();
     }
 
     public void AddMoney(int amount)
     {
         money += amount;
-
-        if (moneyText != null)
-        {
-            moneyText.text = "MONEY × " + money;
-        }
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayCoinSE();
+        if (moneyText != null) moneyText.text = "MONEY × " + money;
     }
 
     public void AddFish(FishData fish)
     {
-        if (fish != null)
-        {
-            caughtFishList.Add(fish);
-        }
+        if (fish != null) caughtFishList.Add(fish);
     }
 
     public void StartRound()
@@ -78,20 +55,16 @@ public class GameManager : MonoBehaviour
         money = 0;
         caughtFishList.Clear();
         isRoundRunning = true;
+        gameTime = GManager.instance != null ? GManager.instance.gameTimeLimit : 10f;
 
-        gameTime = GManager.instance != null
-            ? GManager.instance.gameTimeLimit
-            : 10f;
-
-        if (moneyText != null)
+        if (AudioManager.Instance != null)
         {
-            moneyText.text = "MONEY × 0";
+            AudioManager.Instance.PlaySeagullAmbient();
+            AudioManager.Instance.PlayGameBGM1();
         }
 
-        if (timeText != null)
-        {
-            timeText.text = Mathf.CeilToInt(gameTime).ToString();
-        }
+        if (moneyText != null) moneyText.text = "MONEY × 0";
+        if (timeText != null) timeText.text = Mathf.CeilToInt(gameTime).ToString();
     }
 
     private void EndRound()
@@ -99,15 +72,10 @@ public class GameManager : MonoBehaviour
         gameTime = 0f;
         isRoundRunning = false;
 
-        if (GManager.instance != null)
-        {
-            GManager.instance.SaveRoundResult(money, caughtFishList);
-        }
-        else
-        {
-            Debug.LogError("GManagerが見つかりません！");
-        }
+        if (GManager.instance != null) GManager.instance.SaveRoundResult(money, caughtFishList);
+        else Debug.LogError("GManagerが見つかりません！");
 
+        if (AudioManager.Instance != null) AudioManager.Instance.StopAmbient();
         SceneManager.LoadScene("Result");
     }
 }

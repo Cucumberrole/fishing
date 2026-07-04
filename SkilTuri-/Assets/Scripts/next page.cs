@@ -8,8 +8,10 @@ public class GetCamera : MonoBehaviour
     {
         cam = Camera.main;
     }
+
     public void OnClick()
     {
-          cam.transform.position += new Vector3(18, 0, 0);
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayButtonSE();
+        cam.transform.position += new Vector3(18, 0, 0);
     }
 }

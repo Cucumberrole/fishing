@@ -9,6 +9,12 @@ public class ResultManager : MonoBehaviour
 
     private void Start()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopAmbient();
+            AudioManager.Instance.PlayGameBGM2();
+        }
+
         if (GManager.instance == null)
         {
             Debug.LogError("GManagerが見つかりません！");
@@ -21,26 +27,16 @@ public class ResultManager : MonoBehaviour
 
     private void ShowMoney()
     {
-        if (resultMoneyText != null)
-        {
-            resultMoneyText.text = "獲得金額：" + GManager.instance.roundMoney;
-        }
+        if (resultMoneyText != null) resultMoneyText.text = "獲得金額：" + GManager.instance.roundMoney;
     }
 
     private void ShowCaughtFish()
     {
-        if (fishListParent == null || fishUIPrefab == null)
-        {
-            return;
-        }
+        if (fishListParent == null || fishUIPrefab == null) return;
 
         foreach (FishData fishData in GManager.instance.caughtFishList)
         {
-            if (fishData == null)
-            {
-                continue;
-            }
-
+            if (fishData == null) continue;
             FishGetUI fishUI = Instantiate(fishUIPrefab, fishListParent);
             fishUI.Setup(fishData);
         }
