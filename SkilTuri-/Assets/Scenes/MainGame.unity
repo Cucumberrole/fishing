@@ -1661,7 +1661,7 @@ MonoBehaviour:
   fishReturnDuration: 1.2
   fishReturnCurveHeight: 0.5
   fishReturnSideOffset: 4
-  pierLevel: 0
+  pierLevel: 8
   minThrowPower: 5
   maxThrowPower: 20
   maxChargeTime: 2
